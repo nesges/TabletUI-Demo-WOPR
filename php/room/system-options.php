@@ -33,7 +33,7 @@
                 <div data-type="label">Manuell</div>
             </div>
             <div>
-                <div data-type="switch" data-device="ATHOME" data-subtype="dummy10" data-icon="fa-users"></div>
+                <div data-type="switch" data-device="ATHOME" data-subtype="dummy10" data-icon="fa-users" class="readonly"></div>
                 <div data-type="label">Zuhause</div>
             </div>
             <div>
@@ -55,23 +55,23 @@
         <header>INFO</header>
         <div class="centered container">
             <div>
-                <div data-type="switch" data-device="FREI" data-subtype="dummy10" data-icon="fa-heart-o"></div>
+                <div data-type="switch" data-device="FREI" data-subtype="dummy10" data-icon="fa-heart-o" class="readonly"></div>
                 <div data-type="label">Frei</div>
             </div>
             <div>
-                <div data-type="switch" data-device="LICHT_INFO" data-subtype="dummy10" data-icon="fa-lightbulb-o"></div>
+                <div data-type="switch" data-device="LICHT_INFO" data-subtype="dummy10" data-icon="fa-lightbulb-o" class="readonly"></div>
                 <div data-type="label">Licht</div>
             </div>
             <div>
-                <div data-type="switch" data-device="HANDY" data-subtype="PRESENCE" data-icon="fa-user"></div>
+                <div data-type="switch" data-device="HANDY" data-subtype="PRESENCE" data-icon="fa-user" class="readonly"></div>
                 <div data-type="label">Thomas</div>
             </div>
             <div>
-                <div data-type="switch" data-device="STEFF" data-subtype="PRESENCE" data-icon="fa-user"></div>
+                <div data-type="switch" data-device="STEFF" data-subtype="PRESENCE" data-icon="fa-user" class="readonly"></div>
                 <div data-type="label">Steff</div>
             </div>
             <div>
-                <div data-type="switch" data-device="IPAD" data-subtype="PRESENCE" data-icon="fa-tablet"></div>
+                <div data-type="switch" data-device="IPAD" data-subtype="PRESENCE" data-icon="fa-tablet" class="readonly"></div>
                 <div data-type="label">iPad</div>
             </div>
         </div>
@@ -81,15 +81,15 @@
         <header>SERVER</header>
         <div class="centered container">
             <div class="left">
-                <div data-type="switch" data-device="SKY" data-subtype="PRESENCE" data-icon="fa-server"></div>
+                <div data-type="switch" data-device="SKY" data-subtype="PRESENCE" data-icon="fa-server" class="readonly"></div>
                 <div data-type="label">SKY</div>
             </div>
             <div class="left">
-                <div data-type="switch" data-device="HAILSTORM" data-subtype="PRESENCE" data-icon="fa-server"></div>
+                <div data-type="switch" data-device="HAILSTORM" data-subtype="PRESENCE" data-icon="fa-server" class="readonly"></div>
                 <div data-type="label">HAILSTORM</div>
             </div>
             <div class="left">
-                <div data-type="switch" data-device="MCP" data-subtype="PRESENCE" data-icon="fa-server"></div>
+                <div data-type="switch" data-device="MCP" data-subtype="PRESENCE" data-icon="fa-server" class="readonly"></div>
                 <div data-type="label">MCP</div>
             </div>
         </div>
@@ -175,19 +175,19 @@
         <header>ANTENNEN</header>
         <div class="centered container">
             <div>
-                <div data-type="switch" data-device="CUL1" data-get-on="Initialized" data-icon="fa-rss"></div>
+                <div data-type="switch" data-device="CUL1" data-get-on="Initialized" data-icon="fa-rss" class="readonly"></div>
                 <div data-type="label">CUL 868</div>
             </div>
             <div>
-                <div data-type="switch" data-device="CUL433" data-get-on="Initialized" data-icon="fa-rss"></div>
+                <div data-type="switch" data-device="CUL433" data-get-on="Initialized" data-icon="fa-rss" class="readonly"></div>
                 <div data-type="label">CUL 433</div>
             </div>
             <div>
-                <div data-type="switch" data-device="JEELINK" data-get-on="Initialized" data-icon="fa-rss"></div>
+                <div data-type="switch" data-device="JEELINK" data-get-on="Initialized" data-icon="fa-rss" class="readonly"></div>
                 <div data-type="label">JEELINK</div>
             </div>
             <div>
-                <div data-type="switch" data-device="MILIGHT" data-get-on="ok" data-icon="fa-rss"></div>
+                <div data-type="switch" data-device="MILIGHT" data-get-on="ok" data-icon="fa-rss" class="readonly"></div>
                 <div data-type="label">MILIGHT</div>
             </div>
         </div>
@@ -197,15 +197,15 @@
         <header>DATENBANK</header>
         <div class="centered container">
             <div class="left">
-                <div data-type="switch" data-device="DBLOG1" data-get-on="connected" data-icon="fa-database"></div>
+                <div data-type="switch" data-device="DBLOG1" data-get-on="connected" data-icon="fa-database" class="readonly"></div>
                 <div data-type="label">SKY1</div>
             </div>
             <div class="left">
-                <div data-type="switch" data-device="DBLOG2" data-get-on="connected" data-icon="fa-database"></div>
+                <div data-type="switch" data-device="DBLOG2" data-get-on="connected" data-icon="fa-database" class="readonly"></div>
                 <div data-type="label">SKY2</div>
             </div>
             <div class="left">
-                <div data-type="switch" data-device="DBLOG3" data-get-on="connected" data-icon="fa-database"></div>
+                <div data-type="switch" data-device="DBLOG3" data-get-on="connected" data-icon="fa-database" class="readonly"></div>
                 <div data-type="label">SKY3</div>
             </div>
         </div>
@@ -214,18 +214,18 @@
     <li data-row="1" data-col="5" data-sizex="1" data-sizey="3">
         <header>BATTERIE</header>
         <div class="centered container">
-            <div data-type="switch" title="A_HUMID"          data-device="A_HUMID"            data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="BAD_HUMID"        data-device="BAD_HUMID"          data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="B_HEIZUNG"        data-device="B_HEIZUNG"          data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="B_THERMO"         data-device="B_THERMO"           data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="KUEHL_THERMO"     data-device="KUEHL_THERMO"       data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="S_FENSTER_LINKS"  data-device="S_FENSTER_LINKS"    data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="S_THERMO"         data-device="S_THERMO"           data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="W_FENSTER_Balkon" data-device="W_FENSTER_Balkon"   data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="W_HEIZUNG"        data-device="W_HEIZUNG"          data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="W_HEIZUNG_BALKON" data-device="W_HEIZUNG_BALKON"   data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="W_HEIZUNG_COUCH"  data-device="W_HEIZUNG_COUCH"    data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
-            <div data-type="switch" title="W_HUMID"          data-device="W_HUMID"            data-get="battery" data-get-on="ok" data-icon="fa-bolt"></div>
+            <div data-type="switch" title="A_HUMID"          data-device="A_HUMID"            data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="A_HUMID"          class="readonly"></div>
+            <div data-type="switch" title="BAD_HUMID"        data-device="BAD_HUMID"          data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="BAD_HUMID"        class="readonly"></div>
+            <div data-type="switch" title="B_HEIZUNG"        data-device="B_HEIZUNG"          data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="B_HEIZUNG"        class="readonly"></div>
+            <div data-type="switch" title="B_THERMO"         data-device="B_THERMO"           data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="B_THERMO"         class="readonly"></div>
+            <div data-type="switch" title="KUEHL_THERMO"     data-device="KUEHL_THERMO"       data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="KUEHL_THERMO"     class="readonly"></div>
+            <div data-type="switch" title="S_FENSTER_LINKS"  data-device="S_FENSTER_LINKS"    data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="S_FENSTER_LINKS"  class="readonly"></div>
+            <div data-type="switch" title="S_THERMO"         data-device="S_THERMO"           data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="S_THERMO"         class="readonly"></div>
+            <div data-type="switch" title="W_FENSTER_Balkon" data-device="W_FENSTER_Balkon"   data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_FENSTER_Balkon" class="readonly"></div>
+            <div data-type="switch" title="W_HEIZUNG"        data-device="W_HEIZUNG"          data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_HEIZUNG"        class="readonly"></div>
+            <div data-type="switch" title="W_HEIZUNG_BALKON" data-device="W_HEIZUNG_BALKON"   data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_HEIZUNG_BALKON" class="readonly"></div>
+            <div data-type="switch" title="W_HEIZUNG_COUCH"  data-device="W_HEIZUNG_COUCH"    data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_HEIZUNG_COUCH"  class="readonly"></div>
+            <div data-type="switch" title="W_HUMID"          data-device="W_HUMID"            data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_HUMID"          class="readonly"></div>
         </div>
     </li>
 </ul>

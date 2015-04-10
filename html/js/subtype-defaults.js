@@ -40,10 +40,24 @@ $( document ).ready(function() {
         }
      });
      
-    $('div[data-type="contact"]').each(function(index) {
+    $('div[data-type="symbol"]').each(function(index) {
         switch($(this).attr('data-subtype')) {
             case "MAX":
                 $(this).attr('data-get-on', $(this).attr('data-get-on') || 'opened');
+                break;
+            case "POLLEN":
+                $(this).attr('data-get-off', $(this).attr('data-get-off') || '0');
+                $(this).attr('data-get-on', $(this).attr('data-get-on') || '["1","2","3"]');
+                $(this).attr('data-on-colors', $(this).attr('data-on-colors') || '["yellowgreen","yellow","red"]');
+                $(this).attr('data-icons', $(this).attr('data-icons') || '["fa-pagelines","fa-pagelines","fa-pagelines"]');
+                break;
+            case "BIOWETTER":
+                $(this).attr('data-get-off', $(this).attr('data-get-off') || '');
+                $(this).attr('data-get-on', $(this).attr('data-get-on') || '["keine","schwach","stark","sehr stark"]');
+                $(this).attr('data-off-color', $(this).attr('data-off-color') || 'green');
+                $(this).attr('data-on-colors', $(this).attr('data-on-colors') || '["green","yellow","orange","red"]');
+                $(this).attr('data-icon', $(this).attr('data-icon') || "fa-smile-o");
+                $(this).attr('data-icons', $(this).attr('data-icons') || '["fa-smile-o", "fa-meh-o","fa-frown-o","fa-frown-o"]');
                 break;
         }
     });

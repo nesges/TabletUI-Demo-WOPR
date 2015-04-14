@@ -1,11 +1,10 @@
-cp -a ../tui/room/* php/room/
+cp -a ../tui/room php
 rm php/room/test*.php
 rm php/room/daydream.php
 
-cp -a ../tui/css/* html/css
+cp -a ../tui/css html
 unlink html/css/jquery-ui.min.css
-cp -a ../tui/js/* html/js
-unlink html/js/jquery.min.js
+cp -a ../tui/js/ html
 
 mkdir download
 cd download

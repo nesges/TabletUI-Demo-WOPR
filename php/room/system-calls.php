@@ -5,7 +5,10 @@
     function fb_entry($number) {
 ?>
         <tr>
-            <td><div data-type="label" data-device="FritzBox" data-get="B<?=$number?>"></div></td>
+            <td>
+                <div data-type="label" data-device="FritzBox" data-get="B<?=$number?>" data-part="2"></div>
+                <div data-type="label" data-device="FritzBox" data-get="B<?=$number?>" data-part="1"></div>
+            </td>
             <td>
                 <div data-type="label" data-device="FritzBox" data-get="D<?=$number?>" style="font-size:x-large;color:#aa6900;"></div>
                 <div data-type="label" data-device="FritzBox" data-get="C<?=$number?>"></div>
@@ -17,9 +20,11 @@
                     data-get="A<?=$number?>"
                     data-get-on='["in_connected","in_notconnected","out_connected","out_notconnected"]'
                     data-icons='["fa-angle-left","fa-angle-left","fa-angle-right","fa-angle-right"]'
-                    data-on-colors='["#aa6900","#aa6900","#aa6900","#aa6900"]'
+                    data-color="#aa6900"
+                    data-on-colors='["#aa6900","#aa6900","#505050","#505050"]'
                     data-background-icon="fa-circle-thin"
                     data-on-background-color="#aa6900"
+                    data-off-background-color="#aa6900"
                 ></div>
                 <div data-type="button" 
                     data-device="FritzBox" 

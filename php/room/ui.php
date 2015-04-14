@@ -105,7 +105,6 @@
     <script type="text/javascript" src="../js/subtype-defaults.js"></script>
     <script type="text/javascript" src="<?= $ftui ?>js/fhem-tablet-ui.js"></script>
 
-    <script type="text/javascript" src="../js/devices.js"></script>
     <script type="text/javascript" src="../js/colors.js"></script>
 <?
             if($daydream) {

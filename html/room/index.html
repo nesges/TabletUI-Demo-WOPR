@@ -51,7 +51,6 @@
     <script type="text/javascript" src="http://wopr/tui/js/subtype-defaults.js"></script>
     <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
 
-    <script type="text/javascript" src="http://wopr/tui/js/devices.js"></script>
     <script type="text/javascript" src="http://wopr/tui/js/colors.js"></script>
 </head>
 <body>
@@ -237,7 +236,15 @@
     	        <div data-type="label" data-device="MISSED_CALL" data-get="name"></div>
     	        <div data-type="label" data-device="MISSED_CALL" data-get="number"></div>
             </a>
-    	    <div id="missed_call" data-type="button" data-url="system-calls.php" data-icon="fa-phone" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    	    <div data-type="button"
+    	        data-device="MISSED_CALL"
+    	        data-get-off="&amp;nbsp;"
+    	        data-get-on="!off"
+    	        data-off-background-color="#505050"
+    	        data-on-background-color="#aa6900"
+    	        data-icon="fa-phone"
+    	        data-url="system-calls.php"
+    	    ></div>
         </div>
     </li>    
     

@@ -51,7 +51,6 @@
     <script type="text/javascript" src="http://wopr/tui/js/subtype-defaults.js"></script>
     <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
 
-    <script type="text/javascript" src="http://wopr/tui/js/devices.js"></script>
     <script type="text/javascript" src="http://wopr/tui/js/colors.js"></script>
 </head>
 <body>
@@ -86,7 +85,10 @@
         <header>ANRUFE</header>
         <table class="calls">
                     <tr>
-            <td><div data-type="label" data-device="FritzBox" data-get="B0"></div></td>
+            <td>
+                <div data-type="label" data-device="FritzBox" data-get="B0" data-part="2"></div>
+                <div data-type="label" data-device="FritzBox" data-get="B0" data-part="1"></div>
+            </td>
             <td>
                 <div data-type="label" data-device="FritzBox" data-get="D0" style="font-size:x-large;color:#aa6900;"></div>
                 <div data-type="label" data-device="FritzBox" data-get="C0"></div>
@@ -98,9 +100,11 @@
                     data-get="A0"
                     data-get-on='["in_connected","in_notconnected","out_connected","out_notconnected"]'
                     data-icons='["fa-angle-left","fa-angle-left","fa-angle-right","fa-angle-right"]'
-                    data-on-colors='["#aa6900","#aa6900","#aa6900","#aa6900"]'
+                    data-color="#aa6900"
+                    data-on-colors='["#aa6900","#aa6900","#505050","#505050"]'
                     data-background-icon="fa-circle-thin"
                     data-on-background-color="#aa6900"
+                    data-off-background-color="#aa6900"
                 ></div>
                 <div data-type="button" 
                     data-device="FritzBox" 
@@ -117,7 +121,10 @@
         </tr>
             <tr><td colspan="4" class="ruler"><div>&nbsp;</div></td></tr>
                     <tr>
-            <td><div data-type="label" data-device="FritzBox" data-get="B1"></div></td>
+            <td>
+                <div data-type="label" data-device="FritzBox" data-get="B1" data-part="2"></div>
+                <div data-type="label" data-device="FritzBox" data-get="B1" data-part="1"></div>
+            </td>
             <td>
                 <div data-type="label" data-device="FritzBox" data-get="D1" style="font-size:x-large;color:#aa6900;"></div>
                 <div data-type="label" data-device="FritzBox" data-get="C1"></div>
@@ -129,9 +136,11 @@
                     data-get="A1"
                     data-get-on='["in_connected","in_notconnected","out_connected","out_notconnected"]'
                     data-icons='["fa-angle-left","fa-angle-left","fa-angle-right","fa-angle-right"]'
-                    data-on-colors='["#aa6900","#aa6900","#aa6900","#aa6900"]'
+                    data-color="#aa6900"
+                    data-on-colors='["#aa6900","#aa6900","#505050","#505050"]'
                     data-background-icon="fa-circle-thin"
                     data-on-background-color="#aa6900"
+                    data-off-background-color="#aa6900"
                 ></div>
                 <div data-type="button" 
                     data-device="FritzBox" 
@@ -148,7 +157,10 @@
         </tr>
             <tr><td colspan="4" class="ruler"><div>&nbsp;</div></td></tr>
                     <tr>
-            <td><div data-type="label" data-device="FritzBox" data-get="B2"></div></td>
+            <td>
+                <div data-type="label" data-device="FritzBox" data-get="B2" data-part="2"></div>
+                <div data-type="label" data-device="FritzBox" data-get="B2" data-part="1"></div>
+            </td>
             <td>
                 <div data-type="label" data-device="FritzBox" data-get="D2" style="font-size:x-large;color:#aa6900;"></div>
                 <div data-type="label" data-device="FritzBox" data-get="C2"></div>
@@ -160,9 +172,11 @@
                     data-get="A2"
                     data-get-on='["in_connected","in_notconnected","out_connected","out_notconnected"]'
                     data-icons='["fa-angle-left","fa-angle-left","fa-angle-right","fa-angle-right"]'
-                    data-on-colors='["#aa6900","#aa6900","#aa6900","#aa6900"]'
+                    data-color="#aa6900"
+                    data-on-colors='["#aa6900","#aa6900","#505050","#505050"]'
                     data-background-icon="fa-circle-thin"
                     data-on-background-color="#aa6900"
+                    data-off-background-color="#aa6900"
                 ></div>
                 <div data-type="button" 
                     data-device="FritzBox" 
@@ -179,7 +193,10 @@
         </tr>
             <tr><td colspan="4" class="ruler"><div>&nbsp;</div></td></tr>
                     <tr>
-            <td><div data-type="label" data-device="FritzBox" data-get="B3"></div></td>
+            <td>
+                <div data-type="label" data-device="FritzBox" data-get="B3" data-part="2"></div>
+                <div data-type="label" data-device="FritzBox" data-get="B3" data-part="1"></div>
+            </td>
             <td>
                 <div data-type="label" data-device="FritzBox" data-get="D3" style="font-size:x-large;color:#aa6900;"></div>
                 <div data-type="label" data-device="FritzBox" data-get="C3"></div>
@@ -191,9 +208,11 @@
                     data-get="A3"
                     data-get-on='["in_connected","in_notconnected","out_connected","out_notconnected"]'
                     data-icons='["fa-angle-left","fa-angle-left","fa-angle-right","fa-angle-right"]'
-                    data-on-colors='["#aa6900","#aa6900","#aa6900","#aa6900"]'
+                    data-color="#aa6900"
+                    data-on-colors='["#aa6900","#aa6900","#505050","#505050"]'
                     data-background-icon="fa-circle-thin"
                     data-on-background-color="#aa6900"
+                    data-off-background-color="#aa6900"
                 ></div>
                 <div data-type="button" 
                     data-device="FritzBox" 
@@ -210,7 +229,10 @@
         </tr>
             <tr><td colspan="4" class="ruler"><div>&nbsp;</div></td></tr>
                     <tr>
-            <td><div data-type="label" data-device="FritzBox" data-get="B4"></div></td>
+            <td>
+                <div data-type="label" data-device="FritzBox" data-get="B4" data-part="2"></div>
+                <div data-type="label" data-device="FritzBox" data-get="B4" data-part="1"></div>
+            </td>
             <td>
                 <div data-type="label" data-device="FritzBox" data-get="D4" style="font-size:x-large;color:#aa6900;"></div>
                 <div data-type="label" data-device="FritzBox" data-get="C4"></div>
@@ -222,9 +244,11 @@
                     data-get="A4"
                     data-get-on='["in_connected","in_notconnected","out_connected","out_notconnected"]'
                     data-icons='["fa-angle-left","fa-angle-left","fa-angle-right","fa-angle-right"]'
-                    data-on-colors='["#aa6900","#aa6900","#aa6900","#aa6900"]'
+                    data-color="#aa6900"
+                    data-on-colors='["#aa6900","#aa6900","#505050","#505050"]'
                     data-background-icon="fa-circle-thin"
                     data-on-background-color="#aa6900"
+                    data-off-background-color="#aa6900"
                 ></div>
                 <div data-type="button" 
                     data-device="FritzBox" 

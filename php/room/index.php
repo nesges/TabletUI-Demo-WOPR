@@ -40,7 +40,15 @@
     	        <div data-type="label" data-device="MISSED_CALL" data-get="name"></div>
     	        <div data-type="label" data-device="MISSED_CALL" data-get="number"></div>
             </a>
-    	    <? button('missed_call', 'system-calls.php', 'fa-phone') ?>
+    	    <div data-type="button"
+    	        data-device="MISSED_CALL"
+    	        data-get-off="&amp;nbsp;"
+    	        data-get-on="!off"
+    	        data-off-background-color="#505050"
+    	        data-on-background-color="#aa6900"
+    	        data-icon="fa-phone"
+    	        data-url="system-calls.php"
+    	    ></div>
         </div>
     </li>    
     

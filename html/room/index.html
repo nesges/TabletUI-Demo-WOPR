@@ -70,14 +70,14 @@
     });
 </script>
 <div class="container">
-    <div id="room_index" data-type="button" data-url="index.php" data-icon="fa-home" data-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="fa-film" data-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_kueche" data-type="button" data-url="kueche.php" data-icon="fa-cutlery" data-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_schlafzimmer" data-type="button" data-url="schlafzimmer.php" data-icon="fa-bed" data-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_bad" data-type="button" data-url="bad.php" data-icon="fa-female" data-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="fa-laptop" data-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_aussen" data-type="button" data-url="aussen.php" data-icon="fa-sun-o" data-color="rgb(111,69,0)" class="cell"></div>
-    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-gears" data-color="rgb(80,80,80)" class="cell"></div>
+    <div id="room_index" data-type="button" data-url="index.php" data-icon="fa-home" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="fa-film" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_kueche" data-type="button" data-url="kueche.php" data-icon="fa-cutlery" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_schlafzimmer" data-type="button" data-url="schlafzimmer.php" data-icon="fa-bed" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_bad" data-type="button" data-url="bad.php" data-icon="fa-female" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="fa-laptop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_aussen" data-type="button" data-url="aussen.php" data-icon="fa-sun-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-gears" data-on-background-color="rgb(80,80,80)" class="cell"></div>
 
     <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
 </div>
@@ -237,7 +237,7 @@
     	        <div data-type="label" data-device="MISSED_CALL" data-get="name"></div>
     	        <div data-type="label" data-device="MISSED_CALL" data-get="number"></div>
             </a>
-    	    <div id="missed_call" data-type="button" data-url="system-calls.php" data-icon="fa-phone" data-color="rgb(111,69,0)" class="cell"></div>
+    	    <div id="missed_call" data-type="button" data-url="system-calls.php" data-icon="fa-phone" data-on-background-color="rgb(111,69,0)" class="cell"></div>
         </div>
     </li>    
     
@@ -467,7 +467,7 @@
                     <li><div data-type="button" data-url="wohnzimmer-pc.php" data-icon="fa-desktop"></div></li>
                     <li><div data-type="button" data-url="wohnzimmer-xbmc-simple.php" data-icon="fa-play-circle"></div></li>
                     <li><div data-type="switch" data-device="W_SWITCH_D1_Monitore" data-icon="fa-desktop" data-color="#505050"></div></li>
-                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22WATER%22%2C+%22Winamp+Playlist+DLF%22%29%7D" data-icon="fa-music" data-color="#2E8AE6"></div></li>
+                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22WATER%22%2C+%22Winamp+Playlist+DLF%22%29%7D" data-icon="fa-music" data-on-background-color="#2E8AE6"></div></li>
                     <li><div data-type="button" data-url="wohnzimmer-milight.php" data-icon="fa-lightbulb-o"></div></li>
                 </ul>
             </div>
@@ -479,8 +479,8 @@
                 <ul class="menu">
                     <li><div data-type="symbol" data-icon="fa-laptop" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
                     <li><div data-type="button" data-url="buero-pc.php" data-icon="fa-desktop"></div></li>
-                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22MIST%22%2C+%22Winamp+Play+Toggle%22%29%7D" data-icon="fa-play" data-color="#FFCC00"></div></li>
-                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22MIST%22%2C+%22Winamp+Playlist+DLF%22%29%7D" data-icon="fa-music" data-color="#2E8AE6"></div></li>
+                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22MIST%22%2C+%22Winamp+Play+Toggle%22%29%7D" data-icon="fa-play" data-on-background-color="#FFCC00"></div></li>
+                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22MIST%22%2C+%22Winamp+Playlist+DLF%22%29%7D" data-icon="fa-music" data-on-background-color="#2E8AE6"></div></li>
                 </ul>
             </div>
             <div data-type="label" class="cell">B&uuml;ro</div>

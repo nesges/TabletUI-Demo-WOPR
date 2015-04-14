@@ -1,6 +1,41 @@
 <?
     include("ui.php");
     $ui = new UI();
+    
+    function fb_entry($number) {
+?>
+        <tr>
+            <td><div data-type="label" data-device="FritzBox" data-get="B<?=$number?>"></div></td>
+            <td>
+                <div data-type="label" data-device="FritzBox" data-get="D<?=$number?>" style="font-size:x-large;color:#aa6900;"></div>
+                <div data-type="label" data-device="FritzBox" data-get="C<?=$number?>"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="FritzBox" data-get="E<?=$number?>"></div></td>
+            <td class="r">
+                <div data-type="symbol" 
+                    data-device="FritzBox" 
+                    data-get="A<?=$number?>"
+                    data-get-on='["in_connected","in_notconnected","out_connected","out_notconnected"]'
+                    data-icons='["fa-angle-left","fa-angle-left","fa-angle-right","fa-angle-right"]'
+                    data-on-colors='["#aa6900","#aa6900","#aa6900","#aa6900"]'
+                    data-background-icon="fa-circle-thin"
+                    data-on-background-color="#aa6900"
+                ></div>
+                <div data-type="button" 
+                    data-device="FritzBox" 
+                    data-get="A<?=$number?>"
+                    data-icon='fa-phone'
+                    data-on-color='#aa6900'
+                    data-off-color='#aa6900'
+                    data-fhem-cmd='<?=urlencode("{call($number)}")?>'
+                    data-background-icon="fa-circle-thin"
+                    data-on-background-color="#aa6900"
+                    data-off-background-color="#aa6900"
+                ></div>
+            </td>
+        </tr>
+<?        
+    }
 ?>
 <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
@@ -11,59 +46,15 @@
     <li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
         <header>ANRUFE</header>
         <table class="calls">
-            <tr>
-                <td><div data-type="label" data-device="FritzBox" data-get="B0"></div></td>
-                <td>
-                    <div data-type="label" data-device="FritzBox" data-get="D0" style="font-size:x-large;color:#aa6900;"></div>
-                    <div data-type="label" data-device="FritzBox" data-get="C0"></div>
-                </td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="E0"></div></td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="A0"></div></td>
-            </tr>
+            <? fb_entry(0) ?>
             <tr><td colspan="4" class="ruler"><div>&nbsp;</div></td></tr>
-            
-            <tr>
-                <td><div data-type="label" data-device="FritzBox" data-get="B1"></div></td>
-                <td>
-                    <div data-type="label" data-device="FritzBox" data-get="D1" style="font-size:x-large;color:#aa6900;"></div>
-                    <div data-type="label" data-device="FritzBox" data-get="C1"></div>
-                </td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="E1"></div></td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="A1"></div></td>
-            </tr>
+            <? fb_entry(1) ?>
             <tr><td colspan="4" class="ruler"><div>&nbsp;</div></td></tr>
-
-            <tr>
-                <td><div data-type="label" data-device="FritzBox" data-get="B2"></div></td>
-                <td>
-                    <div data-type="label" data-device="FritzBox" data-get="D2" style="font-size:x-large;color:#aa6900;"></div>
-                    <div data-type="label" data-device="FritzBox" data-get="C2"></div>
-                </td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="E2"></div></td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="A2"></div></td>
-            </tr>
+            <? fb_entry(2) ?>
             <tr><td colspan="4" class="ruler"><div>&nbsp;</div></td></tr>
-            
-            <tr>
-                <td><div data-type="label" data-device="FritzBox" data-get="B3"></div></td>
-                <td>
-                    <div data-type="label" data-device="FritzBox" data-get="D3" style="font-size:x-large;color:#aa6900;"></div>
-                    <div data-type="label" data-device="FritzBox" data-get="C3"></div>
-                </td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="E3"></div></td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="A3"></div></td>
-            </tr>
+            <? fb_entry(3) ?>
             <tr><td colspan="4" class="ruler"><div>&nbsp;</div></td></tr>
-            
-            <tr>
-                <td><div data-type="label" data-device="FritzBox" data-get="B4"></div></td>
-                <td>
-                    <div data-type="label" data-device="FritzBox" data-get="D4" style="font-size:x-large;color:#aa6900;"></div>
-                    <div data-type="label" data-device="FritzBox" data-get="C4"></div>
-                </td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="E4"></div></td>
-                <td class="r"><div data-type="label" data-device="FritzBox" data-get="A4"></div></td>
-            </tr>
+            <? fb_entry(4) ?>
         </table>
     </li>
 </ul>

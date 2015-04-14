@@ -25,3 +25,7 @@ for h in html/room/*.html
         then echo "$p is missing"
     fi
 done
+
+for p in screenshots/*.png
+    do convert -resize 400x400 "$p" "screenshots/small/`basename $p`"
+done

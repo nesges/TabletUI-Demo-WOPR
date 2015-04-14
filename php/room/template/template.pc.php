@@ -95,7 +95,7 @@
 	<header>PC</header>
 	<div class="centered container">
 	    <div class="left">
-            <div data-type="circlemenu" class="cell circlemenu">
+            <div data-type="circlemenu" class="cell circlemenu keepopen">
                 <ul class="menu">
                     <li><div data-type="symbol" data-icon="fa-volume-up" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
                     <li><div data-type="push" data-cmd="{eventghost('<?=$host?>', 'PC Mute Toggle')}" data-icon="fa-volume-off" data-off-background-color="#aa6900"></div></li>

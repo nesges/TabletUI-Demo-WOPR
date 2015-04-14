@@ -3,7 +3,7 @@
     <table>
         <tr>
             <td colspan="2">
-                <a href="aussen-iframe.php?content=meteogram">
+                <a href="aussen.php">
                     <div data-type="weather" 
                         data-device="Wetter"
                         data-get="condition"
@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <a href="aussen-iframe.php?content=meteogram">
+                <a href="aussen.php">
                     <div data-type="label" 
                         data-device="Wetter"
                         data-get="condition"
@@ -142,11 +142,11 @@
                 <div style="text-align:center">
                     <div data-type="wind_direction" 
                         data-device="Wetter"
-                        data-get="wind_direction"
+                        data-direction="wind_direction"
+                        data-speed="wind_speed"
                         data-size="80"
                         class="cell"
                         style="padding-top:15px"></div>
-                    </a>
                 </div>
             </td>
         </tr>

@@ -37,6 +37,9 @@
 ?>
     <div data-type="thermostat" 
         data-subtype="MAX"
+        data-get="desiredTemperature"
+        data-set="desiredTemperature"
+        data-temp="temperature"
         data-off="off"
         data-boost="boost"
         data-min="5"

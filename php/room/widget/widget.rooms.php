@@ -18,5 +18,5 @@
     <? button('room_aussen',        'aussen.php',       'fa-sun-o')     ?>
     <? button('options',            'system-light.php', 'fa-gears', 'rgb(80,80,80)')    ?>
 
-    <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock" class="cells"></div>
+    <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
 </div>

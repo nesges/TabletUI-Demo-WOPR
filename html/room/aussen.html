@@ -1,0 +1,670 @@
+<!doctype html>
+<html>
+<head>
+    <title>TUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="widget_base_width" content="120">
+    <meta name="widget_base_height" content="131">
+    <meta name="fhemweb_url" content="/fhem">
+    <meta name="longpoll" content="1">
+    <meta name="gridster_disable" content="1">
+    <meta name="widget_dir" content="../Widgets-for-fhem-tablet-ui/js">
+    
+    <meta name="color_scheme" content="amber">
+    <meta name="color_background"                           content="#000000">
+    <meta name="color_widget_background"                    content="#2a2a2a">
+    <meta name="color_text"                                 content="#ffffff">
+    <meta name="color_text_emphasized"                      content="#aa6900">
+    <meta name="color_text_dampened"                        content="#262626">
+    <meta name="color_multibutton_background_off"           content="#505050">
+    <meta name="color_multibutton_background_on"            content="#aa6900">
+    <meta name="color_multibutton_background_emphasized"    content="#aa6900">
+    <meta name="color_multibutton_background_dampened"      content="#6f4509">
+    <meta name="color_multibutton_foreground_off"           content="#2a2a2a">
+    <meta name="color_multibutton_foreground_on"            content="#2a2a2a">
+    
+    <link rel="stylesheet" href="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css">
+    <link rel="stylesheet" href="http://wopr/tui/fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.css">
+    <link rel="stylesheet" href="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
+    <link rel="stylesheet" href="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
+    <link rel="stylesheet" href="http://wopr/tui/css/wopr.css">
+    
+    <script type="text/javascript" src="http://wopr/tui/pgm2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://wopr/tui/pgm2/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="http://wopr/tui/fhem-tablet-ui/www/tablet//css/theme/amber/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="http://wopr/tui/fhem-tablet-ui/www/tablet//css/theme/amber/jquery-ui.theme.css" />
+    <link rel="stylesheet" href="http://wopr/tui/fhem-tablet-ui/www/tablet//css/theme/amber/ftui.css" />
+    
+    
+    <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
+    <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/jquery.knob.mod.min.js"></script>
+    <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/jquery.toast.min.js"></script>
+    <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/fa-multi-button.min.js"></script>
+    <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/powerange.min.js"></script>
+    <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/lib/jquery.circlemenu.js"></script>
+    
+    <script type="text/javascript" src="http://wopr/tui/js/subtype-defaults.js"></script>
+    <script type="text/javascript" src="http://wopr/tui/fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
+
+    <script type="text/javascript" src="http://wopr/tui/js/devices.js"></script>
+    <script type="text/javascript" src="http://wopr/tui/js/colors.js"></script>
+</head>
+<body>
+    <div class="gridster">
+<ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
+        <header>R&Auml;UME</header>
+    	<script type="text/javascript">			
+    $(document).ready(function() {
+        var path = document.location.pathname;
+        var roomname = "room_index";
+        if(path.lastIndexOf('.')>-1) {
+            roomname = "room_" + path.substring(path.lastIndexOf('/') + 1, Math.min(path.lastIndexOf('.'), (path.lastIndexOf('-')>0?path.lastIndexOf('-'):9999)));
+        }
+        $('head').append('<style type="text/css">#'+roomname+' #bg { color: rgb(170,105,0) !important; }</style>');
+    });
+</script>
+<div class="container">
+    <div id="room_index" data-type="button" data-url="index.php" data-icon="fa-home" data-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="fa-film" data-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_kueche" data-type="button" data-url="kueche.php" data-icon="fa-cutlery" data-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_schlafzimmer" data-type="button" data-url="schlafzimmer.php" data-icon="fa-bed" data-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_bad" data-type="button" data-url="bad.php" data-icon="fa-female" data-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="fa-laptop" data-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_aussen" data-type="button" data-url="aussen.php" data-icon="fa-sun-o" data-color="rgb(111,69,0)" class="cell"></div>
+    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-gears" data-color="rgb(80,80,80)" class="cell"></div>
+
+    <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
+</div>
+    </li>
+    
+    <li data-row="1" data-col="7" data-sizex="1" data-sizey="1">
+    	<header>KLIMA</header>
+    	<div class="centered container">
+    <div class="left">
+	    <div data-type="label" data-device="A_HUMID" data-get="temperature" data-unit=" %B0C%0A" class="cell big"></div>
+	    <div class="centered container">
+	        <div class="left">
+	            <div data-type="klimatrend" data-device="A_HUMID" data-get="statTemperatureTendency" data-refperiod="1" class="cell small"></div>
+	        </div>
+	        <div class="left">
+	            <div data-type="klimatrend" data-device="A_HUMID" data-get="statTemperatureTendency" data-refperiod="2" class="cell small"></div>
+	        </div>
+	        <div class="left">
+	            <div data-type="klimatrend" data-device="A_HUMID" data-get="statTemperatureTendency" data-refperiod="3" class="cell small"></div>
+	        </div>
+	    </div>
+
+	    <div data-type="label" data-device="A_HUMID" data-get="humidity" data-unit=" %" class="cell big"></div>
+	    <div class="centered container">
+	        <div class="left">
+	            <div data-type="klimatrend" data-device="A_HUMID" data-get="statHumidityTendency" data-refperiod="1" class="cell small"></div>
+	        </div>
+	        <div class="left">
+	            <div data-type="klimatrend" data-device="A_HUMID" data-get="statHumidityTendency" data-refperiod="2" class="cell small"></div>
+	        </div>
+	        <div class="left">
+	            <div data-type="klimatrend" data-device="A_HUMID" data-get="statHumidityTendency" data-refperiod="3" class="cell small"></div>
+	        </div>
+	    </div>
+    </div>
+</div>    </li>
+    <li data-row="2" data-col="7" data-sizex="1" data-sizey="3">
+        <header>WEITER</header>
+        <div class="centered container">
+    <div>
+        <div data-type="circlemenu" data-direction="left-half" class="cell circlemenu">
+            <ul class="menu">
+                <li><div data-type="symbol" data-icon="fa-globe" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=dwd_de" data-icon="fa-globe"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=dwd_de_nacht" data-icon="fa-moon-o"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=dwd_de_morgen" data-icon="fa-forward"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=dwd_radar" data-icon="fa-wifi"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=meteogram" data-icon="fa-line-chart"></div></li>
+            </ul>
+        </div>
+        <div data-type="label" class="cell">Karten DWD</div>
+    </div>
+    <div>
+        <div data-type="circlemenu" data-direction="full" class="cell circlemenu">
+            <ul class="menu">
+                <li><div data-type="symbol" data-icon="fa-globe" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=wetteronline_radar" data-icon="fa-umbrella"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=wetteronline_pegel" data-icon="fa-ship"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=wetteronline_pollen" data-icon="fa-pagelines"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=wetteronline_wolken" data-icon="fa-cloud"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=wetteronline_blitze" data-icon="fa-bolt"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=wetteronline_bio" data-icon="fa-smile-o"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=wetteronline_uv" data-icon="fa-sun-o"></div></li>
+                
+            </ul>
+        </div>
+        <div data-type="label" class="cell">Karten WO</div>
+    </div>
+    <div>
+        <div data-type="circlemenu" data-direction="full" class="cell circlemenu">
+            <ul class="menu">
+                <li><div data-type="symbol" data-icon="fa-line-chart" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_TEMP%26nonav%26dark%26nolegend" data-icon="1" class="meteocons" data-background-icon="fa-circle-thin" title="Temperatur"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN%26nonav%26dark%26nolegend" data-icon="fa-plus-circle" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Alles"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_CHOFRAIN%26nonav%26dark%26nolegend" data-icon="8" class="meteocons" data-background-icon="fa-circle-thin" title="Regenwahrscheinlichkeit"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_BEWOELKUNG%26nonav%26dark%26nolegend" data-icon="fa-cloud" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Bew&ouml;lkung"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_WINDSPEED%26nonav%26dark%26nolegend" data-icon="9" class="meteocons" data-background-icon="fa-circle-thin" title="Windgeschwindigkeit"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_VIS%26nonav%26dark%26nolegend" data-icon="fa-binoculars" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Sicht"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_PRESSURE%26nonav%26dark%26nolegend" data-icon="fa-cloud-download" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Luftdruck"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_HUM%26nonav%26dark%26nolegend" data-icon="fa-tint" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Luftfeuchtigkeit"></div></li>
+            </ul>
+        </div>
+        <div data-type="label" class="cell">Plots</div>
+    </div>
+    <div style="position:relative;z-index:1000">
+                <div data-type="button" data-url="aussen-bio.php" data-icon="fa-smile-o"></div>
+        <div data-type="label" class="cell">Biowetter</div>
+            </div>
+</div>    </li>
+    
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="3">
+        <header>AKTUELL</header>
+        <!-- css in wopr.css -->       
+<div class="centered container weather">
+    <table>
+        <tr>
+            <td colspan="2">
+                <a href="aussen.php">
+                    <div data-type="weather" 
+                        data-device="Wetter"
+                        data-get="condition"
+                        data-imageset="kleinklima"
+                        style="width:110px;padding:0;margin:0;margin-bottom:-6px;"></div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <a href="aussen.php">
+                    <div data-type="label" 
+                        data-device="Wetter"
+                        data-get="condition"
+                        style="font-size:90%"></div>
+                </a>
+                <div style="padding-bottom:25px !important"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_TEMP%26nonav%26dark%26nolegend">
+                    <div data-type="symbol" data-icon="1" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                </a>
+            </td>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_TEMP%26nonav%26dark%26nolegend">
+                    <div data-type="label" 
+                        data-device="Wetter"
+                        data-get="temperature"
+                        data-limits="[-50,0,10,25,30,40]"
+                        data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                        data-unit=" °C"></div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_HUM%26nonav%26dark%26nolegend">
+                    <div data-type="symbol" data-icon="fa-tint" style="font-size:14px" data-off-color="#aa6900"></div>
+                </a>
+            </td>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_HUM%26nonav%26dark%26nolegend">
+                    <div data-type="label" 
+                        data-device="Wetter"
+                        data-get="humidity"
+                        data-limits="[0,40,60]"
+                        data-colors='["#9999ff","#aa6900","#ff6900"]'
+                        data-unit=" %"></div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_CHOFRAIN%26nonav%26dark%26nolegend">
+                    <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                </a>
+            </td>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_CHOFRAIN%26nonav%26dark%26nolegend">
+                    <div data-type="label" 
+                        data-device="WETTER_PROPLANTA"
+                        data-get="now_chOfRain"
+                        data-unit=" %"></div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_WINDSPEED%26nonav%26dark%26nolegend">
+                    <div data-type="symbol" data-icon="9" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                </a>
+            </td>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_WINDSPEED%26nonav%26dark%26nolegend">
+                    <div data-type="label" 
+                        data-device="Wetter"
+                        data-get="wind"
+                        data-unit=" km/h"
+                        data-limits="[0,        19,       28,       38,       49,       74,       102,      117]"
+                        data-colors='["#ffffff","#dddddd","#aa6900","#aa6900","#ff9999","#ff6666","#ff3333","#ff0000"]'
+                        style="display:inline"></div>
+                </a>
+            </td>
+        </tr>
+        <!--tr>
+            <td><div data-type="symbol" data-icon="fa-arrows" style="font-size:14px" data-off-color="#aa6900"></td>
+            <td>
+                <div data-type="label" 
+                    data-device="Wetter"
+                    data-get="wind_condition"
+                    data-part="2"></div>
+            </td>
+        </tr-->
+        <tr>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_PRESSURE%26nonav%26dark%26nolegend">
+                    <div data-type="symbol" data-icon="fa-cloud-download" style="font-size:14px" data-off-color="#aa6900"></div>
+                </a>
+            </td>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_PRESSURE%26nonav%26dark%26nolegend">
+                    <div data-type="symbol" 
+                        data-device="Wetter"
+                        data-get="pressure_trend_sym"
+                        data-get-on='["+", "-"]'
+                        data-icons='["fa-chevron-up", "fa-chevron-down"]'
+                        style="font-size:12px"></div>
+                    <div data-type="label" 
+                        data-device="Wetter"
+                        data-get="pressure"
+                        data-unit=" hPa"
+                        data-limits="[0,950,1000]"
+                        data-colors='["#ff9999","#aa6900","#9999ff"]'></div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_VIS%26nonav%26dark%26nolegend">
+                    <div data-type="symbol" data-icon="fa-binoculars" style="font-size:14px" data-off-color="#aa6900"></div>
+                </a>
+            </td>
+            <td>
+                <a href="http://wopr/tui/room/aussen-iframe.php?content=%2Fplots%2F%3Fp%3DP_AUSSEN_VIS%26nonav%26dark%26nolegend">
+                    <div data-type="label" 
+                        data-device="Wetter"
+                        data-get="visibility"
+                        data-unit=" km"></div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div style="text-align:center">
+                    <div data-type="wind_direction" 
+                        data-device="Wetter"
+                        data-direction="wind_direction"
+                        data-speed="wind_speed"
+                        data-size="80"
+                        class="cell"
+                        style="padding-top:15px"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>    </li>
+    
+    
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="3">
+        <header><div data-type="label" data-device="Wetter" data-get="fc2_day_of_week"></div></header>
+        <div class="centered container weather">
+                        <table>
+                <tr>
+                    <td colspan="2">
+                            <div data-type="weather" 
+                                data-device="Wetter"
+                                data-get="fc2_condition"
+                                data-imageset="kleinklima"
+                                style="width:110px;padding:0;margin:0;margin-bottom:-6px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc2_condition"
+                                style="font-size:90%"></div>
+                        <div style="padding-bottom:25px !important"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="1" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc2_low_c"
+                                data-limits="[-50,0,10,25,30,40]"
+                                data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                                data-unit=" °C"
+                                  class="inline"></div>
+                                -
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc2_high_c"
+                                data-limits="[-50,0,10,25,30,40]"
+                                data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                                data-unit=" °C"
+                                class="inline"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="WETTER_PROPLANTA"
+                                data-get="fc1_chOfRainDay"
+                                data-unit=" %"></div>
+                    </td>
+                </tr>
+                                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="9" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="WETTER_COM"
+                                data-get="fc1_wind"
+                                data-unit=" km/h"
+                                data-limits="[0,        19,       28,       38,       49,       74,       102,      117]"
+                                data-colors='["#ffffff","#dddddd","#aa6900","#aa6900","#ff9999","#ff6666","#ff3333","#ff0000"]'
+                                style="display:inline"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style="text-align:center">
+                            <div data-type="wind_direction" 
+                                data-device="WETTER_COM"
+                                data-direction="fc1_windDir"
+                                data-speed="fc1_wind"
+                                data-size="80"
+                                class="cell"
+                                style="padding-top:85px"></div>
+                        </div>
+                    </td>
+                </tr>
+                            </table>
+        </div>
+    </li>
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="3">
+        <header><div data-type="label" data-device="Wetter" data-get="fc3_day_of_week"></div></header>
+        <div class="centered container weather">
+                        <table>
+                <tr>
+                    <td colspan="2">
+                            <div data-type="weather" 
+                                data-device="Wetter"
+                                data-get="fc3_condition"
+                                data-imageset="kleinklima"
+                                style="width:110px;padding:0;margin:0;margin-bottom:-6px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc3_condition"
+                                style="font-size:90%"></div>
+                        <div style="padding-bottom:25px !important"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="1" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc3_low_c"
+                                data-limits="[-50,0,10,25,30,40]"
+                                data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                                data-unit=" °C"
+                                  class="inline"></div>
+                                -
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc3_high_c"
+                                data-limits="[-50,0,10,25,30,40]"
+                                data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                                data-unit=" °C"
+                                class="inline"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="WETTER_PROPLANTA"
+                                data-get="fc2_chOfRainDay"
+                                data-unit=" %"></div>
+                    </td>
+                </tr>
+                                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="9" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="WETTER_COM"
+                                data-get="fc2_wind"
+                                data-unit=" km/h"
+                                data-limits="[0,        19,       28,       38,       49,       74,       102,      117]"
+                                data-colors='["#ffffff","#dddddd","#aa6900","#aa6900","#ff9999","#ff6666","#ff3333","#ff0000"]'
+                                style="display:inline"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style="text-align:center">
+                            <div data-type="wind_direction" 
+                                data-device="WETTER_COM"
+                                data-direction="fc2_windDir"
+                                data-speed="fc2_wind"
+                                data-size="80"
+                                class="cell"
+                                style="padding-top:85px"></div>
+                        </div>
+                    </td>
+                </tr>
+                            </table>
+        </div>
+    </li>
+    
+    <li data-row="1" data-col="5" data-sizex="1" data-sizey="2">
+        <header><div data-type="label" data-device="Wetter" data-get="fc4_day_of_week"></div></header>
+        <div class="centered container weather">
+                        <table>
+                <tr>
+                    <td colspan="2">
+                            <div data-type="weather" 
+                                data-device="Wetter"
+                                data-get="fc4_condition"
+                                data-imageset="kleinklima"
+                                style="width:110px;padding:0;margin:0;margin-bottom:-6px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc4_condition"
+                                style="font-size:90%"></div>
+                        <div style="padding-bottom:25px !important"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="1" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc4_low_c"
+                                data-limits="[-50,0,10,25,30,40]"
+                                data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                                data-unit=" °C"
+                                  class="inline"></div>
+                                -
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc4_high_c"
+                                data-limits="[-50,0,10,25,30,40]"
+                                data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                                data-unit=" °C"
+                                class="inline"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="WETTER_PROPLANTA"
+                                data-get="fc3_chOfRainDay"
+                                data-unit=" %"></div>
+                    </td>
+                </tr>
+                            </table>
+        </div>
+    </li>
+    <li data-row="1" data-col="6" data-sizex="1" data-sizey="2">
+        <header><div data-type="label" data-device="Wetter" data-get="fc5_day_of_week"></div></header>
+        <div class="centered container weather">
+                        <table>
+                <tr>
+                    <td colspan="2">
+                            <div data-type="weather" 
+                                data-device="Wetter"
+                                data-get="fc5_condition"
+                                data-imageset="kleinklima"
+                                style="width:110px;padding:0;margin:0;margin-bottom:-6px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc5_condition"
+                                style="font-size:90%"></div>
+                        <div style="padding-bottom:25px !important"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="1" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc5_low_c"
+                                data-limits="[-50,0,10,25,30,40]"
+                                data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                                data-unit=" °C"
+                                  class="inline"></div>
+                                -
+                            <div data-type="label" 
+                                data-device="Wetter"
+                                data-get="fc5_high_c"
+                                data-limits="[-50,0,10,25,30,40]"
+                                data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+                                data-unit=" °C"
+                                class="inline"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
+                    </td>
+                    <td>
+                            <div data-type="label" 
+                                data-device="WETTER_PROPLANTA"
+                                data-get="fc4_chOfRainDay"
+                                data-unit=" %"></div>
+                    </td>
+                </tr>
+                            </table>
+        </div>
+    </li>
+    
+    <li data-row="3" data-col="5" data-sizex="2" data-sizey="2">
+        <a id="imgmaplink" href="http://wopr/tui/room/aussen-iframe.php?content=dwd_de"><img id="imgmap" src="http://www.dwd.de/wundk/wetter/de/Deutschland.jpg" width='100%' height='100%' data-number="0" alt="Wetterkarte"></a>
+        <script>
+            $(document).ready(function() {
+                setInterval(function() {
+                    var n = $("#imgmap").data("number");
+                    var newsrc;
+                    var newsrckey;
+                    switch(n) {
+                        case 0:  newsrckey = 'dwd_de_nacht';        newsrc = "http://www.dwd.de/wundk/wetter/de/Deutschland_heute_nacht.jpg"; break;
+                        case 1:  newsrckey = 'wetteronline_radar';  newsrc = "http://www.wetteronline.de/?pid=p_radar_map&amp;ireq=true&amp;src=radar/vermarktung/p_radar_map_forecast/forecastLoop/DL/latestForecastLoop.gif"; break;
+                        case 2:  newsrckey = 'wetteronline_wolken'; newsrc = "http://www.wetteronline.de/?pid=p_sat_image&amp;ireq=true&amp;src=sat/vermarktung/p_sat_image/geostationary/createImages/wom/2015/04/14/CloudMask/DL/201504141000_DL_CloudMask.jpeg&amp;version=0"; break;
+                        case 3:  newsrckey = 'austro_sat';          newsrc = "https://www.austrocontrol.at/jart/met/radar/satloop.gif"; break;
+                        case 4:  newsrckey = 'kontor_de';           newsrc = "http://img.wetterkontor.de/karten/deutschland0.jpg"; break;
+                        default: newsrckey = 'dwd_de';              newsrc = "http://www.dwd.de/wundk/wetter/de/Deutschland.jpg"; n=-1; break;
+                    }
+                    $("#imgmap").attr('src', newsrc);
+                    $("#imgmaplink").attr('href', 'aussen-iframe.php?content='+newsrckey);
+                    $("#imgmap").data("number", n+1)
+                }, 5000);
+            });
+        </script>
+    </li>
+    
+    <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+        <header>UV</header>
+        <div class="centered">
+    <div data-type="label" 
+        data-device="UVOZON" 
+        data-get="UV"  
+        data-unit=" min" 
+        data-limits='[0,        29,   59,      119,       239]'
+        data-colors='["fuchsia","red","orange","#aa6900", "white"]'
+        class="big"></div>
+    <div data-type="label" data-device="UVOZON" data-get="UVDesc" style="margin-top:20px;width:100px;height:100px;white-space:normal"></div>
+</div>    </li>
+    <li data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+        <header>OZON</header>
+        <div class="centered">
+    <div data-type="label" 
+        data-device="UVOZON" 
+        data-get="Ozon" 
+        data-unit=" µg/m3" 
+        data-limits='[0,      110,   180,   200,360]'
+        data-colors='["#aa6900","yellow","orange","red","fuchsia"]'
+        class="big"></div>
+    <div data-type="label" data-device="UVOZON" data-get="OzonDesc" style="margin-top:20px"></div>
+</div>    </li>
+    <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">
+        <header>MOND</header>
+        <a href="http://wopr/tui/room/aussen-iframe.php?content=moon"><img src="http://www.astronomie.de/Images/Himmelaktuell/obsmoon.gif" width="105" alt="Mond"></a>    </li>
+</ul>    </div>
+</body>
+</html>

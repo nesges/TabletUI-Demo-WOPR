@@ -1,4 +1,4 @@
-<div class="container">
+<div class="centered container">
     <div class="left">
 	    <div data-type="label" data-device="A_HUMID" data-get="temperature" data-unit=" %B0C%0A" class="cell big"></div>
 	    <div class="centered container">

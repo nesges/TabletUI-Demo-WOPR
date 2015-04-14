@@ -146,8 +146,37 @@ div.weather div[data-type=symbol] {
 	color: #aa6900;
 }
 
+.meteocons_grey:before {
+	font-family: 'MeteoconsRegular';
+	content: attr(data-icon);
+	color: #2a2a2a;
+}
+
 iframe {
     background-color: transparent;
     overflow:hidden;
     border:none;
 }
+
+table.pollen {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    width:100%;
+}
+
+table.pollen td  {
+    padding:0px;
+    margin:0px;
+    text-align:center;
+    vertical-align:middle;
+    width:25%;
+}
+
+//.widget_settimer_buttons {
+//    margin-top:7px;
+//    margin-right:10px;
+//}
+//.widget_settimer_knobs {
+//    margin-top:5px;
+//    margin-left:10px;
+//}

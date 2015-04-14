@@ -8,11 +8,14 @@
     include_once("template/template.its150.php");
     include_once("template/template.kodi.php");
     include_once("template/template.klima.php");
+    include_once("template/template.pollen.php");
+    include_once("template/template.weathermap.php");
+    include_once("template/template.weatherforecast.php");
 
     $ftui="../fhem-tablet-ui/www/tablet/";
 
     class UI {
-        function __construct($fhemweb_url='/fhem', $longpoll=1, $widget_base_width=120, $widget_base_height=131, $daydream=1) {
+        function __construct($fhemweb_url='/fhem', $longpoll=1, $widget_base_width=120, $widget_base_height=131, $daydream=0) {
             global $ftui;
             
             $this->fhemweb_url = $fhemweb_url;
@@ -35,9 +38,22 @@
         } else if ($_SERVER['REMOTE_ADDR'] == '192.168.178.51') {
             // handy
             ?><meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes"><?
+        } else if ($_SERVER['REMOTE_ADDR'] == '192.168.178.23' || $_SERVER['REMOTE_ADDR'] == '192.168.178.50') {
+            // MIST || WATER
+            ?>
+            <style type="text/css">
+                div.gridster {
+                    zoom: 1.2;
+                    -moz-transform: scale(1.2);
+                    -moz-transform-origin: 0 0;
+                }
+            </style>
+            <?  
         } else {
             ?><meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes"><?
+            //print "<pre>";
             //print_r($_SERVER);
+            //print "</pre>";
         }
     ?>
     <meta name="mobile-web-app-capable" content="yes">
@@ -69,10 +85,16 @@
     <link rel="stylesheet" href="<?= $ftui ?>lib/font-awesome.min.css">
     <link rel="stylesheet" href="<?= $ftui ?>lib/jquery.toast.min.css">
     <link rel="stylesheet" href="<?= $ftui ?>lib/powerange.min.css" />
-
     <link rel="stylesheet" href="../css/wopr.css">
     
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../pgm2/jquery.min.js"></script>
+    <script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="<?= $ftui ?>/css/theme/amber/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="<?= $ftui ?>/css/theme/amber/jquery-ui.theme.css" />
+    <link rel="stylesheet" href="<?= $ftui ?>/css/theme/amber/ftui.css" />
+    
+    
     <script type="text/javascript" src="<?= $ftui ?>lib/jquery.gridster.min.js"></script>
     <script type="text/javascript" src="<?= $ftui ?>lib/jquery.knob.mod.min.js"></script>
     <script type="text/javascript" src="<?= $ftui ?>lib/jquery.toast.min.js"></script>
@@ -91,6 +113,22 @@
     <meta name="daydream_starttime" content="1800000">
     <meta name="daydream_slowdown" content="10000">
     <script type="text/javascript" src="../js/daydream.js"></script>
+<?
+            }
+            if ($_SERVER['REMOTE_ADDR'] == '192.168.178.88') {
+?>
+    <script type="text/javascript" src="../js/bubbles.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            bubbles.init(1800000,-5,250);
+        });
+        $(document).mousemove(function(event) {
+            bubbles.restart();
+        });
+        $(document).click(function(event) {
+            bubbles.restart();
+        });
+    </script>
 <?
             }
 ?>

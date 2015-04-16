@@ -116,7 +116,7 @@
             }
             if ($_SERVER['REMOTE_ADDR'] == '192.168.178.88') {
 ?>
-    <script type="text/javascript" src="../js/bubbles.js"></script>
+    <!--script type="text/javascript" src="../js/bubbles.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             bubbles.init(1800000,-5,250);
@@ -127,7 +127,7 @@
         $(document).click(function(event) {
             bubbles.restart();
         });
-    </script>
+    </script-->
 <?
             }
 ?>

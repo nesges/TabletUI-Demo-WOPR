@@ -32,7 +32,7 @@
                     data-icon='fa-phone'
                     data-on-color='#aa6900'
                     data-off-color='#aa6900'
-                    data-fhem-cmd='<?=urlencode("{call($number)}")?>'
+                    data-fhem-cmd='{call(<?=$number?>)}'
                     data-background-icon="fa-circle-thin"
                     data-on-background-color="#aa6900"
                     data-off-background-color="#aa6900"

@@ -624,7 +624,7 @@
                     switch(n) {
                         case 0:  newsrckey = 'dwd_de_nacht';        newsrc = "http://www.dwd.de/wundk/wetter/de/Deutschland_heute_nacht.jpg"; break;
                         case 1:  newsrckey = 'wetteronline_radar';  newsrc = "http://www.wetteronline.de/?pid=p_radar_map&amp;ireq=true&amp;src=radar/vermarktung/p_radar_map_forecast/forecastLoop/DL/latestForecastLoop.gif"; break;
-                        case 2:  newsrckey = 'wetteronline_wolken'; newsrc = "http://www.wetteronline.de/?pid=p_sat_image&amp;ireq=true&amp;src=sat/vermarktung/p_sat_image/geostationary/createImages/wom/2015/04/14/CloudMask/DL/201504141400_DL_CloudMask.jpeg&amp;version=0"; break;
+                        case 2:  newsrckey = 'wetteronline_wolken'; newsrc = "http://www.wetteronline.de/?pid=p_sat_image&amp;ireq=true&amp;src=sat/vermarktung/p_sat_image/geostationary/createImages/wom/2015/04/16/CloudMask/DL/201504162000_DL_CloudMask.jpeg&amp;version=0"; break;
                         case 3:  newsrckey = 'austro_sat';          newsrc = "https://www.austrocontrol.at/jart/met/radar/satloop.gif"; break;
                         case 4:  newsrckey = 'kontor_de';           newsrc = "http://img.wetterkontor.de/karten/deutschland0.jpg"; break;
                         default: newsrckey = 'dwd_de';              newsrc = "http://www.dwd.de/wundk/wetter/de/Deutschland.jpg"; n=-1; break;
@@ -662,8 +662,18 @@
     <div data-type="label" data-device="UVOZON" data-get="OzonDesc" style="margin-top:20px"></div>
 </div>    </li>
     <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">
-        <header>MOND</header>
-        <a href="http://wopr/tui/room/aussen-iframe.php?content=moon"><img src="http://www.astronomie.de/Images/Himmelaktuell/obsmoon.gif" width="105" alt="Mond"></a>    </li>
+        <header>UNWETTER</header>
+        <a href="http://www.dwd.de/dyn/app/ws/html/reports/BIT_warning_de.html"><div data-type="label"
+            data-device="DWD_WARNING"
+            data-get="text"
+            style="margin-top:10px"
+        ></div></a>
+        <a href="http://www.dwd.de/dyn/app/ws/html/reports/BIT_warning_de.html"><div data-type="label"
+            data-device="DWD_WARNING"
+            data-get="time"
+            style="margin-top:20px"
+        ></div></a>
+    </li>
 </ul>    </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 mv ../secrets.php ../secrets_save.php
-mv ../secrets_public.php secrets.php
+mv ../secrets_public.php ../secrets.php
 
 cp -a ../tui/room php
 rm php/room/test*.php
@@ -32,4 +32,4 @@ for p in screenshots/*.png
     do convert -resize 400x400 "$p" "screenshots/small/`basename $p`"
 done
 
-mv ../secrets_save.php secrets.php
+mv ../secrets_save.php ../secrets.php

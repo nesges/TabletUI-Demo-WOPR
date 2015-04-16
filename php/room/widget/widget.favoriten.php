@@ -7,7 +7,7 @@
                     <li><div data-type="button" data-url="wohnzimmer-pc.php" data-icon="fa-desktop"></div></li>
                     <li><div data-type="button" data-url="wohnzimmer-xbmc-simple.php" data-icon="fa-play-circle"></div></li>
                     <li><div data-type="switch" data-device="W_SWITCH_D1_Monitore" data-icon="fa-desktop" data-color="#505050"></div></li>
-                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22WATER%22%2C+%22Winamp+Playlist+DLF%22%29%7D" data-icon="fa-music" data-on-background-color="#2E8AE6"></div></li>
+                    <li><div data-type="button" data-fhem-cmd="{eventghost('WATER','Winamp Playlist DLF')}" data-icon="fa-music" data-on-background-color="#2E8AE6"></div></li>
                     <li><div data-type="button" data-url="wohnzimmer-milight.php" data-icon="fa-lightbulb-o"></div></li>
                 </ul>
             </div>
@@ -19,8 +19,8 @@
                 <ul class="menu">
                     <li><div data-type="symbol" data-icon="fa-laptop" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
                     <li><div data-type="button" data-url="buero-pc.php" data-icon="fa-desktop"></div></li>
-                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22MIST%22%2C+%22Winamp+Play+Toggle%22%29%7D" data-icon="fa-play" data-on-background-color="#FFCC00"></div></li>
-                    <li><div data-type="button" data-fhem-cmd="%7Beventghost%28%22MIST%22%2C+%22Winamp+Playlist+DLF%22%29%7D" data-icon="fa-music" data-on-background-color="#2E8AE6"></div></li>
+                    <li><div data-type="button" data-fhem-cmd="{eventghost('MIST','Winamp Play Toggle')}" data-icon="fa-play" data-on-background-color="#FFCC00"></div></li>
+                    <li><div data-type="button" data-fhem-cmd="{eventghost('WATER','Winamp Playlist DLF')} data-icon="fa-music" data-on-background-color="#2E8AE6"></div></li>
                 </ul>
             </div>
             <div data-type="label" class="cell">B&uuml;ro</div>

@@ -82,7 +82,16 @@
         <? include('widget/widget.weather-ozon.php') ?>
     </li>
     <li data-row="4" data-col="4" data-sizex="1" data-sizey="1">
-        <header>MOND</header>
-        <? include("widget/widget.moon.php") ?>
+        <header>UNWETTER</header>
+        <a href="http://www.dwd.de/dyn/app/ws/html/reports/BIT_warning_de.html"><div data-type="label"
+            data-device="DWD_WARNING"
+            data-get="text"
+            style="margin-top:10px"
+        ></div></a>
+        <a href="http://www.dwd.de/dyn/app/ws/html/reports/BIT_warning_de.html"><div data-type="label"
+            data-device="DWD_WARNING"
+            data-get="time"
+            style="margin-top:20px"
+        ></div></a>
     </li>
 </ul>

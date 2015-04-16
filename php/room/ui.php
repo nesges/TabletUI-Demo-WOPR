@@ -67,19 +67,6 @@
     <meta name="gridster_disable" content="1">
     <meta name="widget_dir" content="../Widgets-for-fhem-tablet-ui/js">
     
-    <meta name="color_scheme" content="amber">
-    <meta name="color_background"                           content="#000000">
-    <meta name="color_widget_background"                    content="#2a2a2a">
-    <meta name="color_text"                                 content="#ffffff">
-    <meta name="color_text_emphasized"                      content="#aa6900">
-    <meta name="color_text_dampened"                        content="#262626">
-    <meta name="color_multibutton_background_off"           content="#505050">
-    <meta name="color_multibutton_background_on"            content="#aa6900">
-    <meta name="color_multibutton_background_emphasized"    content="#aa6900">
-    <meta name="color_multibutton_background_dampened"      content="#6f4509">
-    <meta name="color_multibutton_foreground_off"           content="#2a2a2a">
-    <meta name="color_multibutton_foreground_on"            content="#2a2a2a">
-    
     <link rel="stylesheet" href="<?= $ftui ?>lib/jquery.gridster.min.css">
     <link rel="stylesheet" href="<?= $ftui ?>css/fhem-tablet-ui.css">
     <link rel="stylesheet" href="<?= $ftui ?>lib/font-awesome.min.css">
@@ -90,10 +77,9 @@
     <script type="text/javascript" src="../pgm2/jquery.min.js"></script>
     <script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script>
 
-    <link rel="stylesheet" href="<?= $ftui ?>/css/theme/amber/jquery-ui.structure.css" />
-    <link rel="stylesheet" href="<?= $ftui ?>/css/theme/amber/jquery-ui.theme.css" />
-    <link rel="stylesheet" href="<?= $ftui ?>/css/theme/amber/ftui.css" />
-    
+    <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
+    <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
     
     <script type="text/javascript" src="<?= $ftui ?>lib/jquery.gridster.min.js"></script>
     <script type="text/javascript" src="<?= $ftui ?>lib/jquery.knob.mod.min.js"></script>

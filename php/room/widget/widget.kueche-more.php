@@ -4,8 +4,8 @@
 	    <div data-type="label">K&Uuml;HL</div>
     </div>
     <div class="left">
-	    <? button('xbmc',       'kueche-xbmc.php', 'fa-play-circle') ?>
-	    <div data-type="label">XBMC</div>
+	    <? button('xbmc',       'kueche-xbmc.php', 'nesges-kodi') ?>
+	    <div data-type="label">KODI</div>
     </div>
     <div class="left">
 	    <? button('milight',    'kueche-milight.php', 'fa-lightbulb-o') ?>

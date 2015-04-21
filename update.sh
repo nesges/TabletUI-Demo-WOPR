@@ -7,6 +7,7 @@ rm php/room/daydream.php
 
 cp -a ../tui/css html
 cp -a ../tui/js/ html
+cp -a ../tui/fonts/ html
 
 mkdir download
 cd download
@@ -15,7 +16,7 @@ rm ui.php
 for p in *.php; do mv "$p" "`echo \"$p\"|sed -s 's#\.php$#.html#'`"; done;
 cd ..
 
-rm html/room/*
+rm -r html/room/*
 mv download/* html/room/
 rm -r download
 

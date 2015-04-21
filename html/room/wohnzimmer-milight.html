@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/openautomation.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/fhemSVG.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
     <link rel="stylesheet" href="../css/wopr.css">
@@ -26,6 +28,8 @@
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
     <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
+    
+    <link rel="stylesheet" href="../fonts/nesges/style.css">
     
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.knob.mod.min.js"></script>
@@ -38,6 +42,8 @@
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
+    
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_symbol.js"></script>
 </head>
 <body>
     <div class="gridster">
@@ -55,14 +61,15 @@
     });
 </script>
 <div class="container">
+            
     <div id="room_index" data-type="button" data-url="index.php" data-icon="fa-home" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="fa-film" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="nesges-sofa" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_kueche" data-type="button" data-url="kueche.php" data-icon="fa-cutlery" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_schlafzimmer" data-type="button" data-url="schlafzimmer.php" data-icon="fa-bed" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_bad" data-type="button" data-url="bad.php" data-icon="fa-female" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="fa-laptop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="nesges-user-tie" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_aussen" data-type="button" data-url="aussen.php" data-icon="fa-sun-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-gears" data-on-background-color="rgb(80,80,80)" class="cell"></div>
+    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-sliders" data-on-background-color="rgb(80,80,80)" class="cell"></div>
 
     <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
 </div>
@@ -120,7 +127,7 @@
         <header>MILIGHT 4</header>
         <div class="centered container" style="margin-top:10px !important">
     <div data-type="volume" 
-        data-device="MILIGHT_Zone4_Buero"
+        data-device="MILIGHT_Zone4_Wohnzimmer"
         data-step="0.5"
         data-get="brightness"
         data-set="dim"
@@ -129,7 +136,7 @@
         class="dim-back"
         ></div>
     <div data-type="volume" 
-        data-device="MILIGHT_Zone4_Buero"
+        data-device="MILIGHT_Zone4_Wohnzimmer"
         data-get="hue"
         data-set="hue"
         data-min="0"
@@ -138,14 +145,14 @@
         ></div>
     <div class="centered">
         <div data-type="switch" 
-            data-device="MILIGHT_Zone4_Buero"
+            data-device="MILIGHT_Zone4_Wohnzimmer"
             data-get-on="on.*"
             data-get-off="off"
             data-set-on="on"
             data-set-off="off"
             ></div>
         <div data-type="switch" 
-            data-device="MILIGHT_Zone4_Buero"
+            data-device="MILIGHT_Zone4_Wohnzimmer"
             data-get="saturation"
             data-get-on="0"
             data-get-off="100"
@@ -155,12 +162,12 @@
             ></div>
     </div>
     <div class="centered" style="margin-top:20px !important">
-        <div id="orange" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Buero hue 50" data-icon="fa-paint-brush" data-on-background-color="hsl(50,100%,50%)" class="cell"></div>
-        <div id="green" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Buero hue 130" data-icon="fa-paint-brush" data-on-background-color="hsl(130,100%,50%)" class="cell"></div>
-        <div id="lblue" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Buero hue 190" data-icon="fa-paint-brush" data-on-background-color="hsl(190,100%,50%)" class="cell"></div>
-        <div id="blue" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Buero hue 240" data-icon="fa-paint-brush" data-on-background-color="hsl(240,100%,50%)" class="cell"></div>
-        <div id="pink" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Buero hue 320" data-icon="fa-paint-brush" data-on-background-color="hsl(320,100%,50%)" class="cell"></div>
-        <div id="red" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Buero hue 360" data-icon="fa-paint-brush" data-on-background-color="hsl(360,100%,50%)" class="cell"></div>
+        <div id="orange" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Wohnzimmer hue 50" data-icon="fa-paint-brush" data-on-background-color="hsl(50,100%,50%)" class="cell"></div>
+        <div id="green" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Wohnzimmer hue 130" data-icon="fa-paint-brush" data-on-background-color="hsl(130,100%,50%)" class="cell"></div>
+        <div id="lblue" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Wohnzimmer hue 190" data-icon="fa-paint-brush" data-on-background-color="hsl(190,100%,50%)" class="cell"></div>
+        <div id="blue" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Wohnzimmer hue 240" data-icon="fa-paint-brush" data-on-background-color="hsl(240,100%,50%)" class="cell"></div>
+        <div id="pink" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Wohnzimmer hue 320" data-icon="fa-paint-brush" data-on-background-color="hsl(320,100%,50%)" class="cell"></div>
+        <div id="red" data-type="button" data-fhem-cmd="set MILIGHT_Zone4_Wohnzimmer hue 360" data-icon="fa-paint-brush" data-on-background-color="hsl(360,100%,50%)" class="cell"></div>
     </div>
 </div>
     </li>
@@ -221,11 +228,11 @@
         <header>WEITER</header>
     	<div class="centered container">
     <div class="left">
-	    <div id="pc" data-type="button" data-url="wohnzimmer-pc.php" data-icon="fa-desktop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	    <div id="pc" data-type="button" data-url="wohnzimmer-pc.php" data-icon="fa-laptop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	    <div data-type="label">PC</div>
     </div>
     <div class="left">
-	    <div id="xbmc" data-type="button" data-url="wohnzimmer-xbmc-simple.php" data-icon="fa-play-circle" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	    <div id="xbmc" data-type="button" data-url="wohnzimmer-xbmc-simple.php" data-icon="nesges-kodi" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	    <div data-type="label">KODI</div>
     </div>
     <div class="left">

@@ -20,7 +20,7 @@
     	        <? include("widget/widget.buero-more.php") ?>
     	    </div>
     	    <div class="left">
-    	        <? button('xbmc',  'buero-xbmc-simple.php', 'fa-play-circle') ?>
+    	        <? button('xbmc',  'buero-xbmc-simple.php', 'nesges-kodi') ?>
     	        <div data-type="label">KODI</div>
     	    </div>
         </div>

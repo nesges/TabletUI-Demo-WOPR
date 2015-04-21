@@ -9,47 +9,47 @@
 	<header>WINAMP</header>
 	<div class="centered container">
 	    <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Start")}', 'fa-play-circle') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Start')}", 'fa-play-circle') ?>
             <div data-type="label">Ein</div>
         </div>
         <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Exit")}', 'fa-power-off') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Exit')}", 'fa-power-off') ?>
 	        <div data-type="label">Aus</div>
 	    </div>
 	    <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Playlist Rockantenne")}', 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist Rockantenne')}", 'fa-music', '#2E8AE6') ?>
 	        <div data-type="label">Rockantenne</div>
         </div>
         <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Playlist Beggelfest13")}', 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist Beggelfest13')}", 'fa-music', '#2E8AE6') ?>
 	        <div data-type="label">BF13</div>
         </div>
         <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Playlist Tormentedradio")}', 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist Tormentedradio')}", 'fa-music', '#2E8AE6') ?>
 	        <div data-type="label">tormented</div>
         </div>
         <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Playlist DLF")}', 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist DLF')}", 'fa-music', '#2E8AE6') ?>
 	        <div data-type="label">DLF</div>
         </div>
         <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Playlist DKultur")}', 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist DKultur')}", 'fa-music', '#2E8AE6') ?>
 	        <div data-type="label">DKultur</div>
         </div>
         <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Playlist DWissen")}', 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist DWissen')}", 'fa-music', '#2E8AE6') ?>
 	        <div data-type="label">DWissen</div>
         </div>
     </div>
     <div class="centered container" style="margin-top:40px !important">
 	    <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Play Toggle")}', 'fa-play', '#FFCC00') ?>
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Pause")}', 'fa-pause', 'rgb(170,105,0)') ?>
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Stop")}', 'fa-stop', 'rgb(170,105,0)') ?>
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Previous")}', 'fa-step-backward') ?>
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Next")}', 'fa-step-forward') ?>
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Volume Down")}', 'fa-volume-down') ?>
-	        <? button_fhem('', '{eventghost("'.$host.'", "Winamp Volume Up")}', 'fa-volume-up') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Play Toggle')}", 'fa-play', '#FFCC00') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Pause')}", 'fa-pause', 'rgb(170,105,0)') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Stop')}", 'fa-stop', 'rgb(170,105,0)') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Previous')}", 'fa-step-backward') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Next')}", 'fa-step-forward') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Volume Down')}", 'fa-volume-down') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Volume Up')}", 'fa-volume-up') ?>
 	    </div>
     </div>
 </li>
@@ -60,7 +60,7 @@
 	    <div class="left">
             <div data-type="circlemenu" class="cell circlemenu">
                 <ul class="menu">
-                    <li><div data-type="symbol" data-icon="fa-play-circle" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
+                    <li><div data-type="symbol" data-icon="nesges-kodi" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
                     <li><div data-type="push" data-cmd="{eventghost('<?=$host?>', 'KODI Start')}" data-icon="fa-play-circle" data-off-background-color="#aa6900"></div></li>
                     <li><div data-type="push" data-cmd="{eventghost('<?=$host?>', 'KODI Focus')}" data-icon="fa-bullseye" data-off-background-color="#aa6900"></div></li>
                     <li><div data-type="push" data-cmd="{eventghost('<?=$host?>', 'KODI Exit')}" data-icon="fa-power-off" data-off-background-color="#aa6900"></div></li>
@@ -68,14 +68,14 @@
             </div>
         </div>
 	    <div class="left">
-	        <? button_fhem('', '{eventghost("'.$host.'", "KODI Play")}', 'fa-play', '#FFCC00') ?>
-            <? button_fhem('', '{eventghost("'.$host.'", "KODI Pause")}', 'fa-pause', 'rgb(170,105,0)') ?>
-            <? button_fhem('', '{eventghost("'.$host.'", "KODI Stop")}', 'fa-stop', 'rgb(170,105,0)') ?>
-            <? button_fhem('', '{eventghost("'.$host.'", "KODI Down")}', 'fa-angle-down', '#2E8AE6') ?>
-            <? button_fhem('', '{eventghost("'.$host.'", "KODI Up")}', 'fa-angle-up', '#2E8AE6') ?>
-            <? button_fhem('', '{eventghost("'.$host.'", "KODI Info")}', 'fa-info') ?>
-            <? button_fhem('', '{eventghost("'.$host.'", "KODI Back")}', 'fa-arrow-circle-o-left') ?>
-            <? button_fhem('', '{eventghost("'.$host.'", "KODI Fullscreen")}', 'fa-desktop') ?>
+	        <? button_fhem('', "{eventghost('".$host."', 'KODI Play')}", 'fa-play', '#FFCC00') ?>
+            <? button_fhem('', "{eventghost('".$host."', 'KODI Pause')}", 'fa-pause', 'rgb(170,105,0)') ?>
+            <? button_fhem('', "{eventghost('".$host."', 'KODI Stop')}", 'fa-stop', 'rgb(170,105,0)') ?>
+            <? button_fhem('', "{eventghost('".$host."', 'KODI Down')}", 'fa-angle-down', '#2E8AE6') ?>
+            <? button_fhem('', "{eventghost('".$host."', 'KODI Up')}", 'fa-angle-up', '#2E8AE6') ?>
+            <? button_fhem('', "{eventghost('".$host."', 'KODI Info')}", 'fa-info') ?>
+            <? button_fhem('', "{eventghost('".$host."', 'KODI Back')}", 'fa-arrow-circle-o-left') ?>
+            <? button_fhem('', "{eventghost('".$host."', 'KODI Fullscreen')}", 'fa-desktop') ?>
         </div>
     </div>
 

@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/openautomation.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/fhemSVG.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
     <link rel="stylesheet" href="../css/wopr.css">
@@ -26,6 +28,8 @@
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
     <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
+    
+    <link rel="stylesheet" href="../fonts/nesges/style.css">
     
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.knob.mod.min.js"></script>
@@ -38,6 +42,8 @@
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
+    
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_symbol.js"></script>
 </head>
 <body>
     <div class="gridster">
@@ -55,14 +61,15 @@
     });
 </script>
 <div class="container">
+            
     <div id="room_index" data-type="button" data-url="index.php" data-icon="fa-home" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="fa-film" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="nesges-sofa" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_kueche" data-type="button" data-url="kueche.php" data-icon="fa-cutlery" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_schlafzimmer" data-type="button" data-url="schlafzimmer.php" data-icon="fa-bed" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_bad" data-type="button" data-url="bad.php" data-icon="fa-female" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="fa-laptop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="nesges-user-tie" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_aussen" data-type="button" data-url="aussen.php" data-icon="fa-sun-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-gears" data-on-background-color="rgb(80,80,80)" class="cell"></div>
+    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-sliders" data-on-background-color="rgb(80,80,80)" class="cell"></div>
 
     <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
 </div>
@@ -73,47 +80,47 @@
 	<header>WINAMP</header>
 	<div class="centered container">
 	    <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Start")}" data-icon="fa-play-circle" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Start')}" data-icon="fa-play-circle" data-on-background-color="rgb(111,69,0)" class="cell"></div>
             <div data-type="label">Ein</div>
         </div>
         <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Exit")}" data-icon="fa-power-off" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Exit')}" data-icon="fa-power-off" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	        <div data-type="label">Aus</div>
 	    </div>
 	    <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Playlist Rockantenne")}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Playlist Rockantenne')}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
 	        <div data-type="label">Rockantenne</div>
         </div>
         <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Playlist Beggelfest13")}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Playlist Beggelfest13')}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
 	        <div data-type="label">BF13</div>
         </div>
         <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Playlist Tormentedradio")}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Playlist Tormentedradio')}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
 	        <div data-type="label">tormented</div>
         </div>
         <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Playlist DLF")}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Playlist DLF')}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
 	        <div data-type="label">DLF</div>
         </div>
         <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Playlist DKultur")}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Playlist DKultur')}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
 	        <div data-type="label">DKultur</div>
         </div>
         <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Playlist DWissen")}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Playlist DWissen')}" data-icon="fa-music" data-on-background-color="#2E8AE6" class="cell"></div>
 	        <div data-type="label">DWissen</div>
         </div>
     </div>
     <div class="centered container" style="margin-top:40px !important">
 	    <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Play Toggle")}" data-icon="fa-play" data-on-background-color="#FFCC00" class="cell"></div>
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Pause")}" data-icon="fa-pause" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Stop")}" data-icon="fa-stop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Previous")}" data-icon="fa-step-backward" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Next")}" data-icon="fa-step-forward" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Volume Down")}" data-icon="fa-volume-down" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "Winamp Volume Up")}" data-icon="fa-volume-up" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Play Toggle')}" data-icon="fa-play" data-on-background-color="#FFCC00" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Pause')}" data-icon="fa-pause" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Stop')}" data-icon="fa-stop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Previous')}" data-icon="fa-step-backward" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Next')}" data-icon="fa-step-forward" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Volume Down')}" data-icon="fa-volume-down" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'Winamp Volume Up')}" data-icon="fa-volume-up" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	    </div>
     </div>
 </li>
@@ -124,7 +131,7 @@
 	    <div class="left">
             <div data-type="circlemenu" class="cell circlemenu">
                 <ul class="menu">
-                    <li><div data-type="symbol" data-icon="fa-play-circle" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
+                    <li><div data-type="symbol" data-icon="nesges-kodi" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
                     <li><div data-type="push" data-cmd="{eventghost('MIST', 'KODI Start')}" data-icon="fa-play-circle" data-off-background-color="#aa6900"></div></li>
                     <li><div data-type="push" data-cmd="{eventghost('MIST', 'KODI Focus')}" data-icon="fa-bullseye" data-off-background-color="#aa6900"></div></li>
                     <li><div data-type="push" data-cmd="{eventghost('MIST', 'KODI Exit')}" data-icon="fa-power-off" data-off-background-color="#aa6900"></div></li>
@@ -132,14 +139,14 @@
             </div>
         </div>
 	    <div class="left">
-	        <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "KODI Play")}" data-icon="fa-play" data-on-background-color="#FFCC00" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "KODI Pause")}" data-icon="fa-pause" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "KODI Stop")}" data-icon="fa-stop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "KODI Down")}" data-icon="fa-angle-down" data-on-background-color="#2E8AE6" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "KODI Up")}" data-icon="fa-angle-up" data-on-background-color="#2E8AE6" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "KODI Info")}" data-icon="fa-info" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "KODI Back")}" data-icon="fa-arrow-circle-o-left" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("MIST", "KODI Fullscreen")}" data-icon="fa-desktop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	        <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI Play')}" data-icon="fa-play" data-on-background-color="#FFCC00" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI Pause')}" data-icon="fa-pause" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI Stop')}" data-icon="fa-stop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI Down')}" data-icon="fa-angle-down" data-on-background-color="#2E8AE6" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI Up')}" data-icon="fa-angle-up" data-on-background-color="#2E8AE6" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI Info')}" data-icon="fa-info" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI Back')}" data-icon="fa-arrow-circle-o-left" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI Fullscreen')}" data-icon="fa-desktop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
         </div>
     </div>
 
@@ -192,12 +199,12 @@
         <div class="centered container">
     	    <div class="left">
     	        <div class="centered container">
-    <div id="pc" data-type="button" data-url="buero-pc.php" data-icon="fa-desktop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="pc" data-type="button" data-url="buero-pc.php" data-icon="fa-laptop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div data-type="label">PC</div>
 </div>
     	    </div>
     	    <div class="left">
-    	        <div id="xbmc" data-type="button" data-url="buero-xbmc-simple.php" data-icon="fa-play-circle" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    	        <div id="xbmc" data-type="button" data-url="buero-xbmc-simple.php" data-icon="nesges-kodi" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     	        <div data-type="label">KODI</div>
     	    </div>
         </div>

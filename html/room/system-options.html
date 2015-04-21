@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/openautomation.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/fhemSVG.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
     <link rel="stylesheet" href="../css/wopr.css">
@@ -26,6 +28,8 @@
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
     <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
+    
+    <link rel="stylesheet" href="../fonts/nesges/style.css">
     
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.knob.mod.min.js"></script>
@@ -38,6 +42,8 @@
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
+    
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_symbol.js"></script>
 </head>
 <body>
     <div class="gridster">
@@ -234,19 +240,19 @@
         <header>ANTENNEN</header>
         <div class="centered container">
             <div>
-                <div data-type="switch" data-device="CUL1" data-get-on="Initialized" data-icon="fa-rss" class="readonly"></div>
+                <div data-type="switch" data-device="CUL1" data-get-on="Initialized" data-icon="fa-wifi" class="readonly"></div>
                 <div data-type="label">CUL 868</div>
             </div>
             <div>
-                <div data-type="switch" data-device="CUL433" data-get-on="Initialized" data-icon="fa-rss" class="readonly"></div>
+                <div data-type="switch" data-device="CUL433" data-get-on="Initialized" data-icon="fa-wifi" class="readonly"></div>
                 <div data-type="label">CUL 433</div>
             </div>
             <div>
-                <div data-type="switch" data-device="JEELINK" data-get-on="Initialized" data-icon="fa-rss" class="readonly"></div>
+                <div data-type="switch" data-device="JEELINK" data-get-on="Initialized" data-icon="fa-wifi" class="readonly"></div>
                 <div data-type="label">JEELINK</div>
             </div>
             <div>
-                <div data-type="switch" data-device="MILIGHT" data-get-on="ok" data-icon="fa-rss" class="readonly"></div>
+                <div data-type="switch" data-device="MILIGHT" data-get-on="ok" data-icon="fa-wifi" class="readonly"></div>
                 <div data-type="label">MILIGHT</div>
             </div>
         </div>
@@ -273,20 +279,22 @@
     <li data-row="1" data-col="5" data-sizex="1" data-sizey="3">
         <header>BATTERIE</header>
         <div class="centered container">
-            <div data-type="switch" title="A_HUMID"          data-device="A_HUMID"            data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="A_HUMID"          class="readonly"></div>
-            <div data-type="switch" title="BAD_HUMID"        data-device="BAD_HUMID"          data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="BAD_HUMID"        class="readonly"></div>
-            <div data-type="switch" title="B_HEIZUNG"        data-device="B_HEIZUNG"          data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="B_HEIZUNG"        class="readonly"></div>
-            <div data-type="switch" title="B_THERMO"         data-device="B_THERMO"           data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="B_THERMO"         class="readonly"></div>
-            <div data-type="switch" title="KUEHL_THERMO"     data-device="KUEHL_THERMO"       data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="KUEHL_THERMO"     class="readonly"></div>
-            <div data-type="switch" title="S_FENSTER_LINKS"  data-device="S_FENSTER_LINKS"    data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="S_FENSTER_LINKS"  class="readonly"></div>
-            <div data-type="switch" title="S_THERMO"         data-device="S_THERMO"           data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="S_THERMO"         class="readonly"></div>
-            <div data-type="switch" title="W_FENSTER_Balkon" data-device="W_FENSTER_Balkon"   data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_FENSTER_Balkon" class="readonly"></div>
-            <div data-type="switch" title="W_HEIZUNG"        data-device="W_HEIZUNG"          data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_HEIZUNG"        class="readonly"></div>
-            <div data-type="switch" title="W_HEIZUNG_BALKON" data-device="W_HEIZUNG_BALKON"   data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_HEIZUNG_BALKON" class="readonly"></div>
-            <div data-type="switch" title="W_HEIZUNG_COUCH"  data-device="W_HEIZUNG_COUCH"    data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_HEIZUNG_COUCH"  class="readonly"></div>
-            <div data-type="switch" title="W_HUMID"          data-device="W_HUMID"            data-get="battery" data-get-on="ok" data-icon="fa-bolt" title="W_HUMID"          class="readonly"></div>
+            <div data-type="symbol" title="A_HUMID"          data-device="A_HUMID"            data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="A_HUMID"          data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="BAD_HUMID"        data-device="BAD_HUMID"          data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="BAD_HUMID"        data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="B_HEIZUNG"        data-device="B_HEIZUNG"          data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="B_HEIZUNG"        data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="B_THERMO"         data-device="B_THERMO"           data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="B_THERMO"         data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="KUEHL_THERMO"     data-device="KUEHL_THERMO"       data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="KUEHL_THERMO"     data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="S_FENSTER_LINKS"  data-device="S_FENSTER_LINKS"    data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="S_FENSTER_LINKS"  data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="S_THERMO"         data-device="S_THERMO"           data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="S_THERMO"         data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="W_FENSTER_Balkon" data-device="W_FENSTER_Balkon"   data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="W_FENSTER_Balkon" data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="W_HEIZUNG"        data-device="W_HEIZUNG"          data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="W_HEIZUNG"        data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="W_HEIZUNG_BALKON" data-device="W_HEIZUNG_BALKON"   data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="W_HEIZUNG_BALKON" data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="W_HEIZUNG_COUCH"  data-device="W_HEIZUNG_COUCH"    data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="W_HEIZUNG_COUCH"  data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
+            <div data-type="symbol" title="W_HUMID"          data-device="W_HUMID"            data-get="battery" data-get-on='["low","ok"]' data-icons='["oa-measure_battery_25","oa-measure_battery_100"]' data-on-colors='["#505050","#aa6900"]' title="W_HUMID"          data-background-icon="fa-circle-thin" data-off-background-color="#505050"></div>
         </div>
     </li>
-</ul>    </div>
+</ul>
+
+<script     </div>
 </body>
 </html>

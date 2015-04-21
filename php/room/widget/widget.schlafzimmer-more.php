@@ -1,10 +1,10 @@
 <div class="centered container">
     <div class="left">
-	    <? button('pc',         'schlafzimmer-pc.php', 'fa-desktop') ?>
+	    <? button('pc',         'schlafzimmer-pc.php', 'fa-laptop') ?>
 	    <div data-type="label">PC</div>
     </div>
     <div class="left">
-	    <? button('xbmc',       'schlafzimmer-xbmc-simple.php', 'fa-play-circle') ?>
+	    <? button('xbmc',       'schlafzimmer-xbmc-simple.php', 'nesges-kodi') ?>
 	    <div data-type="label">KODI</div>
     </div>
     <div class="left">

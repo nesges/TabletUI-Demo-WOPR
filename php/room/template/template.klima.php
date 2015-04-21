@@ -51,7 +51,7 @@
         <div data-type="label" data-device="<?=$device_valve?>" data-get="valveposition" data-unit=" %" class="cell" data-fix="0" style="display:inline;margin:0 !important;"></div>
     </div>
     
-    <div data-type="switch" data-device="<?=$device?>_OVERRIDE" data-subtype="dummy10" data-icon="fa-hand-o-right"></div>
+    <div data-type="switch" data-device="<?=$device?>_OVERRIDE" data-subtype="dummy10" data-icon="fa-hand-o-right" class="bold"></div>
 <?        
     }
 ?>

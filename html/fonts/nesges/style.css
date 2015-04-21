@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'nesges';
+	src:url('fonts/nesges.eot?94nkm5');
+	src:url('fonts/nesges.eot?#iefix94nkm5') format('embedded-opentype'),
+		url('fonts/nesges.woff?94nkm5') format('woff'),
+		url('fonts/nesges.ttf?94nkm5') format('truetype'),
+		url('fonts/nesges.svg?94nkm5#nesges') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="nesges-"], [class*=" nesges-"] {
+	font-family: 'nesges';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	/* line-height: 1; */
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.nesges-user-tie:before {
+	content: "\e600";
+}
+
+.nesges-tv2:before {
+	content: "\e95b";
+}
+
+.nesges-fire:before {
+	content: "\e9a9";
+}
+
+.nesges-books:before {
+	content: "\e920";
+}
+
+.nesges-map:before {
+	content: "\e94b";
+}
+
+.nesges-hour-glass:before {
+	content: "\e979";
+}
+
+.nesges-man-woman:before {
+	content: "\e9de";
+}
+
+.nesges-enter:before {
+	content: "\ea13";
+}
+
+.nesges-exit:before {
+	content: "\ea14";
+}
+
+.nesges-sofa:before {
+	content: "\e605";
+}
+
+.nesges-kodi:before {
+	content: "\e604";
+}
+
+.nesges-alarmclock:before {
+	content: "\e601";
+}
+
+.nesges-radio:before {
+	content: "\e602";
+}
+
+.nesges-satellite:before {
+	content: "\e603";
+}
+

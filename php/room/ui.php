@@ -70,6 +70,8 @@
     <link rel="stylesheet" href="<?= $ftui ?>lib/jquery.gridster.min.css">
     <link rel="stylesheet" href="<?= $ftui ?>css/fhem-tablet-ui.css">
     <link rel="stylesheet" href="<?= $ftui ?>lib/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= $ftui ?>lib/openautomation.css">
+    <link rel="stylesheet" href="<?= $ftui ?>lib/fhemSVG.css">
     <link rel="stylesheet" href="<?= $ftui ?>lib/jquery.toast.min.css">
     <link rel="stylesheet" href="<?= $ftui ?>lib/powerange.min.css" />
     <link rel="stylesheet" href="../css/wopr.css">
@@ -80,6 +82,8 @@
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
     <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
+    
+    <link rel="stylesheet" href="../fonts/nesges/style.css">
     
     <script type="text/javascript" src="<?= $ftui ?>lib/jquery.gridster.min.js"></script>
     <script type="text/javascript" src="<?= $ftui ?>lib/jquery.knob.mod.min.js"></script>
@@ -92,6 +96,8 @@
     <script type="text/javascript" src="<?= $ftui ?>js/fhem-tablet-ui.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
+    
+    <script type="text/javascript" src="<?= $ftui ?>js/widget_symbol.js"></script>
 <?
             if($daydream) {
 ?>

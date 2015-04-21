@@ -43,7 +43,9 @@ $( document ).ready(function() {
     $('div[data-type="symbol"]').each(function(index) {
         switch($(this).attr('data-subtype')) {
             case "MAX":
-                $(this).attr('data-get-on', $(this).attr('data-get-on') || 'opened');
+                $(this).attr('data-get-on', $(this).attr('data-get-on') || '["opened","closed"]');
+                $(this).attr('data-icons', $(this).attr('data-icons') || '["oa-fts_window_2w_open_lr","oa-fts_window_2w"]');
+                $(this).attr('data-on-colors', $(this).attr('data-icons') || '["#aa6900","#505050"]');
                 break;
             case "POLLEN":
                 $(this).attr('data-get-off', $(this).attr('data-get-off') || '0');

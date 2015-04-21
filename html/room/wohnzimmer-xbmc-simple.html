@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/openautomation.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/fhemSVG.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
     <link rel="stylesheet" href="../css/wopr.css">
@@ -26,6 +28,8 @@
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
     <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
+    
+    <link rel="stylesheet" href="../fonts/nesges/style.css">
     
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.knob.mod.min.js"></script>
@@ -38,6 +42,8 @@
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
+    
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_symbol.js"></script>
 </head>
 <body>
     <div class="gridster">
@@ -55,14 +61,15 @@
     });
 </script>
 <div class="container">
+            
     <div id="room_index" data-type="button" data-url="index.php" data-icon="fa-home" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="fa-film" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_wohnzimmer" data-type="button" data-url="wohnzimmer.php" data-icon="nesges-sofa" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_kueche" data-type="button" data-url="kueche.php" data-icon="fa-cutlery" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_schlafzimmer" data-type="button" data-url="schlafzimmer.php" data-icon="fa-bed" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_bad" data-type="button" data-url="bad.php" data-icon="fa-female" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="fa-laptop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    <div id="room_buero" data-type="button" data-url="buero.php" data-icon="nesges-user-tie" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     <div id="room_aussen" data-type="button" data-url="aussen.php" data-icon="fa-sun-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-gears" data-on-background-color="rgb(80,80,80)" class="cell"></div>
+    <div id="options" data-type="button" data-url="system-light.php" data-icon="fa-sliders" data-on-background-color="rgb(80,80,80)" class="cell"></div>
 
     <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
 </div>
@@ -71,53 +78,53 @@
     <li data-row="1" data-col="2" data-sizex="4" data-sizey="4">
         <header>KODI REMOTE</header>
         <div class="centered container">
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Reverse")}" data-icon="fa-backward" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Pause")}" data-icon="fa-pause" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Play")}" data-icon="fa-play" data-on-background-color="#FFCC00" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Stop")}" data-icon="fa-stop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Forward")}" data-icon="fa-forward" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Reverse')}" data-icon="fa-backward" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Pause')}" data-icon="fa-pause" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Play')}" data-icon="fa-play" data-on-background-color="#FFCC00" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Stop')}" data-icon="fa-stop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Forward')}" data-icon="fa-forward" data-on-background-color="rgb(170,105,0)" class="cell"></div>
         </div>
         
         <div data-type="kodinowplaying" data-device="W_XBMC"></div>
         
         <div style="margin-top:18px" class="centered container">
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Back")}" data-icon="fa-arrow-circle-o-left" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Close")}" data-icon="fa-times" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Up")}" data-icon="fa-angle-up" data-on-background-color="#2E8AE6" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI OSD")}" data-icon="fa-bars" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Info")}" data-icon="fa-info" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Back')}" data-icon="fa-arrow-circle-o-left" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Close')}" data-icon="fa-times" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Up')}" data-icon="fa-angle-up" data-on-background-color="#2E8AE6" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI OSD')}" data-icon="fa-bars" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Info')}" data-icon="fa-info" data-on-background-color="rgb(170,105,0)" class="cell"></div>
         </div>
         <div class="centered container">
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Left")}" data-icon="fa-angle-left" data-on-background-color="#2E8AE6" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Ok")}" data-icon="fa-check-circle" data-on-background-color="#0066FF" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Right")}" data-icon="fa-angle-right" data-on-background-color="#2E8AE6" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Left')}" data-icon="fa-angle-left" data-on-background-color="#2E8AE6" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Ok')}" data-icon="fa-check-circle" data-on-background-color="#0066FF" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Right')}" data-icon="fa-angle-right" data-on-background-color="#2E8AE6" class="cell"></div>
         </div>
         <div class="centered container">
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Fullscreen")}" data-icon="fa-desktop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Down")}" data-icon="fa-angle-down" data-on-background-color="#2E8AE6" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Subtitle")}" data-icon="fa-pencil" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Fullscreen')}" data-icon="fa-desktop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Down')}" data-icon="fa-angle-down" data-on-background-color="#2E8AE6" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Subtitle')}" data-icon="fa-pencil" data-on-background-color="rgb(170,105,0)" class="cell"></div>
         </div>
         
         <div style="margin-top:30px" class="centered container">
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Mute")}" data-icon="fa-volume-off" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Volume Down")}" data-icon="fa-volume-down" data-on-background-color="rgb(170,105,0)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Volume Up")}" data-icon="fa-volume-up" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Mute')}" data-icon="fa-volume-off" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Volume Down')}" data-icon="fa-volume-down" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Volume Up')}" data-icon="fa-volume-up" data-on-background-color="rgb(170,105,0)" class="cell"></div>
             <div id="" data-type="button" data-url="/tui/room/wohnzimmer-xbmc.php" data-icon="fa-star" data-on-background-color="#0066FF" class="cell"></div>
         </div>
         
         <div style="margin-top:25px" class="centered container">
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Home")}" data-icon="fa-home" data-on-background-color="#9933FF" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Video")}" data-icon="fa-film" data-on-background-color="#9933FF" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Music")}" data-icon="fa-music" data-on-background-color="#9933FF" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Pictures")}" data-icon="fa-picture-o" data-on-background-color="#9933FF" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI TV")}" data-icon="fa-desktop" data-on-background-color="#9933FF" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Home')}" data-icon="fa-home" data-on-background-color="#9933FF" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Video')}" data-icon="fa-film" data-on-background-color="#9933FF" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Music')}" data-icon="fa-music" data-on-background-color="#9933FF" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Pictures')}" data-icon="fa-picture-o" data-on-background-color="#9933FF" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI TV')}" data-icon="fa-desktop" data-on-background-color="#9933FF" class="cell"></div>
         </div>
         
         <div class="centered container">
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Keyboard")}" data-icon="fa-keyboard-o" data-on-background-color="rgb(80,80,80)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Files")}" data-icon="fa-files-o" data-on-background-color="rgb(80,80,80)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Weather")}" data-icon="fa-sun-o" data-on-background-color="rgb(80,80,80)" class="cell"></div>
-            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Systemsettings")}" data-icon="fa-gears" data-on-background-color="rgb(80,80,80)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Keyboard')}" data-icon="fa-keyboard-o" data-on-background-color="rgb(80,80,80)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Files')}" data-icon="fa-files-o" data-on-background-color="rgb(80,80,80)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Weather')}" data-icon="fa-sun-o" data-on-background-color="rgb(80,80,80)" class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Systemsettings')}" data-icon="fa-gears" data-on-background-color="rgb(80,80,80)" class="cell"></div>
         </div>
     </li>
     
@@ -125,15 +132,15 @@
 	    <header>KODI</header>
 	    <div class="centered container">
 	        <div class="left">
-	            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Start")}" data-icon="fa-play-circle" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Start')}" data-icon="fa-play-circle" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	            <div data-type="label">Start</div>
 	        </div>
 	        <div class="left">
-                <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Exit")}" data-icon="fa-power-off" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+                <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Exit')}" data-icon="fa-power-off" data-on-background-color="rgb(111,69,0)" class="cell"></div>
                 <div data-type="label">Exit</div>
             </div>
 	        <div class="left">
-	            <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "KODI Focus")}" data-icon="fa-bullseye" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	            <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Focus')}" data-icon="fa-bullseye" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	            <div data-type="label">Focus</div>
             </div>
         </div>
@@ -143,15 +150,15 @@
     	<header>PC SHUTDOWN</header>
     	<div class="centered container">
 	        <div class="left">
-    	        <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "PC Shutdown")}" data-icon="fa-power-off" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    	        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'PC Shutdown')}" data-icon="fa-power-off" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     	        <div data-type="label">Shutdown</div>
     	    </div>
 	        <div class="left">
-    	        <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "PC Hibernate")}" data-icon="fa-pause" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    	        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'PC Hibernate')}" data-icon="fa-pause" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     	        <div data-type="label">Ruhe</div>
     	    </div>
 	        <div class="left">
-    	        <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "PC Restart")}" data-icon="fa-repeat" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    	        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'PC Restart')}" data-icon="fa-repeat" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     	        <div data-type="label">Reboot</div>
             </div>
         </div>
@@ -161,15 +168,15 @@
     	<header>PC VOLUME</header>
     	<div class="centered container">
 	        <div class="left">
-    	        <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "PC Mute Toggle")}" data-icon="fa-volume-off" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    	        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'PC Mute Toggle')}" data-icon="fa-volume-off" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     	        <div data-type="label">Mute</div>
     	    </div>
     	    <div class="left">
-    	        <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "PC Volume Down")}" data-icon="fa-volume-down" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    	        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'PC Volume Down')}" data-icon="fa-volume-down" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     	        <div data-type="label">-</div>
     	    </div>
     	    <div class="left">
-    	        <div id="" data-type="button" data-fhem-cmd="{eventghost("WATER", "PC Volume Up")}" data-icon="fa-volume-up" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+    	        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'PC Volume Up')}" data-icon="fa-volume-up" data-on-background-color="rgb(111,69,0)" class="cell"></div>
     	        <div data-type="label">+</div>
             </div>
         </div>
@@ -179,11 +186,11 @@
         <header>WEITER</header>
     	<div class="centered container">
     <div class="left">
-	    <div id="pc" data-type="button" data-url="wohnzimmer-pc.php" data-icon="fa-desktop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	    <div id="pc" data-type="button" data-url="wohnzimmer-pc.php" data-icon="fa-laptop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	    <div data-type="label">PC</div>
     </div>
     <div class="left">
-	    <div id="xbmc" data-type="button" data-url="wohnzimmer-xbmc-simple.php" data-icon="fa-play-circle" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	    <div id="xbmc" data-type="button" data-url="wohnzimmer-xbmc-simple.php" data-icon="nesges-kodi" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	    <div data-type="label">KODI</div>
     </div>
     <div class="left">

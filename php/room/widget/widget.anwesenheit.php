@@ -11,7 +11,7 @@
         <div data-type="label" class="cell">Steff</div>
     </div>
     <div class="left">
-        <div data-type="switch" data-device="OMW" class="cell" data-icon="fa-suitcase" data-subtype="dummy10"></div>
+        <div data-type="switch" data-device="OMW" class="cell" data-icon="fa-road" data-subtype="dummy10"></div>
         <div data-type="label" class="cell">OMW</div>
     </div>
     <div class="left">

@@ -17,7 +17,7 @@
     <li data-row="2" data-col="2" data-sizex="4" data-sizey="1">
     	<header>MILIGHT 4 (Wohnzimmer)</header>
         <div class="left">
-            <? milight("MILIGHT_Zone4_Buero", 1) ?>
+            <? milight("MILIGHT_Zone4_Wohnzimmer", 1) ?>
         </div>
     </li>
     

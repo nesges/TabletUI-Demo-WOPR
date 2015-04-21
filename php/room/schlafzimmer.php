@@ -19,7 +19,7 @@
     
     <li data-row="3" data-col="7" data-sizex="1" data-sizey="1">
         <header>WECKER</header>
-        <? button('wecker',     'schlafzimmer-wecker.php', 'fa-clock-o') ?>
+        <? button('wecker',     'schlafzimmer-wecker.php', 'nesges-alarmclock') ?>
         <div data-type="label">Wecker</div>
     </li>
     

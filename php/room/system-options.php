@@ -88,10 +88,6 @@
                 <div data-type="switch" data-device="HAILSTORM" data-subtype="PRESENCE" data-icon="fa-server" class="readonly"></div>
                 <div data-type="label">HAILSTORM</div>
             </div>
-            <div class="left">
-                <div data-type="switch" data-device="MCP" data-subtype="PRESENCE" data-icon="fa-server" class="readonly"></div>
-                <div data-type="label">MCP</div>
-            </div>
         </div>
     </li>
 

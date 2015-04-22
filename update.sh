@@ -2,7 +2,7 @@ cp ../secrets.php ../secrets_save.php
 cp ../secrets_public.php ../secrets.php
 
 cp -a ../tui/room php
-rm php/room/test*.php
+rm php/room/test*.*
 rm php/room/daydream.php
 
 cp -a ../tui/css html

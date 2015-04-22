@@ -180,3 +180,32 @@ table.pollen td  {
 //    margin-top:5px;
 //    margin-left:10px;
 //}
+
+select {
+    background-color:#2a2a2a;
+}
+#streamradioplaylists div[data-type=button] {
+    font-size:18px;
+    margin-top:2px !important;
+    margin-left:30px !important;
+}
+
+#streamradioplaylists div[data-type=symbol] {
+    font-size:18px;
+    margin-top:1px !important;
+}
+                                            
+#streamradioplaylists div[data-type=label] {
+    font-size:18px;
+    font-weight:bolder;
+    color:#2a2a2a;
+    background-color:#aa6900;
+    border:1px solid #505050;
+    border-radius:18px;
+    padding:3px;
+    padding-left:18px;
+    padding-right:18px;
+    min-width:200px;
+    cursor:pointer;
+    text-align:left;
+}

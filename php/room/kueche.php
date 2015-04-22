@@ -21,14 +21,14 @@
     	<? include("widget/widget.kuehlschrank-klima.php") ?>
     </li>
 
-    <li data-row="4" data-col="2" data-sizex="4" data-sizey="1">
+    <li data-row="4" data-col="2" data-sizex="3" data-sizey="1">
     	<header>MILIGHT 3</header>
         <div class="left">
             <? milight("MILIGHT_Zone3_Kueche", 1) ?>
         </div>
     </li>
     
-    <li data-row="4" data-col="6" data-sizex="2" data-sizey="1">
+    <li data-row="4" data-col="5" data-sizex="3" data-sizey="1">
         <header>WEITER</header>
     	<? include("widget/widget.kueche-more.php") ?>
     </li>

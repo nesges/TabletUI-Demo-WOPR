@@ -11,7 +11,7 @@
         data-max="100"
         class="small left dim-back"
         ></div>
-    <div  style="margin-left:40px !important;" data-type="volume" 
+    <div  style="margin-left:20px !important;" data-type="volume" 
         data-device="<?= $device ?>"
         data-get="hue"
         data-set="hue"
@@ -21,7 +21,7 @@
         data-width="110"
         class="small left hue-back"
         ></div>
-    <div class="left" style="margin-left:40px !important;">
+    <div class="left" style="margin-left:20px !important;">
         <div data-type="switch" 
             data-device="<?= $device ?>"
             data-get-on="on.*"

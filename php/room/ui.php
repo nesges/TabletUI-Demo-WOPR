@@ -27,7 +27,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>TUI</title>
+    <title>WOPR :: FTUI</title>
     <?
         if ($_SERVER['REMOTE_ADDR'] == '192.168.178.88') {
             // monitroid

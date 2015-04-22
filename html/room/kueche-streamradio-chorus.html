@@ -74,76 +74,9 @@
     <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
 </div>
     </li>
-    
-    <li data-row="1" data-col="2" data-sizex="5" data-sizey="3">
-        <iframe src="/plots/?p=P_SCHLAFZIMMER&amp;nonav&amp;dark&amp;nolegend" width='680' height='410' scrolling='no' allowtransparency='true' frameborder='0'></iframe>
-    </li>
-    
-    <li data-row="1" data-col="7" data-sizex="1" data-sizey="2">
-        <header>KLIMA</header>
-        <div class="centered container">
-        <div data-type="label" 
-        data-subtype="Temperature"
-        data-device="S_THERMO" 
-        class="cell big"></div>
-    <div data-type="klimatrend" 
-        data-device="S_THERMO" 
-        data-subtype="statTemperatureTendency" 
-        class="cell small"></div>
-    <div data-type="label" 
-        data-subtype="Humidity"
-        data-device="S_THERMO" 
-        class="cell big"></div>
-    <div data-type="klimatrend" 
-        data-device="S_THERMO" 
-        data-get="statHumidityTendency" 
-        class="cell small"></div>
-    <div data-type="symbol" data-device="S_FENSTER_LINKS" class="cell" data-subtype="MAX"></div>
-</div>    </li>
-    
-    <li data-row="3" data-col="7" data-sizex="1" data-sizey="1">
-        <header>WECKER</header>
-        <div id="wecker" data-type="button" data-url="schlafzimmer-wecker.php" data-icon="nesges-alarmclock" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-        <div data-type="label">Wecker</div>
-    </li>
-    
-    <li data-row="4" data-col="2" data-sizex="4" data-sizey="1">
-    	<header>SCHLAFZIMMER</header>
-        <div class="centered container">
-    <div class="right">
-        <div data-type="switch" data-device="S_SWITCH_A2_TV" class="cell" data-icon="fa-desktop"></div>
-        <div data-type="label" class="cell">TV</div>
-    </div>
-    <div class="right">
-        <div data-type="switch" data-device="S_SWITCH_B2_Leselampe" class="cell"></div>
-        <div data-type="label" class="cell">Regal</div>
-    </div>
-    <div class="right">
-        <div data-type="switch" data-device="S_SWITCH_C2_Sterne" class="cell"></div>
-        <div data-type="label" class="cell">Sterne</div>
-    </div>
-    <div class="right">
-        <div data-type="switch" data-device="MILIGHT_Zone2_Schlafzimmer" class="cell" data-get="simple_state"></div>
-        <div data-type="label" class="cell">Milight 2</div>
-    </div>
-</div>    </li>
-    
-    <li data-row="4" data-col="6" data-sizex="2" data-sizey="1">
-        <header>WEITER</header>
-    	<div class="centered container">
-    <div class="left">
-	    <div id="pc" data-type="button" data-url="schlafzimmer-pc.php" data-icon="fa-laptop" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	    <div data-type="label">PC</div>
-    </div>
-    <div class="left">
-	    <div id="xbmc" data-type="button" data-url="schlafzimmer-xbmc-simple.php" data-icon="nesges-kodi" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	    <div data-type="label">KODI</div>
-    </div>
-    <div class="left">
-	    <div id="milight" data-type="button" data-url="schlafzimmer-milight.php" data-icon="fa-lightbulb-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	    <div data-type="label">LICHT</div>
-    </div>
-</div>
+
+    <li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
+        <iframe src="http://kodi:kodi@192.168.178.34:80/addons/webinterface.chorus" width='767' height='553' scrolling='auto' allowtransparency='true' frameborder='0'></iframe>
     </li>
 </ul>    </div>
 </body>

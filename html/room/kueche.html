@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>TUI</title>
+    <title>WOPR :: FTUI</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,7 +114,7 @@
         class="cell small"></div>
 </div></div>    </li>
 
-    <li data-row="4" data-col="2" data-sizex="4" data-sizey="1">
+    <li data-row="4" data-col="2" data-sizex="3" data-sizey="1">
     	<header>MILIGHT 3</header>
         <div class="left">
             <div class="centered container" style="margin-top:10px !important">
@@ -126,7 +126,7 @@
         data-max="100"
         class="small left dim-back"
         ></div>
-    <div  style="margin-left:40px !important;" data-type="volume" 
+    <div  style="margin-left:20px !important;" data-type="volume" 
         data-device="MILIGHT_Zone3_Kueche"
         data-get="hue"
         data-set="hue"
@@ -136,7 +136,7 @@
         data-width="110"
         class="small left hue-back"
         ></div>
-    <div class="left" style="margin-left:40px !important;">
+    <div class="left" style="margin-left:20px !important;">
         <div data-type="switch" 
             data-device="MILIGHT_Zone3_Kueche"
             data-get-on="on.*"
@@ -158,12 +158,12 @@
         </div>
     </li>
     
-    <li data-row="4" data-col="6" data-sizex="2" data-sizey="1">
+    <li data-row="4" data-col="5" data-sizex="3" data-sizey="1">
         <header>WEITER</header>
     	<div class="centered container">
     <div class="left">
-	    <div id="kuehlschrank" data-type="button" data-url="kuehlschrank.php" data-icon="fa-star-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	    <div data-type="label">K&Uuml;HL</div>
+	    <div id="streamradio" data-type="button" data-url="kueche-streamradio.php" data-icon="nesges-radio2" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	    <div data-type="label">Radio</div>
     </div>
     <div class="left">
 	    <div id="xbmc" data-type="button" data-url="kueche-xbmc.php" data-icon="nesges-kodi" data-on-background-color="rgb(111,69,0)" class="cell"></div>
@@ -172,6 +172,10 @@
     <div class="left">
 	    <div id="milight" data-type="button" data-url="kueche-milight.php" data-icon="fa-lightbulb-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
 	    <div data-type="label">LICHT</div>
+    </div>
+    <div class="left">
+	    <div id="kuehlschrank" data-type="button" data-url="kuehlschrank.php" data-icon="fa-star-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
+	    <div data-type="label">K&Uuml;HL</div>
     </div>
 </div>
     </li>

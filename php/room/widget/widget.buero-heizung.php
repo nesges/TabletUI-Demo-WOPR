@@ -7,4 +7,5 @@
         thermostat('B_HEIZUNG');
     ?>
     </div>
+    <? battery('B_HEIZUNG', 'position:absolute;bottom:0;left:0;') ?>
 </div>

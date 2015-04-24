@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <title>WOPR :: FTUI</title>
+    <title>WOPR :: FTUI 
+     :: Aussen    </title>
     <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -184,8 +185,8 @@
                         data-get="condition"
                         style="font-size:90%"></div>
                 </a>
-                <div style="padding-bottom:25px !important"></div>
-            </td>
+                                        <div style="height:40px;"></div>
+                                    </td>
         </tr>
         <tr>
             <td>
@@ -337,7 +338,7 @@
                                 data-device="Wetter"
                                 data-get="fc2_condition"
                                 style="font-size:90%"></div>
-                        <div style="padding-bottom:25px !important"></div>
+                        <div style="padding-bottom:40px !important"></div>
                     </td>
                 </tr>
                 <tr>
@@ -362,7 +363,7 @@
                                 class="inline"></div>
                     </td>
                 </tr>
-                <tr>
+                                <tr>
                     <td>
                             <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
                     </td>
@@ -422,7 +423,7 @@
                                 data-device="Wetter"
                                 data-get="fc3_condition"
                                 style="font-size:90%"></div>
-                        <div style="padding-bottom:25px !important"></div>
+                        <div style="padding-bottom:40px !important"></div>
                     </td>
                 </tr>
                 <tr>
@@ -447,7 +448,7 @@
                                 class="inline"></div>
                     </td>
                 </tr>
-                <tr>
+                                <tr>
                     <td>
                             <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
                     </td>
@@ -508,7 +509,7 @@
                                 data-device="Wetter"
                                 data-get="fc4_condition"
                                 style="font-size:90%"></div>
-                        <div style="padding-bottom:25px !important"></div>
+                        <div style="padding-bottom:40px !important"></div>
                     </td>
                 </tr>
                 <tr>
@@ -533,7 +534,7 @@
                                 class="inline"></div>
                     </td>
                 </tr>
-                <tr>
+                                <tr>
                     <td>
                             <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
                     </td>
@@ -566,7 +567,7 @@
                                 data-device="Wetter"
                                 data-get="fc5_condition"
                                 style="font-size:90%"></div>
-                        <div style="padding-bottom:25px !important"></div>
+                        <div style="padding-bottom:40px !important"></div>
                     </td>
                 </tr>
                 <tr>
@@ -591,17 +592,6 @@
                                 class="inline"></div>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                            <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
-                    </td>
-                    <td>
-                            <div data-type="label" 
-                                data-device="WETTER_PROPLANTA"
-                                data-get="fc4_chOfRainDay"
-                                data-unit=" %"></div>
-                    </td>
-                </tr>
                             </table>
         </div>
     </li>
@@ -617,7 +607,7 @@
                     switch(n) {
                         case 0:  newsrckey = 'dwd_de_nacht';        newsrc = "http://www.dwd.de/wundk/wetter/de/Deutschland_heute_nacht.jpg"; break;
                         case 1:  newsrckey = 'wetteronline_radar';  newsrc = "http://www.wetteronline.de/?pid=p_radar_map&amp;ireq=true&amp;src=radar/vermarktung/p_radar_map_forecast/forecastLoop/DL/latestForecastLoop.gif"; break;
-                        case 2:  newsrckey = 'wetteronline_wolken'; newsrc = "http://www.wetteronline.de/?pid=p_sat_image&amp;ireq=true&amp;src=sat/vermarktung/p_sat_image/geostationary/createImages/wom/2015/04/22/CloudMask/DL/201504222200_DL_CloudMask.jpeg&amp;version=0"; break;
+                        case 2:  newsrckey = 'wetteronline_wolken'; newsrc = "http://www.wetteronline.de/?pid=p_sat_image&amp;ireq=true&amp;src=sat/vermarktung/p_sat_image/geostationary/createImages/wom/2015/04/24/CloudMask/DL/201504241300_DL_CloudMask.jpeg&amp;version=0"; break;
                         case 3:  newsrckey = 'austro_sat';          newsrc = "https://www.austrocontrol.at/jart/met/radar/satloop.gif"; break;
                         case 4:  newsrckey = 'kontor_de';           newsrc = "http://img.wetterkontor.de/karten/deutschland0.jpg"; break;
                         default: newsrckey = 'dwd_de';              newsrc = "http://www.dwd.de/wundk/wetter/de/Deutschland.jpg"; n=-1; break;

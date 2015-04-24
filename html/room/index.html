@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <title>WOPR :: FTUI</title>
+    <title>WOPR :: FTUI 
+        </title>
     <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,6 +115,43 @@
     <div data-type="switch" data-device="W_HEIZUNG_OVERRIDE" data-subtype="dummy10" data-icon="fa-hand-o-right" class="bold"></div>
     </div>
     <div data-type="symbol" data-device="W_FENSTER_Balkon" class="cell" data-subtype="MAX"></div>
+    
+        <div data-type="symbol" 
+        data-device="W_FENSTER_Balkon" 
+        data-get="battery" 
+        data-get-on="low" 
+        data-on-color="#aa6900" 
+        data-off-color="#2a2a2a" 
+        data-icon="oa-measure_battery_25" 
+        style="position:absolute;bottom:0;right:0;"
+        title="W_FENSTER_Balkon"></div>
+        <div data-type="symbol" 
+        data-device="W_HEIZUNG_COUCH" 
+        data-get="battery" 
+        data-get-on="low" 
+        data-on-color="#aa6900" 
+        data-off-color="#2a2a2a" 
+        data-icon="oa-measure_battery_25" 
+        style="position:absolute;bottom:0;left:0;"
+        title="W_HEIZUNG_COUCH"></div>
+        <div data-type="symbol" 
+        data-device="W_HEIZUNG_BALKON" 
+        data-get="battery" 
+        data-get-on="low" 
+        data-on-color="#aa6900" 
+        data-off-color="#2a2a2a" 
+        data-icon="oa-measure_battery_25" 
+        style="position:absolute;bottom:30px;left:0;"
+        title="W_HEIZUNG_BALKON"></div>
+        <div data-type="symbol" 
+        data-device="W_HEIZUNG" 
+        data-get="battery" 
+        data-get-on="low" 
+        data-on-color="#aa6900" 
+        data-off-color="#2a2a2a" 
+        data-icon="oa-measure_battery_25" 
+        style="position:absolute;bottom:60px;left:0;"
+        title="W_HEIZUNG"></div>
 </div>    </li>
     <li data-row="1" data-col="3" data-sizex="1" data-sizey="3">
     	<header>B&Uuml;RO</header>
@@ -145,6 +183,15 @@
     
     <div data-type="switch" data-device="B_HEIZUNG_OVERRIDE" data-subtype="dummy10" data-icon="fa-hand-o-right" class="bold"></div>
     </div>
+        <div data-type="symbol" 
+        data-device="B_HEIZUNG" 
+        data-get="battery" 
+        data-get-on="low" 
+        data-on-color="#aa6900" 
+        data-off-color="#2a2a2a" 
+        data-icon="oa-measure_battery_25" 
+        style="position:absolute;bottom:0;left:0;"
+        title="B_HEIZUNG"></div>
 </div>    </li>
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
     	<header>K&Uuml;CHE</header>
@@ -183,6 +230,7 @@
     <li data-row="1" data-col="5" data-sizex="1" data-sizey="2">
     	<header>SCHLAFZIMMER</header>
     	<div class="centered container">
+    <div>
         <div data-type="label" 
         data-subtype="Temperature"
         data-device="S_THERMO" 
@@ -199,7 +247,18 @@
         data-device="S_THERMO" 
         data-get="statHumidityTendency" 
         class="cell small"></div>
-    <div data-type="symbol" data-device="S_FENSTER_LINKS" class="cell" data-subtype="MAX"></div>
+    </div>
+    
+    <div data-type="symbol" data-device="S_FENSTER_LINKS" class="cell" data-subtype="MAX" style="margin-top:46px !important"></div>
+        <div data-type="symbol" 
+        data-device="S_FENSTER_LINKS" 
+        data-get="battery" 
+        data-get-on="low" 
+        data-on-color="#aa6900" 
+        data-off-color="#2a2a2a" 
+        data-icon="oa-measure_battery_25" 
+        style="position:absolute;bottom:0;right:0;"
+        title="S_FENSTER_LINKS"></div>
 </div>    </li>
     <li data-row="1" data-col="6" data-sizex="1" data-sizey="1">
     	<header>BAD</header>
@@ -259,7 +318,7 @@
     
     <li data-row="1" data-col="7" data-sizex="1" data-sizey="4">
     	<header>AUSSEN</header>
-    	<div class="centered" style="margin-bottom:50px">
+    	<div class="centered" style="margin-bottom:25px">
     	    <div class="left">
     	        <div class="centered container">
     <div class="left">
@@ -313,8 +372,7 @@
                         data-get="condition"
                         style="font-size:90%"></div>
                 </a>
-                <div style="padding-bottom:25px !important"></div>
-            </td>
+                            </td>
         </tr>
         <tr>
             <td>
@@ -444,7 +502,38 @@
             </td>
         </tr>
     </table>
-</div>    </li>
+</div>        <div class="centered" style="padding-top:10px !important;padding-bottom:15px !important">
+            <a href="aussen.php">
+                <div class="left">
+                    <div data-type="weather" 
+                        data-device="Wetter"
+                        data-get="fc2_condition"
+                        data-imageset="meteocons"
+                        style="font-size:12px;padding:0;margin:0;margin-top:-5px;"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc2_high_c" data-unit="&deg;C"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc2_day_of_week"></div>
+                </div>
+                <div class="left" style="padding-left:10px;padding-right:10px">
+                    <div data-type="weather" 
+                        data-device="Wetter"
+                        data-get="fc3_condition"
+                        data-imageset="meteocons"
+                        style="font-size:12px;padding:0;margin:0;margin-top:-5px;"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc3_high_c" data-unit="&deg;C"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc3_day_of_week"></div>
+                </div>
+                <div class="left">
+                    <div data-type="weather" 
+                        data-device="Wetter"
+                        data-get="fc4_condition"
+                        data-imageset="meteocons"
+                        style="font-size:12px;padding:0;margin:0;margin-top:-5px;"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc4_high_c" data-unit="&deg;C"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc4_day_of_week"></div>
+                </div>
+            </a>
+        </div>
+    </li>
     
     <li data-row="4" data-col="2" data-sizex="4" data-sizey="1">
         <header>ANWESENHEIT</header>

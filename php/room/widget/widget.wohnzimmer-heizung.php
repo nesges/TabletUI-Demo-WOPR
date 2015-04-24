@@ -9,4 +9,9 @@
     ?>
     </div>
     <div data-type="symbol" data-device="W_FENSTER_Balkon" class="cell" data-subtype="MAX"></div>
+    
+    <? battery('W_FENSTER_Balkon', 'position:absolute;bottom:0;right:0;') ?>
+    <? battery('W_HEIZUNG_COUCH', 'position:absolute;bottom:0;left:0;') ?>
+    <? battery('W_HEIZUNG_BALKON', 'position:absolute;bottom:30px;left:0;') ?>
+    <? battery('W_HEIZUNG', 'position:absolute;bottom:60px;left:0;') ?>
 </div>

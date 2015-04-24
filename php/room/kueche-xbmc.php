@@ -9,6 +9,8 @@
     </li>
 
     <li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
-        <iframe src="http://<?=$kodi_user?>:<?=$kodi_pass?>@192.168.178.31:8080/addons/webinterface.chorus" width='767' height='553' scrolling='auto' allowtransparency='true' frameborder='0'></iframe>
+        <div data-type="iframe"
+            data-src="/kodi/atv2/addons/webinterface.chorus/"
+            data-fill="yes"></div>
     </li>
 </ul>

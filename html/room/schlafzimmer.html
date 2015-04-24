@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <title>WOPR :: FTUI</title>
+    <title>WOPR :: FTUI 
+     :: Schlafzimmer    </title>
     <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -82,6 +83,7 @@
     <li data-row="1" data-col="7" data-sizex="1" data-sizey="2">
         <header>KLIMA</header>
         <div class="centered container">
+    <div>
         <div data-type="label" 
         data-subtype="Temperature"
         data-device="S_THERMO" 
@@ -98,7 +100,18 @@
         data-device="S_THERMO" 
         data-get="statHumidityTendency" 
         class="cell small"></div>
-    <div data-type="symbol" data-device="S_FENSTER_LINKS" class="cell" data-subtype="MAX"></div>
+    </div>
+    
+    <div data-type="symbol" data-device="S_FENSTER_LINKS" class="cell" data-subtype="MAX" style="margin-top:46px !important"></div>
+        <div data-type="symbol" 
+        data-device="S_FENSTER_LINKS" 
+        data-get="battery" 
+        data-get-on="low" 
+        data-on-color="#aa6900" 
+        data-off-color="#2a2a2a" 
+        data-icon="oa-measure_battery_25" 
+        style="position:absolute;bottom:0;right:0;"
+        title="S_FENSTER_LINKS"></div>
 </div>    </li>
     
     <li data-row="3" data-col="7" data-sizex="1" data-sizey="1">

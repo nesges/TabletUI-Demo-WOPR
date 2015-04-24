@@ -37,7 +37,7 @@
                 <div data-type="label">Zuhause</div>
             </div>
             <div>
-                <div data-type="switch" data-device="OMW" data-subtype="dummy10" data-icon="fa-suitcase"></div>
+                <div data-type="switch" data-device="OMW" data-subtype="dummy10" data-icon="fa-road"></div>
                 <div data-type="label">OMW</div>
             </div>
             <div>

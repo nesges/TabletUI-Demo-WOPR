@@ -11,6 +11,7 @@
     include_once("template/template.pollen.php");
     include_once("template/template.weathermap.php");
     include_once("template/template.weatherforecast.php");
+    include_once("template/template.battery.php");
 
     $ftui="../fhem-tablet-ui/www/tablet/";
 
@@ -27,8 +28,15 @@
 <!doctype html>
 <html>
 <head>
-    <title>WOPR :: FTUI</title>
+    <title>WOPR :: FTUI 
     <?
+        $title = basename($_SERVER['PHP_SELF']);
+        if($title != 'index.php') {
+            print " :: ".ucwords(preg_replace('/-/', ' ', preg_replace('/\.php$/', '', $title)));
+        }
+    ?>
+    </title>
+    <?        
         if ($_SERVER['REMOTE_ADDR'] == '192.168.178.88') {
             // monitroid
             ?><meta name="viewport" content="width=device-width, initial-scale=1.15, maximum-scale=1.15 user-scalable=no"><?

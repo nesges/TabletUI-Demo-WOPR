@@ -70,12 +70,43 @@
     
     <li data-row="1" data-col="7" data-sizex="1" data-sizey="4">
     	<header>AUSSEN</header>
-    	<div class="centered" style="margin-bottom:50px">
+    	<div class="centered" style="margin-bottom:25px">
     	    <div class="left">
     	        <? include("widget/widget.aussen-klima.php") ?>
     	    </div>
         </div>
         <? include("widget/widget.weather-vertical.php") ?>
+        <div class="centered" style="padding-top:10px !important;padding-bottom:15px !important">
+            <a href="aussen.php">
+                <div class="left">
+                    <div data-type="weather" 
+                        data-device="Wetter"
+                        data-get="fc2_condition"
+                        data-imageset="meteocons"
+                        style="font-size:12px;padding:0;margin:0;margin-top:-5px;"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc2_high_c" data-unit="&deg;C"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc2_day_of_week"></div>
+                </div>
+                <div class="left" style="padding-left:10px;padding-right:10px">
+                    <div data-type="weather" 
+                        data-device="Wetter"
+                        data-get="fc3_condition"
+                        data-imageset="meteocons"
+                        style="font-size:12px;padding:0;margin:0;margin-top:-5px;"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc3_high_c" data-unit="&deg;C"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc3_day_of_week"></div>
+                </div>
+                <div class="left">
+                    <div data-type="weather" 
+                        data-device="Wetter"
+                        data-get="fc4_condition"
+                        data-imageset="meteocons"
+                        style="font-size:12px;padding:0;margin:0;margin-top:-5px;"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc4_high_c" data-unit="&deg;C"></div>
+                    <div data-type="label" data-device="Wetter" data-get="fc4_day_of_week"></div>
+                </div>
+            </a>
+        </div>
     </li>
     
     <li data-row="4" data-col="2" data-sizex="4" data-sizey="1">

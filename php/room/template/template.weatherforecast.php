@@ -31,7 +31,7 @@
                                 data-device="<?= $condition_d ?>"
                                 data-get="<?= $condition_r ?>"
                                 style="font-size:90%"></div>
-                        <div style="padding-bottom:25px !important"></div>
+                        <div style="padding-bottom:40px !important"></div>
                     </td>
                 </tr>
                 <tr>
@@ -56,6 +56,9 @@
                                 class="inline"></div>
                     </td>
                 </tr>
+                <?
+                    if($day<4) {
+                ?>
                 <tr>
                     <td>
                             <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
@@ -68,6 +71,7 @@
                     </td>
                 </tr>
                 <?
+                    }
                     if($day<3) {
                 ?>
                 <tr>

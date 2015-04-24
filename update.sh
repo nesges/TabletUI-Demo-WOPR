@@ -2,6 +2,7 @@ cp ../secrets.php ../secrets_save.php
 cp ../secrets_public.php ../secrets.php
 
 cp -a ../tui/room php
+mv php/room/system-calendar-demo.php php/room/system-calendar.php
 rm php/room/test*.*
 rm php/room/daydream.php
 

@@ -44,8 +44,11 @@ $( document ).ready(function() {
         switch($(this).attr('data-subtype')) {
             case "MAX":
                 $(this).attr('data-get-on', $(this).attr('data-get-on') || '["opened","closed"]');
-                $(this).attr('data-icons', $(this).attr('data-icons') || '["oa-fts_window_2w_open_lr","oa-fts_window_2w"]');
-                $(this).attr('data-on-colors', $(this).attr('data-on-colors') || '["#aa6900","#505050"]');
+                $(this).attr('data-icons', $(this).attr('data-icons') || '["oa-fts_window_1w_open","oa-fts_window_1w"]');
+                $(this).attr('data-on-colors', $(this).attr('data-on-colors') || '["#2a2a2a","#2a2a2a"]');
+                $(this).attr('data-background-icon', $(this).attr('data-background-icon') || "fa-circle");
+                $(this).attr('data-off-background-color', $(this).attr('data-off-background-color') || "#505050");
+                $(this).attr('data-on-background-color', $(this).attr('data-on-background-color') || "#aa6900");
                 break;
             case "POLLEN":
                 $(this).attr('data-get-off', $(this).attr('data-get-off') || '0');

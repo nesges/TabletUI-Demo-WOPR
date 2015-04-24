@@ -15,6 +15,7 @@
     <? button('options_timers',     'system-timers.php',    'fa-clock-o')       ?>
     <? button('options_plots',      'system-plots.php?p=HUMID_ALL',     'fa-line-chart')    ?>
     <? button('options_its150',     'system-its150.php',    'fa-mobile')        ?>
+    <? button('options_calendar',   'system-calendar.php',  'fa-calendar')      ?>
     <? button('options_options',    'system-options.php',   'fa-gears')         ?>
 
     <div style="padding-top:80px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock" class="cell"></div>

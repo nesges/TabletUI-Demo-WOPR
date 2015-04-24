@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <title>WOPR :: FTUI</title>
+    <title>WOPR :: FTUI 
+     :: Kueche Streamradio Chorus    </title>
     <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,7 +77,11 @@
     </li>
 
     <li data-row="1" data-col="2" data-sizex="6" data-sizey="4">
-        <iframe src="http://kodi:kodi@192.168.178.34:80/addons/webinterface.chorus" width='767' height='553' scrolling='auto' allowtransparency='true' frameborder='0'></iframe>
+        <div data-type="iframe"
+            data-check-src="/kodi/mcp/addons/webinterface.chorus/"
+            data-src="http://kodi:kodi@192.168.178.34:80/addons/webinterface.chorus/"
+            data-fill="yes"></div>
+        <div data-type="button" data-url="kueche-streamradio.php" data-icon="nesges-radio2" style="position:absolute;z-index:1001;top:-2px;left:50px;opacity:0.8"></div>
     </li>
 </ul>    </div>
 </body>

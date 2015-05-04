@@ -52,6 +52,17 @@
 	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Volume Up')}", 'fa-volume-up') ?>
 	    </div>
     </div>
+    <div class="centered container" style="margin-top:40px !important">
+	    <div class="left">
+	        <div data-type="slider"
+	            data-device="WATER_WINAMP"
+	            data-cmd="setreading"
+	            data-get="volume"
+	            data-set="volume"
+	            class="horizontal"
+	            style="width:200px"></div>
+	    </div>
+    </div>
 </li>
 
 <li data-row="3" data-col="2" data-sizex="6" data-sizey="1">

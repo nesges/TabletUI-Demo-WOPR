@@ -5,7 +5,7 @@
 <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
         <header>SYSTEM</header>
-    	<? include("widget/widget.options.php") ?>
+    	<? include("widget/widget.rooms.php") ?>
     </li>
     
     <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">

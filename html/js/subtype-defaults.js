@@ -34,7 +34,7 @@ $( document ).ready(function() {
             case "dummy10":
                 $(this).attr('data-get-on', $(this).attr('data-get-on') || '1');
                 $(this).attr('data-get-off', $(this).attr('data-get-off') || '0');
-                $(this).attr('data-set-on', $(this).attr('data-set-on') || '1');
+                $(this).attr('data-set-on',  $(this).attr('data-set-on') || '1');
                 $(this).attr('data-set-off', $(this).attr('data-set-off') || '0');
                 break;
         }
@@ -44,7 +44,7 @@ $( document ).ready(function() {
         switch($(this).attr('data-subtype')) {
             case "MAX":
                 $(this).attr('data-get-on', $(this).attr('data-get-on') || '["opened","closed"]');
-                $(this).attr('data-icons', $(this).attr('data-icons') || '["oa-fts_window_1w_open","oa-fts_window_1w"]');
+                $(this).attr('data-icons', $(this).attr('data-icons') || '["ftui-window","ftui-window"]');
                 $(this).attr('data-on-colors', $(this).attr('data-on-colors') || '["#2a2a2a","#2a2a2a"]');
                 $(this).attr('data-background-icon', $(this).attr('data-background-icon') || "fa-circle");
                 $(this).attr('data-off-background-color', $(this).attr('data-off-background-color') || "#505050");

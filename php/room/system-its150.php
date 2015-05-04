@@ -5,7 +5,7 @@
 <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
         <header>SYSTEM</header>
-    	<? include("widget/widget.options.php") ?>
+    	<? include("widget/widget.rooms.php") ?>
     </li>
     
     <li data-row="1" data-col="2" data-sizex="1" data-sizey="4">
@@ -36,13 +36,13 @@
     
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="4">
         <header>III</header>
-        <div class="subheader">III1</div>
-        <? it("ITS150_III1") ?>
-        <div class="subheader">III2</div>
-        <? it("ITS150_III2") ?>
-        <div class="subheader">III3</div>
-        <? it("ITS150_III3") ?>
-        <div class="subheader">III4</div>
+        <div class="subheader">MCP</div>
+        <? it("ITS150_III1", "Play", "Stop") ?>
+        <div class="subheader">MCP</div>
+        <? it("ITS150_III2", "Vol 0/60", "Vol +10") ?>
+        <div class="subheader">MCP</div>
+        <? it("ITS150_III3", "Prev", "Next") ?>
+        <div class="subheader">MCP - Power</div>
         <? it("ITS150_III4") ?>
     </li>
     

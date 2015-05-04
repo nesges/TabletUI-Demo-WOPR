@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>WOPR :: FTUI 
-     :: Kueche    </title>
+     :: System Kino    </title>
     <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -221,111 +221,95 @@
     <div style="padding-top:10px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
 </div>
     </li>
-    
-    <li data-row="1" data-col="2" data-sizex="5" data-sizey="3">
-        <iframe src="/plots/?p=P_KUECHE&amp;nonav&amp;dark&amp;nolegend" width='680' height='410' scrolling='no' allowtransparency='true' frameborder='0'></iframe>
-    </li>
-    
-    <li data-row="1" data-col="7" data-sizex="1" data-sizey="2">
-        <header>KLIMA</header>
-        <div class="centered container">
-        <div data-type="label" 
-        data-subtype="Temperature"
-        data-device="K_HUMID" 
-        class="cell big"></div>
-    <div data-type="klimatrend" 
-        data-device="K_HUMID" 
-        data-subtype="statTemperatureTendency" 
-        class="cell small"></div>
-    <div data-type="label" 
-        data-subtype="Humidity"
-        data-device="K_HUMID" 
-        class="cell big"></div>
-    <div data-type="klimatrend" 
-        data-device="K_HUMID" 
-        data-get="statHumidityTendency" 
-        class="cell small"></div>
-</div>    </li>
-    <li data-row="3" data-col="7" data-sizex="1" data-sizey="1">
-    	<header>K&Uuml;HLSCHRANK</header>
-    	<div class="centered container"><div class="left">
-    <div data-type="label" 
-        data-device="KUEHL_THERMO" 
-        data-get="temperature" 
-        data-unit=" %B0C%0A" 
-        data-limits="[-20,0,3,8,10]"
-        data-colors='["#ffffff","#AD3333","#AA6900","#AD3333","#ff0000"]'
-        class="cell big"></div>
-    <div data-type="klimatrend" 
-        data-device="KUEHL_THERMO" 
-        class="cell small"></div>
-</div></div>    </li>
-
+    <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+        <header><a target='_blank' href='http://www.kino.de/kinoprogramm/pruem/eifel-kinocenter-k13842/'>PRÜM</a></header>
+                    <div data-type="label"
+                data-subtype="KINO"
+                data-device="KINO_PRUEM"
+                data-get="movies"
+                style="text-align:left;padding-left:10px;padding-top:10px;"></div>
+                    <div data-type="button"
+                data-url="http://www.kino.de/kinoprogramm/pruem/eifel-kinocenter-k13842/"
+                data-icon="fa-info"
+                data-background-icon="fa-circle-thin"
+                data-on-color="#aa6900"
+                data-on-background-color="#505050"
+                style="position:absolute;bottom:10px;right:10px"></div>
+            </li>
+    <li data-row="2" data-col="2" data-sizex="3" data-sizey="2">
+        <header>DAUN</header>
+                    <div data-type="label"
+                data-subtype="KINO"
+                data-device="KINO_DAUN"
+                data-get="movies"
+                style="text-align:left;padding-left:10px;padding-top:10px;"></div>
+                    <div data-type="button"
+                data-url="http://www.kino.de/kinoprogramm/daun/kinopalast-vulkaneifel-k46568/"
+                data-icon="fa-info"
+                data-background-icon="fa-circle-thin"
+                data-on-color="#aa6900"
+                data-on-background-color="#505050"
+                style="position:absolute;bottom:10px;right:10px"></div>
+            </li>
     <li data-row="4" data-col="2" data-sizex="3" data-sizey="1">
-    	<header>MILIGHT 3</header>
-        <div class="left">
-            <div class="centered container" style="margin-top:10px !important">
-    <div style="margin-left:20px !important;" data-type="volume" 
-        data-device="MILIGHT_Zone3_Kueche"
-        data-get="brightness"
-        data-set="dim"
-        data-min="2"
-        data-max="100"
-        class="small left dim-back"
-        ></div>
-    <div  style="margin-left:20px !important;" data-type="volume" 
-        data-device="MILIGHT_Zone3_Kueche"
-        data-get="hue"
-        data-set="hue"
-        data-min="0"
-        data-max="360"
-        data-height="110"
-        data-width="110"
-        class="small left hue-back"
-        ></div>
-    <div class="left" style="margin-left:20px !important;">
-        <div data-type="switch" 
-            data-device="MILIGHT_Zone3_Kueche"
-            data-get-on="on.*"
-            data-get-off="off"
-            data-set-on="on"
-            data-set-off="off"
-            ></div>
-        <div data-type="switch" 
-            data-device="MILIGHT_Zone3_Kueche"
-            data-get="saturation"
-            data-get-on="0"
-            data-get-off="100"
-            data-set-on="saturation 0"
-            data-set-off="saturation 100"
-            data-icon="fa-sun-o"
-            ></div>
-    </div>
-</div>
-        </div>
-    </li>
+        <header>BITBURG</header>
+                    <div data-type="label"
+                data-subtype="KINO"
+                data-device="KINO_BITBURG"
+                data-get="movies"
+                style="text-align:left;padding-left:10px;padding-top:10px;"></div>
+                    <div data-type="button"
+                data-url="http://www.kino.de/kinoprogramm/bitburg/skala-kinocenter-k14890/"
+                data-icon="fa-info"
+                data-background-icon="fa-circle-thin"
+                data-on-color="#aa6900"
+                data-on-background-color="#505050"
+                style="position:absolute;bottom:10px;right:10px"></div>
+            </li>
     
-    <li data-row="4" data-col="5" data-sizex="3" data-sizey="1">
-        <header>WEITER</header>
-    	<div class="centered container">
-    <div class="left">
-	    <div id="streamradio" data-type="button" data-url="kueche-streamradio.php" data-icon="nesges-radio2" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	    <div data-type="label">Radio</div>
-    </div>
-    <div class="left">
-	    <div id="xbmc" data-type="button" data-url="kueche-xbmc.php" data-icon="nesges-kodi" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	    <div data-type="label">KODI</div>
-    </div>
-    <div class="left">
-	    <div id="milight" data-type="button" data-url="kueche-milight.php" data-icon="fa-lightbulb-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	    <div data-type="label">LICHT</div>
-    </div>
-    <div class="left">
-	    <div id="kuehlschrank" data-type="button" data-url="kuehlschrank.php" data-icon="fa-star-o" data-on-background-color="rgb(111,69,0)" class="cell"></div>
-	    <div data-type="label">K&Uuml;HL</div>
-    </div>
-</div>
-    </li>
-</ul>    </div>
+    <li data-row="1" data-col="5" data-sizex="3" data-sizey="1">
+        <header>HILLESHEIM</header>
+                    <div data-type="label"
+                data-subtype="KINO"
+                data-device="KINO_HILLESHEIM"
+                data-get="movies"
+                style="text-align:left;padding-left:10px;padding-top:10px;"></div>
+                    <div data-type="button"
+                data-url="http://www.kino.de/kinoprogramm/hillesheim/eifel-film-buehne-k13776/"
+                data-icon="fa-info"
+                data-background-icon="fa-circle-thin"
+                data-on-color="#aa6900"
+                data-on-background-color="#505050"
+                style="position:absolute;bottom:10px;right:10px"></div>
+            </li>
+    <li data-row="2" data-col="5" data-sizex="3" data-sizey="3">
+        <header>TRIER</header>
+                    <div data-type="label"
+                data-subtype="KINO"
+                data-device="KINO_TRIER"
+                data-get="movies"
+                style="text-align:left;padding-left:10px;padding-top:10px;"></div>
+                    <div data-type="button"
+                data-url="http://www.kino.de/kinoprogramm/trier/cinemaxx-trier-k32975/"
+                data-icon="fa-info"
+                data-background-icon="fa-circle-thin"
+                data-on-color="#aa6900"
+                data-on-background-color="#505050"
+                style="position:absolute;bottom:10px;right:10px"></div>
+            </li>
+</ul>
+
+<script>
+    $( document ).ready(function() {
+        $('div').each(function(index) {
+        	$(this).bind("DOMSubtreeModified", function(event) {
+        	    var elem = $(event.target);
+        	    if(elem.data('subtype') == 'KINO' && elem.html().match(/, /)) {
+        	        elem.html(elem.html().replace(/, /, '<br>'));
+        	    }
+        	});
+        });
+    });
+</script>    </div>
 </body>
 </html>

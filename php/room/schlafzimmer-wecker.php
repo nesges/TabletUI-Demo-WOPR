@@ -123,12 +123,12 @@
         </div>
     </li>
     
-    <li data-row="4" data-col="2" data-sizex="4" data-sizey="1">
+    <li data-row="4" data-col="2" data-sizex="3" data-sizey="1">
     	<header>SCHLAFZIMMER</header>
         <? include("widget/widget.schlafzimmer-switches.php") ?>
     </li>
     
-    <li data-row="4" data-col="6" data-sizex="2" data-sizey="1">
+    <li data-row="4" data-col="5" data-sizex="3" data-sizey="1">
         <header>WEITER</header>
     	<? include("widget/widget.schlafzimmer-more.php") ?>
     </li>

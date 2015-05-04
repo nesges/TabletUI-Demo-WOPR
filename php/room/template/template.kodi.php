@@ -46,6 +46,15 @@
             <? button_fhem('', "{eventghost('".$host."', 'KODI Volume Up')}", 'fa-volume-up', 'rgb(170,105,0)') ?>
             <? button('', preg_replace('/-simple/', '', $_SERVER['PHP_SELF']), 'fa-star', '#0066FF') ?>
         </div>
+        <div class="centered container">
+            <div data-type="slider"
+                data-device="<?= $xbmc[$host] ?>"
+                data-get="volume"
+                data-cmd="set"
+                data-set="volume"
+                class="horizontal"
+                style="height:0px !important;margin-bottom:0px !important;margin-top:-10px !important;width:250px"></div>
+        </div>
         
         <div style="margin-top:25px" class="centered container">
             <? button_fhem('', "{eventghost('".$host."', 'KODI Home')}", 'fa-home', '#9933FF') ?>

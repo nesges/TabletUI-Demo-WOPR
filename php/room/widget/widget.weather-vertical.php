@@ -88,7 +88,7 @@
                 <a href="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN_WINDSPEED&nonav&dark&nolegend")?>">
                     <div data-type="label" 
                         data-device="Wetter"
-                        data-get="wind"
+                        data-get="wind_speed"
                         data-unit=" km/h"
                         data-limits="[0,        19,       28,       38,       49,       74,       102,      117]"
                         data-colors='["#ffffff","#dddddd","#aa6900","#aa6900","#ff9999","#ff6666","#ff3333","#ff0000"]'
@@ -145,7 +145,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <div style="text-align:center">
+                <a href="aussen-iframe.php?content=wind_direction_pie"><div style="text-align:center">
                     <div data-type="wind_direction" 
                         data-device="Wetter"
                         data-direction="wind_direction"
@@ -153,7 +153,7 @@
                         data-size="80"
                         class="cell"
                         style="padding-top:15px"></div>
-                </div>
+                </div></a>
             </td>
         </tr>
     </table>

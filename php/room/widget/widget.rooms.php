@@ -9,25 +9,140 @@
     });
 </script>
 <div class="container">
-    <?
-    //<div data-type="pagetab" data-url="index.php"  data-icon="fa-home" class="cell"></div>
-    //<div data-type="pagetab" data-url="wohnzimmer.php" data-icon="nesges-sofa" class="cell"></div>
-    //<div data-type="pagetab" data-url="kueche.php" data-icon="fa-cutlery" class="cell"></div>
-    //<div data-type="pagetab" data-url="schlafzimmer.php" data-icon="fa-bed" class="cell"></div>
-    //<div data-type="pagetab" data-url="bad.php" data-icon="fa-female" class="cell"></div>
-    //<div data-type="pagetab" data-url="buero.php" data-icon="nesges-user-tie" class="cell"></div>
-    //<div data-type="pagetab" data-url="aussen.php" data-icon="fa-sun-o" class="cell"></div>
-    //<div data-type="pagetab" data-url="system-light.php" data-icon="fa-gears" class="cell"></div>
-    ?>
-        
     <? button('room_index',         'index.php',        'fa-home')      ?>
-    <? button('room_wohnzimmer',    'wohnzimmer.php',   'nesges-sofa')  ?>
-    <? button('room_kueche',        'kueche.php',       'fa-cutlery')   ?>
-    <? button('room_schlafzimmer',  'schlafzimmer.php', 'fa-bed')       ?>
+    
+    <div data-type="circlemenu" class="cell circlemenu" data-direction="right-half">
+        <ul class="menu">
+            <li><div data-type="button" id="room_wohnzimmer" data-icon="nesges-sofa" data-on-background-color="rgb(111,69,0)" data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><? button('', 'wohnzimmer.php',             'fa-line-chart',    '#aa6900', true) ?></li>
+            <li><div data-type="button"
+                    data-device="WATER"
+                    data-get-on="present"
+                    data-get-off="absent"
+                    data-url="wohnzimmer-pc.php"
+                    data-icon="fa-laptop"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
+                    data-device="W_XBMC"
+                    data-get-on="opened"
+                    data-get-off="disconnected"
+                    data-url="wohnzimmer-xbmc-simple.php"
+                    data-icon="nesges-kodi"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
+                    data-device="MILIGHT_Zone1_Wohnzimmer"
+                    data-get-on="on.*"
+                    data-get-off="off"
+                    data-url="wohnzimmer-milight.php"
+                    data-icon="fa-lightbulb-o"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+        </ul>
+    </div>
+    <div data-type="circlemenu" class="cell circlemenu" data-direction="right-half">
+        <ul class="menu">
+            <li><div data-type="button" id="room_kueche" data-icon="fa-cutlery" data-on-background-color="rgb(111,69,0)" data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><? button('', 'kueche.php',             'fa-line-chart',    '#aa6900', true) ?></li>
+            <li><div data-type="button"
+                    data-device="MCP_KODI"
+                    data-get-on="opened"
+                    data-get-off="disconnected"
+                    data-url="kueche-streamradio.php"
+                    data-icon="nesges-radio2"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><? button('', 'kueche-xbmc.php',        'nesges-kodi',      '#aa6900', true) ?></li>
+            <li><div data-type="button"
+                    data-device="MILIGHT_Zone3_Kueche"
+                    data-get-on="on.*"
+                    data-get-off="off"
+                    data-url="kueche-milight.php"
+                    data-icon="fa-lightbulb-o"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><? button('', 'kuehlschrank.php',       'fa-star-o',        '#aa6900', true) ?></li>
+        </ul>
+    </div>
+    <div data-type="circlemenu" class="cell circlemenu" data-direction="right-half" data-circle-radius="90">
+        <ul class="menu">
+            <li><div data-type="button" id="room_schlafzimmer" data-icon="fa-bed" data-on-background-color="rgb(111,69,0)" data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><? button('', 'schlafzimmer.php',               'fa-line-chart',    '#aa6900', true) ?></li>
+            <li><div data-type="button"
+                    data-device="REVO"
+                    data-get-on="present"
+                    data-get-off="absent"
+                    data-url="schlafzimmer-pc.php"
+                    data-icon="fa-laptop"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
+                    data-device="FLUX_KODI"
+                    data-get-on="opened"
+                    data-get-off="disconnected"
+                    data-url="schlafzimmer-streamradio.php"
+                    data-icon="nesges-radio2"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
+                    data-device="S_XBMC"
+                    data-get-on="opened"
+                    data-get-off="disconnected"
+                    data-url="schlafzimmer-xbmc-simple.php"
+                    data-icon="nesges-kodi"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
+                    data-device="MILIGHT_Zone2_Schlafzimmer"
+                    data-get-on="on.*"
+                    data-get-off="off"
+                    data-url="schlafzimmer-milight.php"
+                    data-icon="fa-lightbulb-o"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><? button('', 'schlafzimmer-wecker.php', 'nesges-alarmclock', '#aa6900', true) ?></li>
+        </ul>
+    </div>
+    
     <? button('room_bad',           'bad.php',          'fa-female')    ?>
-    <? button('room_buero',         'buero.php',        'nesges-user-tie')    ?>
-    <? button('room_aussen',        'aussen.php',       'fa-sun-o')     ?>
-    <? button('options',            'system-light.php', 'fa-sliders', 'rgb(80,80,80)')    ?>
+    
+    <div data-type="circlemenu" class="cell circlemenu" data-direction="right-half">
+        <ul class="menu">
+            <li><div data-type="button" id="room_buero" data-icon="nesges-user-tie" data-on-background-color="rgb(111,69,0)" data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><? button('', 'buero.php',               'fa-line-chart',    '#aa6900', true) ?></li>
+            <li><div data-type="button"
+                    data-device="MIST"
+                    data-get-on="present"
+                    data-get-off="absent"
+                    data-url="buero-pc.php"
+                    data-icon="fa-laptop"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li>
+                <div data-type="button"
+                    data-device="B_XBMC"
+                    data-get-on="opened"
+                    data-get-off="disconnected"
+                    data-url="buero-xbmc-simple.php"
+                    data-icon="nesges-kodi"
+                    data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div>
+        </ul>
+    </div>
 
-    <div style="padding-top:30px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
+    <? button('room_aussen',        'aussen.php',       'fa-sun-o')     ?>
+    
+    <div data-type="circlemenu" class="cell circlemenu" data-direction="right-half">
+        <ul class="menu">
+            <li><div data-type="button" id="room_system" data-icon="fa-info" data-on-background-color="rgb(111,69,0)" data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><? button('options_calls',      'system-calls.php',             'fa-phone',         '#aa6900', true)                      ?></li>
+            <li><? button('options_timers',     'system-timers.php',            'fa-clock-o',       '#aa6900', true)                    ?></li>
+            <li><? button('options_plots',      'system-plots.php?p=HUMID_ALL', 'fa-line-chart',    '#aa6900', true)     ?></li>
+            <li><? button('options_calendar',   'system-calendar.php',          'fa-calendar',      '#aa6900', true)                   ?></li>
+            <li><? button('options_cinema',     'system-kino.php',              'fa-video-camera',  '#aa6900', true)               ?></li>
+        </ul>
+    </div>
+
+    <div style="padding-top:10px;font-size:20px;color:rgb(170,105,0);text-shadow: 0px 0px 3px rgb(42,42,42)" data-type="clock"></div>
 </div>

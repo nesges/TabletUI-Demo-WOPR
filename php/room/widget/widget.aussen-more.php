@@ -13,7 +13,7 @@
         <div data-type="label" class="cell">Karten DWD</div>
     </div>
     <div>
-        <div data-type="circlemenu" data-direction="full" class="cell circlemenu">
+        <div data-type="circlemenu" data-direction="left-half" class="cell circlemenu" data-circle-radius="100">
             <ul class="menu">
                 <li><div data-type="symbol" data-icon="nesges-map" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
                 <li><div data-type="button" data-url="aussen-iframe.php?content=wetteronline_radar" data-icon="fa-umbrella"></div></li>
@@ -29,17 +29,18 @@
         <div data-type="label" class="cell">Karten WO</div>
     </div>
     <div>
-        <div data-type="circlemenu" data-direction="full" class="cell circlemenu">
+        <div data-type="circlemenu" class="cell circlemenu" data-direction="left-half" data-circle-radius="140">
             <ul class="menu">
                 <li><div data-type="symbol" data-icon="fa-line-chart" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
                 <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN_TEMP&nonav&dark&nolegend")?>" data-icon="1" class="meteocons" data-background-icon="fa-circle-thin" title="Temperatur"></div></li>
-                <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN&nonav&dark&nolegend")?>" data-icon="fa-plus-circle" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Alles"></div></li>
                 <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN_CHOFRAIN&nonav&dark&nolegend")?>" data-icon="8" class="meteocons" data-background-icon="fa-circle-thin" title="Regenwahrscheinlichkeit"></div></li>
                 <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN_BEWOELKUNG&nonav&dark&nolegend")?>" data-icon="fa-cloud" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Bew&ouml;lkung"></div></li>
                 <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN_WINDSPEED&nonav&dark&nolegend")?>" data-icon="9" class="meteocons" data-background-icon="fa-circle-thin" title="Windgeschwindigkeit"></div></li>
                 <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN_VIS&nonav&dark&nolegend")?>" data-icon="fa-binoculars" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Sicht"></div></li>
                 <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN_PRESSURE&nonav&dark&nolegend")?>" data-icon="fa-cloud-download" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Luftdruck"></div></li>
                 <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN_HUM&nonav&dark&nolegend")?>" data-icon="fa-tint" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Luftfeuchtigkeit"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=wind_direction_pie" data-icon="fa-compass" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Hauptwindrichtung"></div></li>
+                <li><div data-type="button" data-url="aussen-iframe.php?content=<?=urlencode("/plots/?p=P_AUSSEN&nonav&dark&nolegend")?>" data-icon="fa-plus-circle" data-background-icon="fa-circle-thin" data-on-color="#aa6900" title="Alles"></div></li>
             </ul>
         </div>
         <div data-type="label" class="cell">Plots</div>

@@ -60,7 +60,7 @@
 <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
         <header>SYSTEM</header>
-    	<? include("widget/widget.options.php") ?>
+    	<? include("widget/widget.rooms.php") ?>
     </li>
     
     <li data-row="1" data-col="2" data-sizex="1" data-sizey="4">
@@ -80,6 +80,8 @@
         <div class="centered container" style="margin-bottom:40px !important">
             <div class="left">
                 <div id="TIMER3_m" 
+                    data-device="TIMER3"
+                    data-cmd=" "
                     data-type="volume"
                     data-min="0"
                     data-max="60"
@@ -91,6 +93,8 @@
             </div>
             <div class="left">
                 <div id="TIMER3_h"  
+                    data-device="TIMER3"
+                    data-cmd=" "
                     data-type="volume"
                     data-min="0"
                     data-max="24"
@@ -138,7 +142,7 @@
                     data-cmd="setreading"
                     data-get-on="handy|all"
                     data-get-off="!on"
-                    data-set-on="handy" 
+                    data-set-on="signaldevice handy" 
                     data-set-off="signaldevice monitroid" 
                     data-icon="fa-mobile" 
                     data-on-background-color="#9933FF"
@@ -215,6 +219,8 @@
         <div class="centered container" style="margin-bottom:40px !important">
             <div class="left">
                 <div id="TIMER4_m" 
+                    data-device="TIMER4"
+                    data-cmd=" "
                     data-type="volume"
                     data-min="0"
                     data-max="60"
@@ -226,6 +232,8 @@
             </div>
             <div class="left">
                 <div id="TIMER4_h"  
+                    data-device="TIMER4"
+                    data-cmd=" "
                     data-type="volume"
                     data-min="0"
                     data-max="24"
@@ -273,11 +281,11 @@
                     data-cmd="setreading"
                     data-get-on="handy|all"
                     data-get-off="!on"
-                    data-set-on="handy" 
+                    data-set-on="signaldevice handy" 
                     data-set-off="signaldevice monitroid" 
                     data-icon="fa-mobile" 
-                    data-color="#9933FF"
-                    data-offcolor="#505050"
+                    data-on-background-color="#9933FF"
+                    data-off-background-color="#505050"
                     class="left"></div>
             </div>
             <div class="left">
@@ -290,8 +298,8 @@
                     data-set-on="signaldevice monitroid" 
                     data-set-off="signaldevice monitroid" 
                     data-icon="fa-tablet" 
-                    data-color="#9933FF"
-                    data-offcolor="#505050"
+                    data-on-background-color="#9933FF"
+                    data-off-background-color="#505050"
                     class="left"></div>
             </div>
             <div class="left">
@@ -304,8 +312,8 @@
                     data-set-on="signaldevice fritz" 
                     data-set-off="signaldevice monitroid" 
                     data-icon="fa-phone" 
-                    data-color="#9933FF"
-                    data-offcolor="#505050"
+                    data-on-background-color="#9933FF"
+                    data-off-background-color="#505050"
                     class="left"></div>
             </div>
         </div>
@@ -320,8 +328,8 @@
                     data-set-on="signaldevice water" 
                     data-set-off="signaldevice monitroid" 
                     data-icon="fa-desktop" 
-                    data-color="#9933FF"
-                    data-offcolor="#505050"                   
+                    data-on-background-color="#9933FF"
+                    data-off-background-color="#505050"
                     class="left"></div>
             </div>
             <div class="left">
@@ -334,8 +342,8 @@
                     data-set-on="signaldevice all" 
                     data-set-off="signaldevice monitroid" 
                     data-icon="fa-plus-circle" 
-                    data-color="#9933FF"
-                    data-offcolor="#505050"                   
+                    data-on-background-color="#9933FF"
+                    data-off-background-color="#505050"
                     class="left"></div>
             </div>
         </div>        

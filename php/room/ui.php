@@ -12,6 +12,7 @@
     include_once("template/template.weathermap.php");
     include_once("template/template.weatherforecast.php");
     include_once("template/template.battery.php");
+    include_once("template/template.kodi-streamradio.php");
 
     $ftui="../fhem-tablet-ui/www/tablet/";
 
@@ -51,9 +52,9 @@
             ?>
             <style type="text/css">
                 div.gridster {
-                    zoom: 1.2;
-                    -moz-transform: scale(1.2);
-                    -moz-transform-origin: 0 0;
+                    // zoom: 1.2;
+                    // -moz-transform: scale(1.2);
+                    // -moz-transform-origin: 0 0;
                 }
             </style>
             <?  
@@ -72,8 +73,10 @@
     <meta name="widget_base_height" content="<?=$this->widget_base_height?>">
     <meta name="fhemweb_url" content="<?=$this->fhemweb_url?>">
     <meta name="longpoll" content="<?=$this->longpoll?>">
+    <meta name="request_cache" content="100">
     <meta name="gridster_disable" content="1">
     <meta name="widget_dir" content="../Widgets-for-fhem-tablet-ui/js">
+    <meta name="debug" content="0">
     
     <link rel="stylesheet" href="<?= $ftui ?>lib/jquery.gridster.min.css">
     <link rel="stylesheet" href="<?= $ftui ?>css/fhem-tablet-ui.css">
@@ -104,8 +107,6 @@
     <script type="text/javascript" src="<?= $ftui ?>js/fhem-tablet-ui.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
-    
-    <script type="text/javascript" src="<?= $ftui ?>js/widget_symbol.js"></script>
 <?
             if($daydream) {
 ?>
@@ -133,6 +134,15 @@
 ?>
 </head>
 <body>
+    <div data-type="clicksound"
+        data-sound='["ion-tap", "ion-water-droplet-2", "ion-button-tiny", "ion-cd-tray", "ion-water-droplet-3"]'
+        data-bind-to='["+knob", "+circlemenu-outer", "+button", "+circlemenu-center", "+slider"]'
+        data-length='[200,300,200,1400,200]'
+        data-volume="70"
+        ></div>
+        
+        <script type="text/javascript" src="<?= $ftui ?>js/widget_clicksound.js"></script>
+        <script type="text/javascript" src="<?= $ftui ?>js/widget_famultibutton.js"></script>
     <div class="gridster">
 <?
         }

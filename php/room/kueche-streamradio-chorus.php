@@ -13,6 +13,6 @@
             data-check-src="/kodi/mcp/addons/webinterface.chorus/"
             data-src="http://<?=$mcp_user?>:<?=$mcp_pass?>@192.168.178.34:80/addons/webinterface.chorus/"
             data-fill="yes"></div>
-        <div data-type="button" data-url="kueche-streamradio.php" data-icon="nesges-radio2" style="position:absolute;z-index:1001;top:-2px;left:50px;opacity:0.8"></div>
+        <div data-type="button" data-url="kueche-streamradio.php" data-icon="fa-star" data-on-background-color="transparent" data-background-icon="none" data-on-color="#aa6900" style="position:absolute;z-index:1001;top:-2px;left:-5px"></div>
     </li>
 </ul>

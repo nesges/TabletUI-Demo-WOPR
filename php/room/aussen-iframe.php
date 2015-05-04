@@ -25,6 +25,12 @@
                 $url = $_url;
             }
             break;
+        case "wind_direction_pie":
+            $img=0;
+            $width=700;
+            $height=570;
+            $url = '/plots/wind_direction.php';
+            break;
         case "moon":
             $url = weathermap($url);
             $imgstyle="zoom:1.7;margin:-100px";

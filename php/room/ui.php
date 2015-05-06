@@ -52,9 +52,9 @@
             ?>
             <style type="text/css">
                 div.gridster {
-                    // zoom: 1.2;
-                    // -moz-transform: scale(1.2);
-                    // -moz-transform-origin: 0 0;
+                     //zoom: 1.2;
+                     //-moz-transform: scale(1.2);
+                     //-moz-transform-origin: 0 0;
                 }
             </style>
             <?  

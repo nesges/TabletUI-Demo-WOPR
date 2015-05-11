@@ -13,6 +13,7 @@
     include_once("template/template.weatherforecast.php");
     include_once("template/template.battery.php");
     include_once("template/template.kodi-streamradio.php");
+    include_once("template/template.mdp.php");
 
     $ftui="../fhem-tablet-ui/www/tablet/";
 
@@ -52,9 +53,9 @@
             ?>
             <style type="text/css">
                 div.gridster {
-                     //zoom: 1.2;
-                     //-moz-transform: scale(1.2);
-                     //-moz-transform-origin: 0 0;
+                     zoom: 1.2;
+                     -moz-transform: scale(1.2);
+                     -moz-transform-origin: 0 0;
                 }
             </style>
             <?  
@@ -112,6 +113,7 @@
 ?>
     <meta name="daydream_starttime" content="1800000">
     <meta name="daydream_slowdown" content="10000">
+    
     <script type="text/javascript" src="../js/daydream.js"></script>
 <?
             }

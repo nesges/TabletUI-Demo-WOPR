@@ -20,13 +20,7 @@
                         data-get="condition"
                         style="font-size:90%"></div>
                 </a>
-                <?
-                    if(basename($_SERVER['PHP_SELF'])!='index.php') {
-                        ?>
-                        <div style="height:40px;"></div>
-                        <?
-                    }
-                ?>
+                <div style="height:40px;"></div>
             </td>
         </tr>
         <tr>

@@ -41,6 +41,7 @@
         </div>
         
         <div style="margin-top:30px" class="centered container">
+            <? if($host=='WATER') { button('', preg_replace('/-xbmc-simple/', '-streamradio', $_SERVER['PHP_SELF']), 'nesges-radio2', '#0066FF'); } ?>
             <? button_fhem('', "{eventghost('".$host."', 'KODI Mute')}", 'fa-volume-off', 'rgb(170,105,0)') ?>
             <? button_fhem('', "{eventghost('".$host."', 'KODI Volume Down')}", 'fa-volume-down', 'rgb(170,105,0)') ?>
             <? button_fhem('', "{eventghost('".$host."', 'KODI Volume Up')}", 'fa-volume-up', 'rgb(170,105,0)') ?>
@@ -53,7 +54,7 @@
                 data-cmd="set"
                 data-set="volume"
                 class="horizontal"
-                style="height:0px !important;margin-bottom:0px !important;margin-top:-10px !important;width:250px"></div>
+                style="margin-top:20px !important;margin-bottom:0px !important;"></div>
         </div>
         
         <div style="margin-top:25px" class="centered container">

@@ -1,5 +1,5 @@
 <div class="centered container">
-    <div class="left">
+    <a href="aussen.php"><div class="left">
 	    <div data-type="label" data-device="A_HUMID" data-get="temperature" data-unit=" %B0C%0A" class="cell big"></div>
 	    <div class="centered container">
 	        <div class="left">
@@ -25,5 +25,5 @@
 	            <div data-type="klimatrend" data-device="A_HUMID" data-get="statHumidityTendency" data-refperiod="3" class="cell small"></div>
 	        </div>
 	    </div>
-    </div>
+    </div></a>
 </div>

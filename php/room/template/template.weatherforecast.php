@@ -56,9 +56,6 @@
                                 class="inline"></div>
                     </td>
                 </tr>
-                <?
-                    if($day<4) {
-                ?>
                 <tr>
                     <td>
                             <div data-type="symbol" data-icon="8" class="meteocons" style="font-size:14px" data-off-color="#aa6900"></div>
@@ -71,7 +68,6 @@
                     </td>
                 </tr>
                 <?
-                    }
                     if($day<3) {
                 ?>
                 <tr>

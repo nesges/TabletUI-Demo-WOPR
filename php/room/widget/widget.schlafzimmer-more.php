@@ -6,7 +6,7 @@
     </div>
     <? } ?>
     <div class="left">
-	    <? button('pc',         'schlafzimmer-streamradio.php', 'nesges-radio2') ?>
+	    <? button('pc',         'schlafzimmer-mpd.php', 'nesges-radio2') ?>
 	    <div data-type="label">Radio</div>
     </div>
     <? if(basename($_SERVER['PHP_SELF']) != 'schlafzimmer-xbmc-simple.php') { ?>

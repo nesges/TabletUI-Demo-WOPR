@@ -1,8 +1,8 @@
 <div class="centered container">
-    <?
+    <a href="wohnzimmer.php"><?
         temperature('W_HUMID');
         humidity('W_HUMID');
-    ?>
+    ?></a>
     <div style="padding-top:33px !important">
     <?
         thermostat('W_HEIZUNG', 'W_HEIZUNG_BALKON');

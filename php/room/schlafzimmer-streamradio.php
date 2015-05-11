@@ -23,7 +23,7 @@
         <div data-type="iframe"
             data-device="FLUX"
             data-check-src="/kodi/flux/addons/webinterface.chorus/"
-            data-src="http://<?=$mcp_user?>:<?=$mcp_pass?>@192.168.178.35:80/addons/webinterface.chorus/"
+            data-src="http://<?=$mcp_user?>:<?=$mcp_pass?>@192.168.178.35:8080/addons/webinterface.chorus/"
             data-height="109"
             data-width="765"></div>
         
@@ -43,6 +43,6 @@
     
     <li data-row="3" data-col="5" data-sizex="3" data-sizey="1">
         <header>WEITER</header>
-    	<? include("widget/widget.kueche-more.php") ?>
+    	<? include("widget/widget.schlafzimmer-more.php") ?>
     </li>
 </ul>

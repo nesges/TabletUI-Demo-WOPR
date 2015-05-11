@@ -1,5 +1,5 @@
 <div class="centered container"><div class="left">
-    <div data-type="label" 
+    <a href="kuehlschrank.php"><div data-type="label" 
         data-device="KUEHL_THERMO" 
         data-get="temperature" 
         data-unit=" %B0C%0A" 
@@ -8,5 +8,5 @@
         class="cell big"></div>
     <div data-type="klimatrend" 
         data-device="KUEHL_THERMO" 
-        class="cell small"></div>
+        class="cell small"></div></a>
 </div></div>

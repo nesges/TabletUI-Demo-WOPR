@@ -46,6 +46,7 @@ $( document ).ready(function() {
                 $(this).attr('data-get-on', $(this).attr('data-get-on') || '["opened","closed"]');
                 $(this).attr('data-icons', $(this).attr('data-icons') || '["ftui-window","ftui-window"]');
                 $(this).attr('data-on-colors', $(this).attr('data-on-colors') || '["#2a2a2a","#2a2a2a"]');
+                $(this).attr('data-on-background-colors', $(this).attr('data-on-background-colors') || '["#aa6900","#505050"]');
                 $(this).attr('data-background-icon', $(this).attr('data-background-icon') || "fa-circle");
                 $(this).attr('data-off-background-color', $(this).attr('data-off-background-color') || "#505050");
                 $(this).attr('data-on-background-color', $(this).attr('data-on-background-color') || "#aa6900");

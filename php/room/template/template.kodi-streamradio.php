@@ -74,11 +74,30 @@
                 onClick="$('#KODIVolumeSlider').data('Powerange').setStart(100)"></div>
         </div>
         <div class="centered">
-            <? button_fhem('', "set ".$kodi[$host]." repeat off", 'fa-long-arrow-right', '#339999') ?>
-            <? button_fhem('', "set ".$kodi[$host]." repeat one", 'nesges-repeat-one', '#339999') ?>
-            <? button_fhem('', "set ".$kodi[$host]." repeat all", 'nesges-repeat', '#339999') ?>
-            <? button_fhem('', "set ".$kodi[$host]." shuffle off", 'nesges-ordered', '#9933FF') ?>
-            <? button_fhem('', "set ".$kodi[$host]." shuffle on", 'fa-random', '#9933FF') ?>
+            <div data-type="button"
+                data-url="<?= preg_replace('/\.php$/', '-kodilib.php', basename($_SERVER['PHP_SELF'])) ?>"
+                data-icon="fa-list"
+                data-on-background-color="#FFCC00"
+                class="cell"
+                ></div>
+            <div data-type="multistatebutton"
+                data-device="<?=$kodi[$host]?>"
+                data-get="repeat"
+                data-get-on='["off","one","all"]'
+                data-set='["repeat one","repeat all","repeat off"]'
+                data-set-default="repeat off"
+                data-icons='["fa-long-arrow-right","nesges-repeat-one","nesges-repeat"]'
+                data-on-background-color='#339999'
+                class="cell"></div>
+            <div data-type="multistatebutton"
+                data-device="<?=$kodi[$host]?>"
+                data-get="shuffle"
+                data-get-on='["off","on"]'
+                data-set='["shuffle on","shuffle off"]'
+                data-set-default="shuffle off"
+                data-icons='["nesges-ordered","fa-random"]'
+                data-on-background-color="#9933FF"
+                class="cell"></div>
         </div>
         <div class="centered">
             <div class="left">

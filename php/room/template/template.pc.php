@@ -4,65 +4,112 @@
         $xbmc['REVO'] = 'S_XBMC';
         $xbmc['WATER'] = 'W_XBMC';
 ?>
-
-<li data-row="1" data-col="2" data-sizex="6" data-sizey="2">
+<li data-row="1" data-col="2" data-sizex="3" data-sizey="2">
 	<header>WINAMP</header>
-	<div class="centered container">
+    <div class="centered container">
 	    <div class="left">
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'rockantenne') }", 'fa-bolt', '#2E8AE6') ?>
+	        <div data-type="label">RA Metal</div>
+        </div>
+	    <div class="left">
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'rockantenneclassic') }", 'fa-bolt', '#2E8AE6') ?>
+	        <div data-type="label">RA Classic</div>
+        </div>
+	    <div class="left">
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'rockantennealternative') }", 'fa-bolt', '#2E8AE6') ?>
+	        <div data-type="label">RA Alternative</div>
+        </div>
+        <div class="left">
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'rockradiodeathmetal') }", 'fa-bolt', '#2E8AE6') ?>
+	        <div data-type="label">RR Death</div>
+        </div>
+    </div>
+    <div class="centered container">
+        <div class="left">
 	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Start')}", 'fa-play-circle') ?>
             <div data-type="label">Ein</div>
         </div>
         <div class="left">
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Exit')}", 'fa-power-off') ?>
-	        <div data-type="label">Aus</div>
-	    </div>
-	    <div class="left">
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist Rockantenne')}", 'fa-music', '#2E8AE6') ?>
-	        <div data-type="label">Rockantenne</div>
-        </div>
-        <div class="left">
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist Beggelfest13')}", 'fa-music', '#2E8AE6') ?>
-	        <div data-type="label">BF13</div>
-        </div>
-        <div class="left">
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist Tormentedradio')}", 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'tormentedradio') }", 'fa-gears', '#2E8AE6') ?>
 	        <div data-type="label">tormented</div>
         </div>
         <div class="left">
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist DLF')}", 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'digitalgunfire') }", 'fa-gears', '#2E8AE6') ?>
+	        <div data-type="label">DGunfire</div>
+        </div>
+        <div class="left">
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'ebmradio') }", 'fa-gears', '#2E8AE6') ?>
+	        <div data-type="label">EBMr</div>
+        </div>
+    </div>
+    <div class="centered container">    
+        <div class="left">
+	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Exit')}", 'fa-power-off') ?>
+	        <div data-type="label">Aus</div>
+	    </div>
+        <div class="left">
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'dlf') }", 'fa-comment-o', '#2E8AE6') ?>
 	        <div data-type="label">DLF</div>
         </div>
         <div class="left">
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist DKultur')}", 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'dkultur') }", 'fa-comment-o', '#2E8AE6') ?>
 	        <div data-type="label">DKultur</div>
         </div>
         <div class="left">
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Playlist DWissen')}", 'fa-music', '#2E8AE6') ?>
+	        <? button_fhem('', "{ winamp_streamradio('".$host."', 'dradiowissen') }", 'fa-comment-o', '#2E8AE6') ?>
 	        <div data-type="label">DWissen</div>
         </div>
     </div>
-    <div class="centered container" style="margin-top:40px !important">
+</li>
+<li data-row="1" data-col="5" data-sizex="3" data-sizey="2">
+    <div data-type="itunes_artwork"
+        data-device="<?=$host?>_INFO"
+        data-get='["WinampSongTitle"]'
+        data-stripbrackets="true"
+        data-notfoundimg="../images/empty.svg"
+        data-stripregex=" -"
+        data-opacity="0.2"
+        data-size=280
+        style="position:absolute;bottom:-5px;left:50px;"></div>
+    <div class="centered container" style="margin-top:20px !important">
 	    <div class="left">
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Play Toggle')}", 'fa-play', '#FFCC00') ?>
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Pause')}", 'fa-pause', 'rgb(170,105,0)') ?>
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Stop')}", 'fa-stop', 'rgb(170,105,0)') ?>
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Previous')}", 'fa-step-backward') ?>
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Next')}", 'fa-step-forward') ?>
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Volume Down')}", 'fa-volume-down') ?>
-	        <? button_fhem('', "{eventghost('".$host."', 'Winamp Volume Up')}", 'fa-volume-up') ?>
+	        <? button_fhem('', "{winamp('".$host."', 'Play Toggle')}", 'fa-play', '#FFCC00') ?>
+	        <? button_fhem('', "{winamp('".$host."', 'Pause')}", 'fa-pause', 'rgb(170,105,0)') ?>
+	        <? button_fhem('', "{winamp('".$host."', 'Stop')}", 'fa-stop', 'rgb(170,105,0)') ?>
+        </div>
+    </div>
+    <div class="centered container" style="margin-top:20px !important">
+	    <div class="left">
+	        <? button_fhem('', "{winamp('".$host."', 'Previous')}", 'fa-step-backward') ?>
+	        <? button_fhem('', "{winamp('".$host."', 'Next')}", 'fa-step-forward') ?>
 	    </div>
     </div>
-    <div class="centered container" style="margin-top:40px !important">
+    <div class="centered container" style="margin-top:10px !important">
+        <div data-type="label" 
+            data-device="<?=$host?>_INFO" 
+            data-get="WinampSongTitle"
+            data-substitution="s/(.*?)\s*-\s*(.*)\s*(\(.*?\))/$3<br>$1 - $2/"
+            ></div>
+    </div>
+    <div class="centered container" style="margin-top:15px !important">
 	    <div class="left">
 	        <div data-type="slider"
-	            data-device="WATER_WINAMP"
+	            data-device="<?=$host?>"
 	            data-cmd="setreading"
-	            data-get="volume"
-	            data-set="volume"
+	            data-get="winampVolume"
+	            data-set="winampVolume"
 	            class="horizontal"
 	            style="width:200px"></div>
 	    </div>
     </div>
+    <style>
+        .range-handle, .range-bar {
+            box-shadow:0px 0px 20px white;
+        }
+        [data-type=slider] {
+            padding-left:35px;
+        }
+    </style>
 </li>
 
 <li data-row="3" data-col="2" data-sizex="6" data-sizey="1">

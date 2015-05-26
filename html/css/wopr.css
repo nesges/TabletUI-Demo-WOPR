@@ -209,3 +209,8 @@ select {
     cursor:pointer;
     text-align:left;
 }
+
+.ipadscrollwrapper {
+    width:100%;
+    height:100%;
+}

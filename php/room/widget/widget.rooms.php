@@ -27,6 +27,12 @@
                     data-on-color="white"
                     data-off-background-color="rgb(111,69,0)"></div></li>
             <li><div data-type="button"
+                    data-url="wohnzimmer-mpd.php"
+                    data-icon="nesges-radio2"
+                    data-on-color="white"
+                    data-off-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
                     data-device="W_XBMC"
                     data-get-on="opened"
                     data-get-off="disconnected"

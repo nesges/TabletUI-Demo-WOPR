@@ -1,22 +1,6 @@
 <?
     include("ui.php");
     $ui = new UI();
-    
-    function weather_forecast_small($day) {
-        ?>
-                <div class="left">
-                    <div data-type="label" data-device="Wetter" data-get="fc<?=$day?>_day_of_week" style="margin-bottom:5px"></div>
-                    <div data-type="weather" 
-                        data-device="Wetter"
-                        data-get="fc<?=$day?>_condition"
-                        data-imageset="meteocons"
-                        style="font-size:16px;padding:5px;margin:0;margin-top:-5px;"></div>
-                    <!--div data-type="label" data-device="Wetter" data-get="fc<?=$day?>_low_c" data-unit="&deg;C"></div-->
-                    <div data-type="label" data-device="Wetter" data-get="fc<?=$day?>_high_c" data-unit="&deg;C"></div>
-                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc<?=$day?>_chOfRainDay" data-unit="%"></div>
-                </div>
-        <?
-    }
 ?>
 <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
@@ -54,11 +38,11 @@
         <header>WETTER-VORHERSAGE</header>
         <div class="centered" style="padding-top:10px !important;padding-bottom:15px !important">
             <a href="aussen.php">
+                <? weather_forecast_small(0) ?>
                 <? weather_forecast_small(1) ?>
                 <? weather_forecast_small(2) ?>
                 <? weather_forecast_small(3) ?>
                 <? weather_forecast_small(4) ?>
-                <? weather_forecast_small(5) ?>
             </a>
         </div>
     </li>
@@ -121,15 +105,15 @@
         <header>OPTIONEN</header>
         <div class="centered">
             <div class="left">
-                <div data-type="switch" data-device="OPT_PARTY" class="cell" data-icon="fa-glass" data-subtype="dummy10"></div>
+                <div data-type="switch" data-doubleclick="1000" data-device="OPT_PARTY" class="cell" data-icon="fa-glass" data-subtype="dummy10"></div>
                 <div data-type="label" class="cell">Gäste</div>
             </div>
             <div class="left">
-                <div data-type="switch" data-device="OPT_ALARM" class="cell" data-icon="fa-bullhorn" data-subtype="dummy10"></div>
+                <div data-type="switch" data-doubleclick="1000" data-device="OPT_ALARM" class="cell" data-icon="fa-bullhorn" data-subtype="dummy10"></div>
                 <div data-type="label" class="cell">Alarm</div>
             </div>
             <div class="left">
-                <div data-type="switch" data-device="OPT_HEIZUNG" class="cell" data-icon="fa-fire" data-subtype="dummy10"></div>
+                <div data-type="switch" data-doubleclick="1000" data-device="OPT_HEIZUNG" class="cell" data-icon="fa-fire" data-subtype="dummy10"></div>
                 <div data-type="label" class="cell">Heizung</div>
             </div>
         </div>

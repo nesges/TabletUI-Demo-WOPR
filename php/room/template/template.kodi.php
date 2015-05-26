@@ -53,6 +53,7 @@
                 data-get="volume"
                 data-cmd="set"
                 data-set="volume"
+                data-width="250"
                 class="horizontal"
                 style="margin-top:20px !important;margin-bottom:0px !important;"></div>
         </div>

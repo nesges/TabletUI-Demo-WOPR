@@ -15,6 +15,13 @@
     
     <li data-row="1" data-col="5" data-sizex="3" data-sizey="3">
         <header>PLAYER</header>
+        <div data-type="itunes_artwork"
+            data-device="MPD_FLUX"
+            data-get='["now_artist","now_album","now_title"]'
+            data-opacity="0.2"
+            data-size=400
+            style="position:absolute;top:20px;left:-10px;"></div>
+            
         <? mpd_streamradio_control('FLUX') ?>
     </li>
     

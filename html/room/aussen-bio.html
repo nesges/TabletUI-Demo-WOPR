@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <head>
-    <title>WOPR :: FTUI 
-     :: Aussen Bio    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
+    <title>WOPR :: FTUI  :: Aussen Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
@@ -24,13 +24,14 @@
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
     <link rel="stylesheet" href="../css/wopr.css">
+    <!--link rel="stylesheet" href="../css/csshake.min.css"-->
     
     <script type="text/javascript" src="../pgm2/jquery.min.js"></script>
-    <script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script>
+    <!--script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script-->
 
-    <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
+    <!--link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
-    <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
+    <link rel="stylesheet" href="../css/theme/amber/ftui.css" /-->
     
     <link rel="stylesheet" href="../fonts/nesges/style.css">
     
@@ -43,9 +44,11 @@
     
     <script type="text/javascript" src="../js/subtype-defaults.js"></script>
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
+    
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_label.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
-</head>
+    </head>
 <body>
     <div data-type="clicksound"
         data-sound='["ion-tap", "ion-water-droplet-2", "ion-button-tiny", "ion-cd-tray", "ion-water-droplet-3"]'
@@ -54,8 +57,6 @@
         data-volume="70"
         ></div>
         
-        <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_clicksound.js"></script>
-        <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_famultibutton.js"></script>
     <div class="gridster">
 <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
@@ -87,6 +88,12 @@
                     data-url="wohnzimmer-pc.php"
                     data-icon="fa-laptop"
                     data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
+                    data-url="wohnzimmer-mpd.php"
+                    data-icon="nesges-radio2"
+                    data-on-color="white"
+                    data-off-color="white"
                     data-off-background-color="rgb(111,69,0)"></div></li>
             <li><div data-type="button"
                     data-device="W_XBMC"
@@ -490,13 +497,13 @@
     <div data-type="label" data-device="UVOZON" data-get="OzonDesc" style="margin-top:20px"></div>
 </div>    </li>
     <li data-row="1" data-col="4" data-sizex="3" data-sizey="3">
-        <img id="imgmap" src="http://www.wetteronline.de/?fcdatstr=20150511&amp;gid=DL&amp;iid=DL&amp;img=true&amp;pid=p_city_bio&amp;sid=Map" width='100%' alt="Wetterkarte">
+        <img id="imgmap" src="http://www.wetteronline.de/?fcdatstr=20150526&amp;gid=DL&amp;iid=DL&amp;img=true&amp;pid=p_city_bio&amp;sid=Map" width='100%' alt="Wetterkarte">
         <div data-type="circlemenu" class="cell circlemenu" data-direction="bottom-left" style="position:absolute;z-index:1001;top:0px;right:0px;opacity:0.5">
     <ul class="menu">
         <li><div data-type="symbol" data-icon="fa-globe" data-off-color="#aa6900" data-background-icon="fa-circle-thin"></div></li>
-        <li><div data-type="button" data-url="javascript:imgmap.src='http://www.wetteronline.de/?fcdatstr=20150511&amp;gid=DL&amp;iid=DL&amp;img=true&amp;paraid=Max&amp;pid=p_city_pollen&amp;sid=Map';false" data-icon="fa-pagelines"></div></li>
-        <li><div data-type="button" data-url="javascript:imgmap.src='http://www.wetteronline.de/?fcdatstr=20150511&amp;gid=DL&amp;iid=DL&amp;img=true&amp;pid=p_city_bio&amp;sid=Map';false" data-icon="fa-smile-o"></div></li>
-        <li><div data-type="button" data-url="javascript:imgmap.src='http://www.wetteronline.de/?fcdatstr=20150511&amp;gid=DL&amp;iid=DL&amp;img=true&amp;pid=p_city_uv&amp;sid=Map';false" data-icon="fa-sun-o"></div></li>
+        <li><div data-type="button" data-url="javascript:imgmap.src='http://www.wetteronline.de/?fcdatstr=20150526&amp;gid=DL&amp;iid=DL&amp;img=true&amp;paraid=Max&amp;pid=p_city_pollen&amp;sid=Map';false" data-icon="fa-pagelines"></div></li>
+        <li><div data-type="button" data-url="javascript:imgmap.src='http://www.wetteronline.de/?fcdatstr=20150526&amp;gid=DL&amp;iid=DL&amp;img=true&amp;pid=p_city_bio&amp;sid=Map';false" data-icon="fa-smile-o"></div></li>
+        <li><div data-type="button" data-url="javascript:imgmap.src='http://www.wetteronline.de/?fcdatstr=20150526&amp;gid=DL&amp;iid=DL&amp;img=true&amp;pid=p_city_uv&amp;sid=Map';false" data-icon="fa-sun-o"></div></li>
     </ul>
 </div>
     </li>

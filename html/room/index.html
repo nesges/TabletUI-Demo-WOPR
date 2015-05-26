@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <head>
-    <title>WOPR :: FTUI 
-        </title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
+    <title>WOPR :: FTUI </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
@@ -24,13 +24,14 @@
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
     <link rel="stylesheet" href="../css/wopr.css">
+    <!--link rel="stylesheet" href="../css/csshake.min.css"-->
     
     <script type="text/javascript" src="../pgm2/jquery.min.js"></script>
-    <script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script>
+    <!--script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script-->
 
-    <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
+    <!--link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
-    <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
+    <link rel="stylesheet" href="../css/theme/amber/ftui.css" /-->
     
     <link rel="stylesheet" href="../fonts/nesges/style.css">
     
@@ -43,9 +44,11 @@
     
     <script type="text/javascript" src="../js/subtype-defaults.js"></script>
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
+    
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_label.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
-</head>
+    </head>
 <body>
     <div data-type="clicksound"
         data-sound='["ion-tap", "ion-water-droplet-2", "ion-button-tiny", "ion-cd-tray", "ion-water-droplet-3"]'
@@ -54,8 +57,6 @@
         data-volume="70"
         ></div>
         
-        <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_clicksound.js"></script>
-        <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_famultibutton.js"></script>
     <div class="gridster">
 <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
@@ -87,6 +88,12 @@
                     data-url="wohnzimmer-pc.php"
                     data-icon="fa-laptop"
                     data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
+                    data-url="wohnzimmer-mpd.php"
+                    data-icon="nesges-radio2"
+                    data-on-color="white"
+                    data-off-color="white"
                     data-off-background-color="rgb(111,69,0)"></div></li>
             <li><div data-type="button"
                     data-device="W_XBMC"
@@ -288,7 +295,7 @@
         <div data-type="thermostat" 
         data-subtype="MAX"
         data-get="desiredTemperature"
-        data-set="desiredTemperature auto"
+        data-set="desiredTemperature"
         data-temp="temperature"
         data-off="off"
         data-boost="boost"
@@ -358,7 +365,7 @@
         <div data-type="thermostat" 
         data-subtype="MAX"
         data-get="desiredTemperature"
-        data-set="desiredTemperature auto"
+        data-set="desiredTemperature"
         data-temp="temperature"
         data-off="off"
         data-boost="boost"
@@ -488,7 +495,7 @@
                         style="font-size:16px;padding:5px;margin:0;margin-top:-5px;"></div>
                     <!--div data-type="label" data-device="Wetter" data-get="fc1_low_c" data-unit="&deg;C"></div-->
                     <div data-type="label" data-device="Wetter" data-get="fc1_high_c" data-unit="&deg;C"></div>
-                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc1_chOfRainDay" data-unit="%"></div>
+                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc0_chOfRainDay" data-unit="%"></div>
                 </div>
                                         <div class="left">
                     <div data-type="label" data-device="Wetter" data-get="fc2_day_of_week" style="margin-bottom:5px"></div>
@@ -499,7 +506,7 @@
                         style="font-size:16px;padding:5px;margin:0;margin-top:-5px;"></div>
                     <!--div data-type="label" data-device="Wetter" data-get="fc2_low_c" data-unit="&deg;C"></div-->
                     <div data-type="label" data-device="Wetter" data-get="fc2_high_c" data-unit="&deg;C"></div>
-                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc2_chOfRainDay" data-unit="%"></div>
+                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc1_chOfRainDay" data-unit="%"></div>
                 </div>
                                         <div class="left">
                     <div data-type="label" data-device="Wetter" data-get="fc3_day_of_week" style="margin-bottom:5px"></div>
@@ -510,7 +517,7 @@
                         style="font-size:16px;padding:5px;margin:0;margin-top:-5px;"></div>
                     <!--div data-type="label" data-device="Wetter" data-get="fc3_low_c" data-unit="&deg;C"></div-->
                     <div data-type="label" data-device="Wetter" data-get="fc3_high_c" data-unit="&deg;C"></div>
-                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc3_chOfRainDay" data-unit="%"></div>
+                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc2_chOfRainDay" data-unit="%"></div>
                 </div>
                                         <div class="left">
                     <div data-type="label" data-device="Wetter" data-get="fc4_day_of_week" style="margin-bottom:5px"></div>
@@ -521,7 +528,7 @@
                         style="font-size:16px;padding:5px;margin:0;margin-top:-5px;"></div>
                     <!--div data-type="label" data-device="Wetter" data-get="fc4_low_c" data-unit="&deg;C"></div-->
                     <div data-type="label" data-device="Wetter" data-get="fc4_high_c" data-unit="&deg;C"></div>
-                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc4_chOfRainDay" data-unit="%"></div>
+                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc3_chOfRainDay" data-unit="%"></div>
                 </div>
                                         <div class="left">
                     <div data-type="label" data-device="Wetter" data-get="fc5_day_of_week" style="margin-bottom:5px"></div>
@@ -532,7 +539,7 @@
                         style="font-size:16px;padding:5px;margin:0;margin-top:-5px;"></div>
                     <!--div data-type="label" data-device="Wetter" data-get="fc5_low_c" data-unit="&deg;C"></div-->
                     <div data-type="label" data-device="Wetter" data-get="fc5_high_c" data-unit="&deg;C"></div>
-                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc5_chOfRainDay" data-unit="%"></div>
+                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc4_chOfRainDay" data-unit="%"></div>
                 </div>
                     </a>
         </div>
@@ -791,15 +798,15 @@
         <header>OPTIONEN</header>
         <div class="centered">
             <div class="left">
-                <div data-type="switch" data-device="OPT_PARTY" class="cell" data-icon="fa-glass" data-subtype="dummy10"></div>
+                <div data-type="switch" data-doubleclick="1000" data-device="OPT_PARTY" class="cell" data-icon="fa-glass" data-subtype="dummy10"></div>
                 <div data-type="label" class="cell">Gäste</div>
             </div>
             <div class="left">
-                <div data-type="switch" data-device="OPT_ALARM" class="cell" data-icon="fa-bullhorn" data-subtype="dummy10"></div>
+                <div data-type="switch" data-doubleclick="1000" data-device="OPT_ALARM" class="cell" data-icon="fa-bullhorn" data-subtype="dummy10"></div>
                 <div data-type="label" class="cell">Alarm</div>
             </div>
             <div class="left">
-                <div data-type="switch" data-device="OPT_HEIZUNG" class="cell" data-icon="fa-fire" data-subtype="dummy10"></div>
+                <div data-type="switch" data-doubleclick="1000" data-device="OPT_HEIZUNG" class="cell" data-icon="fa-fire" data-subtype="dummy10"></div>
                 <div data-type="label" class="cell">Heizung</div>
             </div>
         </div>

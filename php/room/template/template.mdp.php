@@ -1,81 +1,77 @@
 <?
-    $mpd['FLUX'] = 'MPD_FLUX';
-    $mpd['MCP'] = 'MPD_MCP';
-    $power['MCP'] = 'K_SWITCH_A3_Boxen';
-    $power['FLUX'] = 'S_SWITCH_D2_FLUX';
+    $mpd['FLUX']    = 'MPD_FLUX';
+    $mpd['MCP']     = 'MPD_MCP';
+    $mpd['WOPR']    = 'MPD_WOPR';
+    $power['MCP']   = 'K_SWITCH_A3_Boxen';
+    $power['FLUX']  = 'S_SWITCH_D2_FLUX';
     
-    function mpd_streamradio_control($host) {
+    function mpd_streamradio_control($host, $type='normal') {
         global $mpd, $power;    
 ?>
         <div class="centered">
             <? button_fhem('', "set ".$mpd[$host]." previous", 'fa-backward', '#AA6900') ?>
             <div
-                data-type="button" 
-                data-fhem-cmd="set <?=$mpd[$host]?> pause" 
-                data-icon="fa-pause" 
+                data-type="button"
+                data-fhem-cmd="set <?=$mpd[$host]?> pause"
+                data-icon="fa-pause"
                 data-on-background-color="#aa6900"
                 class="cell"></div>
             <div
-                data-type="button" 
-                data-fhem-cmd="set <?=$mpd[$host]?> play" 
-                data-icon="fa-play" 
+                data-type="button"
+                data-fhem-cmd="set <?=$mpd[$host]?> play"
+                data-icon="fa-play"
                 data-on-background-color="#FFCC00"
                 class="cell"></div>
             <div
-                data-type="button" 
+                data-type="button"
                 data-fhem-cmd="set <?=$mpd[$host]?> stop" data-icon="fa-stop" 
                 data-on-background-color="#aa6900"
                 class="cell"></div>
             <? button_fhem('', "set ".$mpd[$host]." next", 'fa-forward', '#AA6900') ?>
         </div>
         
-        <div id="mpdinfo" class="centered" style="margin-top:20px;margin-bottom:25px">
-            <div data-type="symbol" data-icon="fa-spinner fa-spin" style="height:1px;margin-top:-40px;"></div>
+        <div class="centered">
+            <div data-type="mpdnowplaying"
+                data-device="<?=$mpd[$host]?>"
+                data-album="now_album"
+                data-artist="now_artist"
+                data-name="now_name"
+                data-track="now_track"
+                data-title="now_title"
+                style="padding:10px;padding-top:4px"
+                ></div>
         </div>
-        <script>
-            $(document).ready(function() {
-                $.get('http://<?=$host?>/mpdinfo/')
-                    .success(function(data) {
-                        if(data.length>0) {
-                            $("#mpdinfo").html(data);
-                        }
-                    });
-                setInterval(function() { $.get('http://<?=$host?>/mpdinfo/')
-                    .success(function(data) {
-                        if(data.length>0) {
-                            $("#mpdinfo").html(data);
-                        } else {
-                            $("#mpdinfo").empty();
-                            spinner = $('<div data-icon="fa-cog fa-spin" style="height:1px;margin-top:-40px;"></div>');
-                            spinner.famultibutton({
-                                    mode:'signal',
-                                    offBackgroundColor:'#2a2a2a',
-                                    offColor:'#505050'
-                            });
-                            spinner.appendTo("#mpdinfo");
-                        }
-                    }); }, 5000);
-            });
-        </script>
         
-        <div class="centered" style="margin-bottom:25px">
+        <div class="centered" style="margin-bottom:10px">
             <div data-type="push" 
                 data-set="volume 0" 
                 data-icon="fa-volume-off" 
+                data-off-background-color="#662222"
+                data-off-color="#2a2a2a"
+                data-on-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                data-device="<?=$mpd[$host]?>"
+                class="left"
+                onClick="$('#VolumeSlider').data('Powerange').setStart(50)"></div>
+            <div data-type="push" 
+                data-set="volume 50" 
+                data-icon="fa-volume-down" 
                 data-off-background-color="#aa3333"
                 data-off-color="#2a2a2a"
                 data-on-color="#2a2a2a"
                 data-background-icon="fa-circle"
                 data-device="<?=$mpd[$host]?>"
                 class="left"
-                onClick="$('#VolumeSlider').data('Powerange').setStart(0)"></div>
+                onClick="$('#VolumeSlider').data('Powerange').setStart(50)"></div>
             <div id="VolumeSlider"data-type="slider"
                 data-device="<?=$mpd[$host]?>"
                 data-get="volume"
                 data-set="volume"
-                data-min="70"
+                data-min="50"
                 data-max="100"
-                class="left horizontal"></div>
+                data-width="200"
+                class="left horizontal"
+                style="margin-top:0 !important"></div>
             <div data-type="push" 
                 data-set="volume 100" 
                 data-icon="fa-volume-up" 
@@ -180,60 +176,63 @@
                 data-on-background-color="white"
                 class="cell"></div>
         </div>
+        <? if($type != 'mini') { ?>
+            <? if($host != "WOPR") { ?>
         <div class="centered">
-                <div data-type="switch"
-                    data-device="<?=$power[$host]?>"
-                    data-icon="fa-plug"
-                    data-on-background-color="#505050"
-                    data-on-color="#aa6900"
-                    data-off-background-color="#aa6900"
-                    data-off-color="#2a2a2a"
-                    data-doubleclick="1000"
-                    class="cell"></div>
-
-                <div
-                    data-type="button" 
-                    data-fhem-cmd="{sshcmd('<?=$host?>','shutdown -h now',2)}" data-icon="fa-power-off" 
-                    data-on-background-color="#505050"
-                    data-off-background-color="#505050"
-                    data-device="<?=$host?>"
-                    data-get-on='present'
-                    data-get-off="absent"
-                    data-on-color="#aa6900"
-                    data-off-color="#2a2a2a"
-                    data-doubleclick="1000"
-                    class="cell"></div>
-
-                <div
-                    data-type="button" 
-                    data-fhem-cmd="{sshcmd('<?=$host?>','shutdown -r now',2)}" data-icon="fa-refresh" 
-                    data-on-background-color="#505050"
-                    data-off-background-color="#505050"
-                    data-device="<?=$host?>"
-                    data-get-on='present'
-                    data-get-off="absent"
-                    data-on-color="#aa6900"
-                    data-off-color="#2a2a2a"
-                    data-doubleclick="1000"
-                    class="cell"></div>
+            <div data-type="switch"
+                data-device="<?=$power[$host]?>"
+                data-icon="fa-plug"
+                data-on-background-color="#505050"
+                data-on-color="#aa6900"
+                data-off-background-color="#aa6900"
+                data-off-color="#2a2a2a"
+                data-doubleclick="1000"
+                class="cell"></div>
             
-                <div data-type="button"
-                    data-device="<?=$host?>"
-                    data-get-on="present"
-                    data-get-off="absent"
-                    data-fhem-cmd="set <?=$host?> statusRequest"
-                    data-icon="nesges-radio-tower"
-                    data-background-icon="fa-circle"
-                    data-on-color="#aa6900"
-                    data-off-color="#2a2a2a"
-                    data-on-background-color="#505050"
-                    data-off-background-color="#505050"
-                    class="cell"></div>
+            <div
+                data-type="button" 
+                data-fhem-cmd="{sshcmd('<?=$host?>','shutdown -h now',2)}" data-icon="fa-power-off" 
+                data-on-background-color="#505050"
+                data-off-background-color="#505050"
+                data-device="<?=$host?>"
+                data-get-on='present'
+                data-get-off="absent"
+                data-on-color="#aa6900"
+                data-off-color="#2a2a2a"
+                data-doubleclick="1000"
+                class="cell"></div>
+
+            <div
+                data-type="button" 
+                data-fhem-cmd="{sshcmd('<?=$host?>','shutdown -r now',2)}" data-icon="fa-refresh" 
+                data-on-background-color="#505050"
+                data-off-background-color="#505050"
+                data-device="<?=$host?>"
+                data-get-on='present'
+                data-get-off="absent"
+                data-on-color="#aa6900"
+                data-off-color="#2a2a2a"
+                data-doubleclick="1000"
+                class="cell"></div>
+            
+            <div data-type="button"
+                data-device="<?=$host?>"
+                data-get-on="present"
+                data-get-off="absent"
+                data-fhem-cmd="set <?=$host?> statusRequest"
+                data-icon="nesges-radio-tower"
+                data-background-icon="fa-circle"
+                data-on-color="#aa6900"
+                data-off-color="#2a2a2a"
+                data-on-background-color="#505050"
+                data-off-background-color="#505050"
+                class="cell"></div>
             
             <div data-type="symbol"
                 data-device="<?=$mpd[$host]?>"
                 data-get-on='["play","pause", "stop"]'
                 data-get-off="not conected"
+                data-icon="fa-ban"
                 data-icons='["fa-play","fa-pause","fa-stop"]'
                 data-background-icon='fa-circle'
                 data-on-background-color='#505050'
@@ -242,6 +241,43 @@
                 data-off-color="#2a2a2a"
                 class="cell"></div>
         </div>
+            <? } else { ?>
+        <div class="centered" style="margin-top:52px"></div>
+            <? }?>
+        <div class="centered">
+            <div data-type="push"
+                data-cmd="{say('<?=$host?>',ReadingsVal('<?=$mpd[$host]?>','now_name','').'. '.ReadingsVal('<?=$mpd[$host]?>','now_artist','').'. '.ReadingsVal('<?=$mpd[$host]?>','now_album','').'. '.ReadingsVal('<?=$mpd[$host]?>','now_title','') )}"
+                data-icon="fa-info"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"></div>
+            <div data-type="push"
+                data-cmd="{say('<?=$host?>', 'Es ist {DATE} {TIME}')}"
+                data-icon="fa-clock-o"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"></div>
+            <div data-type="push"
+                data-cmd="{goodmorning('<?=$host?>')}"
+                data-icon="fa-comment"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"></div>
+            <div data-type="push"
+                data-cmd="{say('<?=$host?>', ReadingsVal('DLFNACHRICHTEN', 'schlagzeilen', ''))}"
+                data-icon="fa-newspaper-o"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"></div>
+            <!--div data-type="push"
+                data-cmd="set <?=$mpd[$host] ?> playfile http://ondemand-mp3.dradio.de/file/dradio/nachrichten/nachrichten.mp3"
+                data-icon="fa-newspaper-o"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"
+                class="shake shake-little shake-constant"></div-->
+        </div>
+        <? }?>
 <?
     }
     
@@ -292,5 +328,20 @@
         mpd_streamradio_station($host, 'ebmradio',                  'EBM Radio',             'fa-cogs');
         mpd_streamradio_station($host, 'steffi',                    'Awesome Mix Vol.1',     'fa-music');
         mpd_streamradio_station($host, 'dnd',                       'Dungeons & Dragons',    'nesges-skull');
+    }
+    
+    function mpd_select_station($host) {
+        global $mpd;
+        ?>
+        <div data-type="select"
+            data-device="<?=$mpd[$host]?>"
+            data-items='["rockantenne","rockantenneclassic","rockantennealternative","rockradiodeathmetal","dlf","dkultur","dradiowissen","tormentedradio", "digitalgunfire", "ebmradio", "steffi", "dnd"]'
+            data-alias='["RA Heavy Metal","RA Classic Perlen","RA Alternative","Rockradio Deathmetal","Deutschlandfunk","DRadio Kultur","DRadio Wissen","tormentedradio","Digital Gunfire","EBM Radio","Awesome Mix Vol.1","Dungeons & Dragons"]'
+            data-get="station"
+            data-set=" "
+            data-cmd=" "
+            onChange="var station=$(this).find('select').val();var url='/fhem?cmd='+encodeURIComponent('{mpd_streamradio(\'<?=$mpd[$host]?>\',\''+station+'\');;fhem(\'set <?=$mpd[$host]?> station '+station+'\')}')+'&XHR=1'; $.get(url);false"
+            ></div>
+        <?
     }
 ?>

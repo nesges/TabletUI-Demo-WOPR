@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <head>
-    <title>WOPR :: FTUI 
-     :: Schlafzimmer Mpd    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1.1 user-scalable=yes">    <meta name="mobile-web-app-capable" content="yes">
+    <title>WOPR :: FTUI  :: Schlafzimmer Mpd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
@@ -24,13 +24,14 @@
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
     <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
     <link rel="stylesheet" href="../css/wopr.css">
+    <!--link rel="stylesheet" href="../css/csshake.min.css"-->
     
     <script type="text/javascript" src="../pgm2/jquery.min.js"></script>
-    <script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script>
+    <!--script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script-->
 
-    <link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
+    <!--link rel="stylesheet" href="../css/theme/amber/jquery-ui.structure.css" />
     <link rel="stylesheet" href="../css/theme/amber/jquery-ui.theme.css" />
-    <link rel="stylesheet" href="../css/theme/amber/ftui.css" />
+    <link rel="stylesheet" href="../css/theme/amber/ftui.css" /-->
     
     <link rel="stylesheet" href="../fonts/nesges/style.css">
     
@@ -43,9 +44,11 @@
     
     <script type="text/javascript" src="../js/subtype-defaults.js"></script>
     <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
+    
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_label.js"></script>
 
     <script type="text/javascript" src="../js/colors.js"></script>
-</head>
+    </head>
 <body>
     <div data-type="clicksound"
         data-sound='["ion-tap", "ion-water-droplet-2", "ion-button-tiny", "ion-cd-tray", "ion-water-droplet-3"]'
@@ -54,8 +57,6 @@
         data-volume="70"
         ></div>
         
-        <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_clicksound.js"></script>
-        <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/widget_famultibutton.js"></script>
     <div class="gridster">
 <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="4">
@@ -87,6 +88,12 @@
                     data-url="wohnzimmer-pc.php"
                     data-icon="fa-laptop"
                     data-on-color="white"
+                    data-off-background-color="rgb(111,69,0)"></div></li>
+            <li><div data-type="button"
+                    data-url="wohnzimmer-mpd.php"
+                    data-icon="nesges-radio2"
+                    data-on-color="white"
+                    data-off-color="white"
                     data-off-background-color="rgb(111,69,0)"></div></li>
             <li><div data-type="button"
                     data-device="W_XBMC"
@@ -594,75 +601,77 @@
     
     <li data-row="1" data-col="5" data-sizex="3" data-sizey="3">
         <header>PLAYER</header>
+        <div data-type="itunes_artwork"
+            data-device="MPD_FLUX"
+            data-get='["now_artist","now_album","now_title"]'
+            data-opacity="0.2"
+            data-size=400
+            style="position:absolute;top:20px;left:-10px;"></div>
+            
                 <div class="centered">
             <div id="" data-type="button" data-fhem-cmd="set MPD_FLUX previous" data-icon="fa-backward" data-on-background-color="#AA6900" class="cell"></div>
             <div
-                data-type="button" 
-                data-fhem-cmd="set MPD_FLUX pause" 
-                data-icon="fa-pause" 
+                data-type="button"
+                data-fhem-cmd="set MPD_FLUX pause"
+                data-icon="fa-pause"
                 data-on-background-color="#aa6900"
                 class="cell"></div>
             <div
-                data-type="button" 
-                data-fhem-cmd="set MPD_FLUX play" 
-                data-icon="fa-play" 
+                data-type="button"
+                data-fhem-cmd="set MPD_FLUX play"
+                data-icon="fa-play"
                 data-on-background-color="#FFCC00"
                 class="cell"></div>
             <div
-                data-type="button" 
+                data-type="button"
                 data-fhem-cmd="set MPD_FLUX stop" data-icon="fa-stop" 
                 data-on-background-color="#aa6900"
                 class="cell"></div>
             <div id="" data-type="button" data-fhem-cmd="set MPD_FLUX next" data-icon="fa-forward" data-on-background-color="#AA6900" class="cell"></div>
         </div>
         
-        <div id="mpdinfo" class="centered" style="margin-top:20px;margin-bottom:25px">
-            <div data-type="symbol" data-icon="fa-spinner fa-spin" style="height:1px;margin-top:-40px;"></div>
+        <div class="centered">
+            <div data-type="mpdnowplaying"
+                data-device="MPD_FLUX"
+                data-album="now_album"
+                data-artist="now_artist"
+                data-name="now_name"
+                data-track="now_track"
+                data-title="now_title"
+                style="padding:10px;padding-top:4px"
+                ></div>
         </div>
-        <script>
-            $(document).ready(function() {
-                $.get('http://FLUX/mpdinfo/')
-                    .success(function(data) {
-                        if(data.length>0) {
-                            $("#mpdinfo").html(data);
-                        }
-                    });
-                setInterval(function() { $.get('http://FLUX/mpdinfo/')
-                    .success(function(data) {
-                        if(data.length>0) {
-                            $("#mpdinfo").html(data);
-                        } else {
-                            $("#mpdinfo").empty();
-                            spinner = $('<div data-icon="fa-cog fa-spin" style="height:1px;margin-top:-40px;"></div>');
-                            spinner.famultibutton({
-                                    mode:'signal',
-                                    offBackgroundColor:'#2a2a2a',
-                                    offColor:'#505050'
-                            });
-                            spinner.appendTo("#mpdinfo");
-                        }
-                    }); }, 5000);
-            });
-        </script>
         
-        <div class="centered" style="margin-bottom:25px">
+        <div class="centered" style="margin-bottom:10px">
             <div data-type="push" 
                 data-set="volume 0" 
                 data-icon="fa-volume-off" 
+                data-off-background-color="#662222"
+                data-off-color="#2a2a2a"
+                data-on-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                data-device="MPD_FLUX"
+                class="left"
+                onClick="$('#VolumeSlider').data('Powerange').setStart(50)"></div>
+            <div data-type="push" 
+                data-set="volume 50" 
+                data-icon="fa-volume-down" 
                 data-off-background-color="#aa3333"
                 data-off-color="#2a2a2a"
                 data-on-color="#2a2a2a"
                 data-background-icon="fa-circle"
                 data-device="MPD_FLUX"
                 class="left"
-                onClick="$('#VolumeSlider').data('Powerange').setStart(0)"></div>
+                onClick="$('#VolumeSlider').data('Powerange').setStart(50)"></div>
             <div id="VolumeSlider"data-type="slider"
                 data-device="MPD_FLUX"
                 data-get="volume"
                 data-set="volume"
-                data-min="70"
+                data-min="50"
                 data-max="100"
-                class="left horizontal"></div>
+                data-width="200"
+                class="left horizontal"
+                style="margin-top:0 !important"></div>
             <div data-type="push" 
                 data-set="volume 100" 
                 data-icon="fa-volume-up" 
@@ -767,60 +776,61 @@
                 data-on-background-color="white"
                 class="cell"></div>
         </div>
-        <div class="centered">
-                <div data-type="switch"
-                    data-device="S_SWITCH_D2_FLUX"
-                    data-icon="fa-plug"
-                    data-on-background-color="#505050"
-                    data-on-color="#aa6900"
-                    data-off-background-color="#aa6900"
-                    data-off-color="#2a2a2a"
-                    data-doubleclick="1000"
-                    class="cell"></div>
-
-                <div
-                    data-type="button" 
-                    data-fhem-cmd="{sshcmd('FLUX','shutdown -h now',2)}" data-icon="fa-power-off" 
-                    data-on-background-color="#505050"
-                    data-off-background-color="#505050"
-                    data-device="FLUX"
-                    data-get-on='present'
-                    data-get-off="absent"
-                    data-on-color="#aa6900"
-                    data-off-color="#2a2a2a"
-                    data-doubleclick="1000"
-                    class="cell"></div>
-
-                <div
-                    data-type="button" 
-                    data-fhem-cmd="{sshcmd('FLUX','shutdown -r now',2)}" data-icon="fa-refresh" 
-                    data-on-background-color="#505050"
-                    data-off-background-color="#505050"
-                    data-device="FLUX"
-                    data-get-on='present'
-                    data-get-off="absent"
-                    data-on-color="#aa6900"
-                    data-off-color="#2a2a2a"
-                    data-doubleclick="1000"
-                    class="cell"></div>
+                            <div class="centered">
+            <div data-type="switch"
+                data-device="S_SWITCH_D2_FLUX"
+                data-icon="fa-plug"
+                data-on-background-color="#505050"
+                data-on-color="#aa6900"
+                data-off-background-color="#aa6900"
+                data-off-color="#2a2a2a"
+                data-doubleclick="1000"
+                class="cell"></div>
             
-                <div data-type="button"
-                    data-device="FLUX"
-                    data-get-on="present"
-                    data-get-off="absent"
-                    data-fhem-cmd="set FLUX statusRequest"
-                    data-icon="nesges-radio-tower"
-                    data-background-icon="fa-circle"
-                    data-on-color="#aa6900"
-                    data-off-color="#2a2a2a"
-                    data-on-background-color="#505050"
-                    data-off-background-color="#505050"
-                    class="cell"></div>
+            <div
+                data-type="button" 
+                data-fhem-cmd="{sshcmd('FLUX','shutdown -h now',2)}" data-icon="fa-power-off" 
+                data-on-background-color="#505050"
+                data-off-background-color="#505050"
+                data-device="FLUX"
+                data-get-on='present'
+                data-get-off="absent"
+                data-on-color="#aa6900"
+                data-off-color="#2a2a2a"
+                data-doubleclick="1000"
+                class="cell"></div>
+
+            <div
+                data-type="button" 
+                data-fhem-cmd="{sshcmd('FLUX','shutdown -r now',2)}" data-icon="fa-refresh" 
+                data-on-background-color="#505050"
+                data-off-background-color="#505050"
+                data-device="FLUX"
+                data-get-on='present'
+                data-get-off="absent"
+                data-on-color="#aa6900"
+                data-off-color="#2a2a2a"
+                data-doubleclick="1000"
+                class="cell"></div>
+            
+            <div data-type="button"
+                data-device="FLUX"
+                data-get-on="present"
+                data-get-off="absent"
+                data-fhem-cmd="set FLUX statusRequest"
+                data-icon="nesges-radio-tower"
+                data-background-icon="fa-circle"
+                data-on-color="#aa6900"
+                data-off-color="#2a2a2a"
+                data-on-background-color="#505050"
+                data-off-background-color="#505050"
+                class="cell"></div>
             
             <div data-type="symbol"
                 data-device="MPD_FLUX"
                 data-get-on='["play","pause", "stop"]'
                 data-get-off="not conected"
+                data-icon="fa-ban"
                 data-icons='["fa-play","fa-pause","fa-stop"]'
                 data-background-icon='fa-circle'
                 data-on-background-color='#505050'
@@ -829,7 +839,40 @@
                 data-off-color="#2a2a2a"
                 class="cell"></div>
         </div>
-    </li>
+                    <div class="centered">
+            <div data-type="push"
+                data-cmd="{say('FLUX',ReadingsVal('MPD_FLUX','now_name','').'. '.ReadingsVal('MPD_FLUX','now_artist','').'. '.ReadingsVal('MPD_FLUX','now_album','').'. '.ReadingsVal('MPD_FLUX','now_title','') )}"
+                data-icon="fa-info"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"></div>
+            <div data-type="push"
+                data-cmd="{say('FLUX', 'Es ist {DATE} {TIME}')}"
+                data-icon="fa-clock-o"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"></div>
+            <div data-type="push"
+                data-cmd="{goodmorning('FLUX')}"
+                data-icon="fa-comment"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"></div>
+            <div data-type="push"
+                data-cmd="{say('FLUX', ReadingsVal('DLFNACHRICHTEN', 'schlagzeilen', ''))}"
+                data-icon="fa-newspaper-o"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"></div>
+            <!--div data-type="push"
+                data-cmd="set MPD_FLUX playfile http://ondemand-mp3.dradio.de/file/dradio/nachrichten/nachrichten.mp3"
+                data-icon="fa-newspaper-o"
+                data-off-color="#2E8AE6"
+                data-off-background-color="#2a2a2a"
+                data-background-icon="none"
+                class="shake shake-little shake-constant"></div-->
+        </div>
+            </li>
     
     <li data-row="4" data-col="5" data-sizex="3" data-sizey="1">
         <header>WEITER</header>

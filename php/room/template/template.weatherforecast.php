@@ -1,4 +1,20 @@
 <?
+    function weather_forecast_small($day) {
+        ?>
+                <div class="left">
+                    <div data-type="label" data-device="Wetter" data-get="fc<?=($day+1)?>_day_of_week" style="margin-bottom:5px"></div>
+                    <div data-type="weather" 
+                        data-device="Wetter"
+                        data-get="fc<?=($day+1)?>_condition"
+                        data-imageset="meteocons"
+                        style="font-size:16px;padding:5px;margin:0;margin-top:-5px;"></div>
+                    <!--div data-type="label" data-device="Wetter" data-get="fc<?=($day+1)?>_low_c" data-unit="&deg;C"></div-->
+                    <div data-type="label" data-device="Wetter" data-get="fc<?=($day+1)?>_high_c" data-unit="&deg;C"></div>
+                    <div data-type="label" data-device="WETTER_PROPLANTA" data-get="fc<?=$day?>_chOfRainDay" data-unit="%"></div>
+                </div>
+        <?
+    }
+
     function weatherforecast($day) {
         $condition_d        = 'Wetter';
         $condition_r        = 'fc'.($day+1).'_condition';

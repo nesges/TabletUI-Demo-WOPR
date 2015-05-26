@@ -1,9 +1,14 @@
 <?
-    function light($device, $times=array("1h","2h")) {
+    function light($device, $times=array("1h","2h"), $label="") {
 ?>
 <div class="centered container">
     <div class="left">
         <div data-type="switch" data-device="<?= $device ?>" class="cell"></div>
+        <?
+            if($label) {
+                ?><div data-type="label" class="cell"><?= $label ?></div><?
+            }
+        ?>
     </div>
     <?
         if(!is_array($times)) {

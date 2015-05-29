@@ -84,12 +84,23 @@
                 onClick="$('#VolumeSlider').data('Powerange').setStart(100)"></div>
         </div>
         <div class="centered">
+            <? if($type == 'mini') { ?>
+            <div data-type="pagetab"
+                data-url="<?= preg_replace('/\.php$/', '-kodilib.php', basename($_SERVER['PHP_SELF'])) ?>"
+                data-icon="fa-music"
+                data-off-background-color="#FFCC00"
+                data-off-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                class="cell"
+                ></div>
+            <? } else { ?>
             <div data-type="button"
                 data-url="<?= preg_replace('/\.php$/', '-kodilib.php', basename($_SERVER['PHP_SELF'])) ?>"
                 data-icon="fa-music"
                 data-on-background-color="#FFCC00"
                 class="cell"
                 ></div>
+            <? } ?>
             <div data-type="push"
                 data-device="<?=$mpd[$host]?>"
                 data-get="repeat"
@@ -133,12 +144,23 @@
                 class="cell"></div>
         </div>
         <div class="centered">
+            <? if($type == 'mini') { ?>
+            <div data-type="pagetab"
+                data-url="<?= preg_replace('/\.php$/', '-kodilib.php?dir=audiobooks', basename($_SERVER['PHP_SELF'])) ?>"
+                data-icon="nesges-books"
+                data-off-background-color="#FFCC00"
+                data-off-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                class="cell"
+                ></div>
+            <? } else { ?>
             <div data-type="button"
                 data-url="<?= preg_replace('/\.php$/', '-kodilib.php?dir=audiobooks', basename($_SERVER['PHP_SELF'])) ?>"
                 data-icon="nesges-books"
                 data-on-background-color="#FFCC00"
                 class="cell"
                 ></div>
+            <? } ?>
             <div data-type="push"
                 data-device="<?=$mpd[$host]?>"
                 data-get="random"

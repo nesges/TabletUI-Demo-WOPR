@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <div class="gridster">
+            <ul>
+                <li data-row="1" data-col="1" data-sizex="3" data-sizey="7">
+                    <header>K&Uuml;CHE BELEUCHTUNG</header>
+                    <div class="centered container" style="margin-top:10px !important">
+    <div data-type="volume" 
+        data-device="MILIGHT_Zone3_Kueche"
+        data-step="0.5"
+        data-get="brightness"
+        data-set="dim"
+        data-min="2"
+        data-max="100"
+        class="dim-back"
+        ></div>
+    <div data-type="volume" 
+        data-device="MILIGHT_Zone3_Kueche"
+        data-get="hue"
+        data-set="hue"
+        data-min="0"
+        data-max="360"
+        class="hue-back"
+        ></div>
+    <div class="centered">
+        <div data-type="switch" 
+            data-device="MILIGHT_Zone3_Kueche"
+            data-get-on="on.*"
+            data-get-off="off"
+            data-set-on="on"
+            data-set-off="off"
+            ></div>
+        <div data-type="switch" 
+            data-device="MILIGHT_Zone3_Kueche"
+            data-get="saturation"
+            data-get-on="0"
+            data-get-off="100"
+            data-set-on="saturation 0"
+            data-set-off="saturation 100"
+            data-icon="fa-sun-o"
+            ></div>
+    </div>
+    <div class="centered" style="margin-top:20px !important">
+        <div id="orange" data-type="button" data-fhem-cmd="set MILIGHT_Zone3_Kueche hue 50" data-icon="fa-paint-brush" data-on-background-color="hsl(50,100%,50%)" class="cell"></div>
+        <div id="green" data-type="button" data-fhem-cmd="set MILIGHT_Zone3_Kueche hue 130" data-icon="fa-paint-brush" data-on-background-color="hsl(130,100%,50%)" class="cell"></div>
+        <div id="lblue" data-type="button" data-fhem-cmd="set MILIGHT_Zone3_Kueche hue 190" data-icon="fa-paint-brush" data-on-background-color="hsl(190,100%,50%)" class="cell"></div>
+        <div id="blue" data-type="button" data-fhem-cmd="set MILIGHT_Zone3_Kueche hue 240" data-icon="fa-paint-brush" data-on-background-color="hsl(240,100%,50%)" class="cell"></div>
+        <div id="pink" data-type="button" data-fhem-cmd="set MILIGHT_Zone3_Kueche hue 320" data-icon="fa-paint-brush" data-on-background-color="hsl(320,100%,50%)" class="cell"></div>
+        <div id="red" data-type="button" data-fhem-cmd="set MILIGHT_Zone3_Kueche hue 360" data-icon="fa-paint-brush" data-on-background-color="hsl(360,100%,50%)" class="cell"></div>
+    </div>
+</div>
+                </li>
+                
+                <li data-row="8" data-col="1" data-sizex="3" data-sizey="1" data-template="menu-kueche.php"></li>
+                <li data-row="9" data-col="1" data-sizex="3" data-sizey="1" data-template="menu.php"></li>
+            </ul>
+        </div>
+    </body>
+</html>

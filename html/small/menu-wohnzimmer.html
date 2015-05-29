@@ -1,0 +1,5 @@
+<div data-type="pagetab" data-on-background-color="#aa6900" data-off-background-color="rgb(111,69,0)" data-off-color="#2a2a2a" data-url="wohnzimmer-mpd.php" data-icon="nesges-radio2" class="cell"></div>
+<div data-type="pagetab" data-on-background-color="#aa6900" data-off-background-color="rgb(111,69,0)" data-off-color="#2a2a2a" data-url="wohnzimmer-kodi.php" data-icon="nesges-kodi" class="cell"></div>
+<div data-type="pagetab" data-on-background-color="#aa6900" data-off-background-color="rgb(111,69,0)" data-off-color="#2a2a2a" data-url="wohnzimmer-milight.php" data-icon="fa-lightbulb-o" class="cell"></div>
+<div data-type="switch" data-device="W_SWITCH_D1_Monitore" class="cell" data-icon="fa-desktop" data-color="#505050"></div>
+<div data-type="switch" data-device="MILIGHT_Zone1_Wohnzimmer" class="cell" data-subtype="MilightDevice"></div>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>WOPR :: FTUI 
+        </title>
+    <meta name="viewport" content="initial-scale=0.85,minimum-scale=0.85,maximum-scale=0.85,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="widget_base_width" content="120">
+    <meta name="widget_base_height" content="62">
+    <meta name="fhemweb_url" content="/fhem">
+    <meta name="longpoll" content="1">
+    <meta name="request_cache" content="100">
+    <meta name="gridster_disable" content="1">
+    <meta name="debug" content="0">
+    <meta name="toast" content="0">
+    
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/css/fhem-tablet-ui.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.css">
+    <link rel="stylesheet" href="../fhem-tablet-ui/www/tablet/lib/powerange.min.css" />
+    <link rel="stylesheet" href="../css/wopr.css">
+    <link rel="stylesheet" href="../css/csshake.min.css">
+    
+    <script type="text/javascript" src="../pgm2/jquery.min.js"></script>
+    <script type="text/javascript" src="../pgm2/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="../fonts/nesges/style.css">
+    
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.gridster.min.js"></script>
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.knob.mod.min.js"></script>
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.toast.min.js"></script>
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/fa-multi-button.min.js"></script>
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/powerange.min.js"></script>
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/lib/jquery.circlemenu.js"></script>
+    
+    <script type="text/javascript" src="../js/subtype-defaults.js"></script>
+    <script type="text/javascript" src="../fhem-tablet-ui/www/tablet/js/fhem-tablet-ui.js"></script>
+
+    <script type="text/javascript" src="../js/colors.js"></script>
+</head>
+<body>
+    <div data-type="clicksound"
+        data-sound='["ion-tap", "ion-water-droplet-2", "ion-button-tiny", "ion-cd-tray", "ion-water-droplet-3"]'
+        data-bind-to='["+knob", "+circlemenu-outer", "+button", "+circlemenu-center", "+slider"]'
+        data-length='[200,300,200,1400,200]'
+        data-volume="70"
+        ></div>
+
+    <div class="gridster">
+<ul>
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="3">
+    </li>
+    
+    <li data-row="6" data-col="1" data-sizex="3" data-sizey="1" data-template="menu.php" style="height:75px"></li>
+</ul>    </div>
+</body>
+</html>

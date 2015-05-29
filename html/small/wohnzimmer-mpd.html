@@ -1,0 +1,205 @@
+<html>
+    <body>
+        <div class="gridster">
+            <ul>
+                <li data-row="1" data-col="1" data-sizex="3" data-sizey="7">
+                    <header>WOHNZIMMER MPD</header>
+                    <div data-type="itunes_artwork"
+                        data-device="MPD_WOPR"
+                        data-get='["now_artist","now_album","now_title"]'
+                        data-opacity="0.2"
+                        data-size=400
+                        style="position:absolute;top:20px;left:-10px;"></div>
+            
+                            <div class="centered">
+            <div id="" data-type="button" data-fhem-cmd="set MPD_WOPR previous" data-icon="fa-backward" data-on-background-color="#AA6900" class="cell"></div>
+            <div
+                data-type="button"
+                data-fhem-cmd="set MPD_WOPR pause"
+                data-icon="fa-pause"
+                data-on-background-color="#aa6900"
+                class="cell"></div>
+            <div
+                data-type="button"
+                data-fhem-cmd="set MPD_WOPR play"
+                data-icon="fa-play"
+                data-on-background-color="#FFCC00"
+                class="cell"></div>
+            <div
+                data-type="button"
+                data-fhem-cmd="set MPD_WOPR stop" data-icon="fa-stop" 
+                data-on-background-color="#aa6900"
+                class="cell"></div>
+            <div id="" data-type="button" data-fhem-cmd="set MPD_WOPR next" data-icon="fa-forward" data-on-background-color="#AA6900" class="cell"></div>
+        </div>
+        
+        <div class="centered">
+            <div data-type="mpdnowplaying"
+                data-device="MPD_WOPR"
+                data-album="now_album"
+                data-artist="now_artist"
+                data-name="now_name"
+                data-track="now_track"
+                data-title="now_title"
+                style="padding:10px;padding-top:4px"
+                ></div>
+        </div>
+        
+        <div class="centered" style="margin-bottom:10px">
+            <div data-type="push" 
+                data-set="volume 0" 
+                data-icon="fa-volume-off" 
+                data-off-background-color="#662222"
+                data-off-color="#2a2a2a"
+                data-on-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                data-device="MPD_WOPR"
+                class="left"
+                onClick="$('#VolumeSlider').data('Powerange').setStart(50)"></div>
+            <div data-type="push" 
+                data-set="volume 50" 
+                data-icon="fa-volume-down" 
+                data-off-background-color="#aa3333"
+                data-off-color="#2a2a2a"
+                data-on-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                data-device="MPD_WOPR"
+                class="left"
+                onClick="$('#VolumeSlider').data('Powerange').setStart(50)"></div>
+            <div id="VolumeSlider"data-type="slider"
+                data-device="MPD_WOPR"
+                data-get="volume"
+                data-set="volume"
+                data-min="50"
+                data-max="100"
+                data-width="200"
+                class="left horizontal"
+                style="margin-top:0 !important"></div>
+            <div data-type="push" 
+                data-set="volume 100" 
+                data-icon="fa-volume-up" 
+                data-off-background-color="#aa3333"
+                data-off-color="#2a2a2a"
+                data-on-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                data-device="MPD_WOPR"
+                class="left"
+                onClick="$('#VolumeSlider').data('Powerange').setStart(100)"></div>
+        </div>
+        <div class="centered">
+                        <div data-type="pagetab"
+                data-url="wohnzimmer-mpd-kodilib.php"
+                data-icon="fa-music"
+                data-off-background-color="#FFCC00"
+                data-off-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                class="cell"
+                ></div>
+                        <div data-type="push"
+                data-device="MPD_WOPR"
+                data-get="repeat"
+                data-get-on="0"
+                data-get-off="1"
+                data-set="mpdCMD repeat 0;set MPD_WOPR mpdCMD single 0"
+                data-icon="fa-long-arrow-right"
+                data-background-icon="fa-circle"
+                data-on-color="white"
+                data-off-color="#2a2a2a"
+                data-off-background-color='#339999'
+                class="cell"></div>
+            <div data-type="push"
+                data-device="MPD_WOPR"
+                data-get="single"
+                data-get-on="1"
+                data-get-off="0"
+                data-set="mpdCMD single 1;set MPD_WOPR mpdCMD repeat 1"
+                data-icon="nesges-repeat-one"
+                data-background-icon="fa-circle"
+                data-on-color="white"
+                data-off-color="#2a2a2a"
+                data-off-background-color='#339999'
+                class="cell"></div>
+            <div data-type="push"
+                data-device="MPD_WOPR"
+                data-get="repeat"
+                data-get-on="1"
+                data-get-off="0"
+                data-set="mpdCMD single 0;set MPD_WOPR mpdCMD repeat 1"
+                data-icon="nesges-repeat"
+                data-background-icon="fa-circle"
+                data-on-color="white"
+                data-off-color="#2a2a2a"
+                data-off-background-color='#339999'
+                class="cell"></div>
+            <div data-type="button"
+                data-url="http://WOPR:8066/static/index.html"
+                data-icon="fa-star"
+                data-on-background-color='#0066FF'
+                class="cell"></div>
+        </div>
+        <div class="centered">
+                        <div data-type="pagetab"
+                data-url="wohnzimmer-mpd-kodilib.php?dir=audiobooks"
+                data-icon="nesges-books"
+                data-off-background-color="#FFCC00"
+                data-off-color="#2a2a2a"
+                data-background-icon="fa-circle"
+                class="cell"
+                ></div>
+                        <div data-type="push"
+                data-device="MPD_WOPR"
+                data-get="random"
+                data-get-on="1"
+                data-get-off="0"
+                data-set="mpdCMD random 0"
+                data-icon="nesges-ordered"
+                data-background-icon="fa-circle"
+                data-on-color="white"
+                data-off-color="#2a2a2a"
+                data-off-background-color='#9933FF'
+                class="cell"></div>
+
+            <div data-type="push"
+                data-device="MPD_WOPR"
+                data-get="random"
+                data-get-on="0"
+                data-get-off="1"
+                data-set="mpdCMD random 1"
+                data-icon="fa-random"
+                data-background-icon="fa-circle"
+                data-on-color="white"
+                data-off-color="#2a2a2a"
+                data-off-background-color='#9933FF'
+                class="cell"></div>
+
+            <div data-type="multistatebutton"
+                data-device="MPD_WOPR"
+                data-get="xfade"
+                data-get-on='["0","5", "10"]'
+                data-set='["mpdCMD crossfade 5","mpdCMD crossfade 10","mpdCMD crossfade 0"]'
+                data-set-default="mpdCMD crossfade 0"
+                data-icons='["fa-exchange","fa-exchange warn","fa-exchange warn"]'
+                data-background-colors='["#dd99dd","#aa66aa","#993399"]'
+                data-on-background-color="white"
+                class="cell"></div>
+        </div>
+        
+                    <div style="margin-top:30px">
+                                <div data-type="select"
+            data-device="MPD_WOPR"
+            data-items='["rockantenne","rockantenneclassic","rockantennealternative","rockradiodeathmetal","dlf","dkultur","dradiowissen","tormentedradio", "digitalgunfire", "ebmradio", "steffi", "dnd"]'
+            data-alias='["RA Heavy Metal","RA Classic Perlen","RA Alternative","Rockradio Deathmetal","Deutschlandfunk","DRadio Kultur","DRadio Wissen","tormentedradio","Digital Gunfire","EBM Radio","Awesome Mix Vol.1","Dungeons & Dragons"]'
+            data-get="station"
+            data-set=" "
+            data-cmd=" "
+            onChange="var station=$(this).find('select').val();var url='/fhem?cmd='+encodeURIComponent('{mpd_streamradio(\'MPD_WOPR\',\''+station+'\');;fhem(\'set MPD_WOPR station '+station+'\')}')+'&XHR=1'; $.get(url);false"
+            ></div>
+                            </div>
+                </li>
+
+                <li data-row="8" data-col="1" data-sizex="3" data-sizey="1" data-template="menu-wohnzimmer.php"></li>
+                <li data-row="9" data-col="1" data-sizex="3" data-sizey="1" data-template="menu.php"></li>
+            </ul>
+        </div>
+    </body>
+</html>

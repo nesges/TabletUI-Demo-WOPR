@@ -39,10 +39,14 @@
     <?        
         if ($_SERVER['REMOTE_ADDR'] == '192.168.178.88') {
             // monitroid
-            ?>
-                <meta name="viewport" content="width=device-width, initial-scale=1.15, maximum-scale=1.15 user-scalable=no">
-                <meta name="refresh" content="3600; URL=<?= $_SERVER['PHP_SELF'] ?>">
-            <?
+            if($_SERVER['HTTP_X_REQUESTED_WITH'] != 'com.vmd.webViewControl' ) {
+                // Chrome
+                ?><meta name="viewport" content="width=device-width, initial-scale=1.15, maximum-scale=1.15 user-scalable=no"><?
+            } else {
+                // WVC
+                ?><style type="text/css"> body { margin-left:35px; } </style><?
+            }
+            ?><meta name="refresh" content="1800; URL=<?= $_SERVER['PHP_SELF'] ?>"><?
         } else if ($_SERVER['REMOTE_ADDR'] == '192.168.178.49' || $_SERVER['REMOTE_ADDR'] == '2003:7a:cf25:f700:4b3:2521:7e23:700a' ) {
             // iPad
             ?><meta name="viewport" content="width=device-width, initial-scale=1.1, maximum-scale=1.1 user-scalable=no"><?
@@ -108,7 +112,13 @@
     <script type="text/javascript" src="../js/subtype-defaults.js"></script>
     <script type="text/javascript" src="<?= $ftui ?>js/fhem-tablet-ui.js"></script>
     
-    <script type="text/javascript" src="<?= $ftui ?>js/widget_label.js"></script>
+    <? if($_SERVER['HTTP_X_REQUESTED_WITH'] == 'com.vmd.webViewControl' ) { ?>
+    <script type="text/javascript" src="../pgm2/cordova-2.3.0.js"></script>
+    <script type="text/javascript" src="../pgm2/webviewcontrol.js"></script>
+    <? if($_SERVER['REMOTE_ADDR'] == '192.168.178.88') { ?>
+    <script type="text/javascript">var wvcDevices = {'12345': 'WVC_MONITROID'}; var wvcUserCssFile="../pgm2/webviewcontrol.css"</script>
+    <? } ?>
+    <? } ?>
 
     <script type="text/javascript" src="../js/colors.js"></script>
     <?

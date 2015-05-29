@@ -99,7 +99,8 @@
 	            data-get="winampVolume"
 	            data-set="winampVolume"
 	            class="horizontal"
-	            style="width:200px"></div>
+	            data-width="250"
+	            ></div>
 	    </div>
     </div>
     <style>

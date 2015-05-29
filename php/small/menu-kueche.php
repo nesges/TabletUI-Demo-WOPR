@@ -1,0 +1,3 @@
+<div data-type="pagetab" data-on-background-color="#aa6900" data-off-background-color="rgb(111,69,0)" data-off-color="#2a2a2a" data-url="kueche-mpd.php" data-icon="nesges-radio2" class="cell"></div>
+<div data-type="pagetab" data-on-background-color="#aa6900" data-off-background-color="rgb(111,69,0)" data-off-color="#2a2a2a" data-url="kueche-milight.php" data-icon="fa-lightbulb-o" class="cell"></div>
+<div data-type="switch" data-device="MILIGHT_Zone3_Kueche" class="cell" data-subtype="MilightDevice"></div>

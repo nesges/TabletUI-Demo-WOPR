@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <div class="gridster">
+            <ul>
+                <li data-row="1" data-col="1" data-sizex="3" data-sizey="7">
+                    <header>WOHNZIMMER KODI</header>
+                    <div class="centered container">
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Reverse')}" data-icon="fa-backward" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Pause')}" data-icon="fa-pause" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Play')}" data-icon="fa-play" data-on-background-color="#FFCC00" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Stop')}" data-icon="fa-stop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Forward')}" data-icon="fa-forward" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                    </div>
+                    
+                    <div data-type="kodinowplaying" data-device="W_XBMC"></div>
+                    
+                    <div style="margin-top:18px" class="centered container">
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Back')}" data-icon="fa-arrow-circle-o-left" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Close')}" data-icon="fa-times" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Up')}" data-icon="fa-angle-up" data-on-background-color="#2E8AE6" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI OSD')}" data-icon="fa-bars" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Info')}" data-icon="fa-info" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                    </div>
+                    <div class="centered container">
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Left')}" data-icon="fa-angle-left" data-on-background-color="#2E8AE6" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Ok')}" data-icon="fa-check-circle" data-on-background-color="#0066FF" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Right')}" data-icon="fa-angle-right" data-on-background-color="#2E8AE6" class="cell"></div>
+                    </div>
+                    <div class="centered container">
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Fullscreen')}" data-icon="fa-desktop" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Down')}" data-icon="fa-angle-down" data-on-background-color="#2E8AE6" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Subtitle')}" data-icon="fa-pencil" data-on-background-color="rgb(170,105,0)" class="cell"></div>
+                    </div>
+                    
+                    <div class="centered container">
+                        <div data-type="slider"
+                            data-device="W_XBMC"
+                            data-get="volume"
+                            data-cmd="set"
+                            data-set="volume"
+                            class="horizontal"
+                            style="margin-top:25px !important;margin-bottom:15px !important;"></div>
+                    </div>
+                    
+                    <div style="margin-top:25px" class="centered container">
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Home')}" data-icon="fa-home" data-on-background-color="#9933FF" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Video')}" data-icon="fa-film" data-on-background-color="#9933FF" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Music')}" data-icon="fa-music" data-on-background-color="#9933FF" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI Pictures')}" data-icon="fa-picture-o" data-on-background-color="#9933FF" class="cell"></div>
+                        <div id="" data-type="button" data-fhem-cmd="{eventghost('WATER', 'KODI TV')}" data-icon="fa-desktop" data-on-background-color="#9933FF" class="cell"></div>
+                    </div>
+                </li>
+                
+                <li data-row="8" data-col="1" data-sizex="3" data-sizey="1" data-template="menu-wohnzimmer.php"></li>
+                <li data-row="9" data-col="1" data-sizex="3" data-sizey="1" data-template="menu.php"></li>
+            </ul>
+        </div>
+    </body>
+</html>
